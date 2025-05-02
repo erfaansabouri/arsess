@@ -1,0 +1,526 @@
+/************************0 fonts 0****************/
+/*----------Darvish-Expanded----------*/
+
+@font-face {
+  font-family: "DarvishExpand_ExBold";
+  src: url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-ExtraBold.woff");
+  src: url("../fonts/Darvish-Expanded/OTF/Darvish-Expanded-ExtraBold.otf")
+      format("opentype"),
+    url("../fonts/Darvish-Expanded/WOFF2/Darvish-Expanded-ExtraBold.woff2")
+      format("woff2"),
+    url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-ExtraBold.woff")
+      format("woff"),
+    url("../fonts/Darvish-Expanded/TTF/Darvish-Expanded-ExtraBold.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DarvishExpand_Bold";
+  src: url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-Bold.woff");
+  src: url("../fonts/Darvish-Expanded/OTF/Darvish-Expanded-Bold.otf")
+      format("opentype"),
+    url("../fonts/Darvish-Expanded/WOFF2/Darvish-Expanded-Bold.woff2")
+      format("woff2"),
+    url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-Bold.woff")
+      format("woff"),
+    url("../fonts/Darvish-Expanded/TTF/Darvish-Expanded-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DarvishExpand_SemiBold";
+  src: url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-SemiBold.woff");
+  src: url("../fonts/Darvish-Expanded/OTF/Darvish-Expanded-SemiBold.otf")
+      format("opentype"),
+    url("../fonts/Darvish-Expanded/WOFF2/Darvish-Expanded-SemiBold.woff2")
+      format("woff2"),
+    url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-SemiBold.woff")
+      format("woff"),
+    url("../fonts/Darvish-Expanded/TTF/Darvish-Expanded-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DarvishExpand_Medium";
+  src: url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-Medium.woff");
+  src: url("../fonts/Darvish-Expanded/OTF/Darvish-Expanded-Medium.otf")
+      format("opentype"),
+    url("../fonts/Darvish-Expanded/WOFF2/Darvish-Expanded-Medium.woff2")
+      format("woff2"),
+    url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-Medium.woff")
+      format("woff"),
+    url("../fonts/Darvish-Expanded/TTF/Darvish-Expanded-Medium.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DarvishExpand_Regular";
+  src: url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-Regular.woff");
+  src: url("../fonts/Darvish-Expanded/OTF/Darvish-Expanded-Regular.otf")
+      format("opentype"),
+    url("../fonts/Darvish-Expanded/WOFF2/Darvish-Expanded-Regular.woff2")
+      format("woff2"),
+    url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-Regular.woff")
+      format("woff"),
+    url("../fonts/Darvish-Expanded/TTF/Darvish-Expanded-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DarvishExpand_Light";
+  src: url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-Light.woff");
+  src: url("../fonts/Darvish-Expanded/OTF/Darvish-Expanded-Light.otf")
+      format("opentype"),
+    url("../fonts/Darvish-Expanded/WOFF2/Darvish-Expanded-Light.woff2")
+      format("woff2"),
+    url("../fonts/Darvish-Expanded/WOFF/Darvish-Expanded-Light.woff")
+      format("woff"),
+    url("../fonts/Darvish-Expanded/TTF/Darvish-Expanded-Light.ttf")
+      format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*----------Darvish----------*/
+
+@font-face {
+  font-family: "Darvish_ExBlack";
+  src: url("../fonts/Darvish/WOFF/Darvish-ExtraBlack.woff");
+  src: url("../fonts/Darvish/OTF/Darvish-ExtraBlack.otf") format("opentype"),
+    url("../fonts/Darvish/WOFF2/Darvish-ExtraBlack.woff2") format("woff2"),
+    url("../fonts/Darvish/WOFF/Darvish-ExtraBlack.woff") format("woff"),
+    url("../fonts/Darvish/TTF/Darvish-ExtraBlack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Darvish_Black";
+  src: url("../fonts/Darvish/WOFF/Darvish-Black.woff");
+  src: url("../fonts/Darvish/OTF/Darvish-Black.otf") format("opentype"),
+    url("../fonts/Darvish/WOFF2/Darvish-Black.woff2") format("woff2"),
+    url("../fonts/Darvish/WOFF/Darvish-Black.woff") format("woff"),
+    url("../fonts/Darvish/TTF/Darvish-Black.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Darvish_ExBold";
+  src: url("../fonts/Darvish/WOFF/Darvish-ExtraBold.woff");
+  src: url("../fonts/Darvish/OTF/Darvish-ExtraBold.otf") format("opentype"),
+    url("../fonts/Darvish/WOFF2/Darvish-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Darvish/WOFF/Darvish-ExtraBold.woff") format("woff"),
+    url("../fonts/Darvish/TTF/Darvish-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Darvish_Bold";
+  src: url("../fonts/Darvish/WOFF/Darvish-Bold.woff");
+  src: url("../fonts/Darvish/OTF/Darvish-Bold.otf") format("opentype"),
+    url("../fonts/Darvish/WOFF2/Darvish-Bold.woff2") format("woff2"),
+    url("../fonts/Darvish/WOFF/Darvish-Bold.woff") format("woff"),
+    url("../fonts/Darvish/TTF/Darvish-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Darvish_SemiBold";
+  src: url("../fonts/Darvish/WOFF/Darvish-SemiBold.woff");
+  src: url("../fonts/Darvish/OTF/Darvish-SemiBold.otf") format("opentype"),
+    url("../fonts/Darvish/WOFF2/Darvish-SemiBold.woff2") format("woff2"),
+    url("../fonts/Darvish/WOFF/Darvish-SemiBold.woff") format("woff"),
+    url("../fonts/Darvish/TTF/Darvish-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Darvish_Medium";
+  src: url("../fonts/Darvish/WOFF/Darvish-Medium.woff");
+  src: url("../fonts/Darvish/OTF/Darvish-Medium.otf") format("opentype"),
+    url("../fonts/Darvish/WOFF2/Darvish-Medium.woff2") format("woff2"),
+    url("../fonts/Darvish/WOFF/Darvish-Medium.woff") format("woff"),
+    url("../fonts/Darvish/TTF/Darvish-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Darvish_Regular";
+  src: url("../fonts/Darvish/WOFF/Darvish-Regular.woff");
+  src: url("../fonts/Darvish/OTF/Darvish-Regular.otf") format("opentype"),
+    url("../fonts/Darvish/WOFF2/Darvish-Regular.woff2") format("woff2"),
+    url("../fonts/Darvish/WOFF/Darvish-Regular.woff") format("woff"),
+    url("../fonts/Darvish/TTF/Darvish-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Darvish_Light";
+  src: url("../fonts/Darvish/WOFF/Darvish-Light.woff");
+  src: url("../fonts/Darvish/OTF/Darvish-Light.otf") format("opentype"),
+    url("../fonts/Darvish/WOFF2/Darvish-Light.woff2") format("woff2"),
+    url("../fonts/Darvish/WOFF/Darvish-Light.woff") format("woff"),
+    url("../fonts/Darvish/TTF/Darvish-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*-------------------main-style---------------------*/
+
+/****************body******************/
+body {
+  min-height: 100vh;
+  scrollbar-width: thin;
+  line-height: 1;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 35px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 35px;
+  background-color: rgba(0, 0, 0, 0.4);
+  --webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+body.noScroll,
+body.hidOverflow {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+body.hidOverflow:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* backdrop-filter: blur(5px); */
+  z-index: 14;
+  /* background: #0d100b1c; */
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.transitionCls {
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+}
+
+*:focus {
+  outline: none;
+}
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+.form-check,
+input[type="radio"] {
+  cursor: pointer;
+}
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none;
+}
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+}
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+input::-webkit-input-placeholder,
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #b3b3b3;
+  font-family: "Darvish_Regular";
+  font-size: 16px;
+}
+input::-moz-placeholder,
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #b3b3b3;
+  font-family: "Darvish_Regular";
+  font-size: 16px;
+}
+input:-ms-input-placeholder,
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #b3b3b3;
+  font-family: "Darvish_Regular";
+  font-size: 16px;
+}
+.form-control:-moz-placeholder,
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #b3b3b3;
+  font-family: "Darvish_Regular";
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  input::-webkit-input-placeholder,
+  .form-control::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  input::-moz-placeholder,
+  .form-control::-moz-placeholder {
+    font-size: 14px;
+  }
+  input:-ms-input-placeholder,
+  .form-control:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .form-control:-moz-placeholder,
+  input:-moz-placeholder {
+    font-size: 14px;
+  }
+}
+
+.form-check:hover,
+.form-check:hover input,
+.form-check:hover label,
+input[type="file"],
+input[type="file"]:hover {
+  cursor: pointer !important;
+}
+input[type="file"] {
+  text-indent: -999px;
+}
+
+:root {
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+}
+.animate__animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: var(--animate-duration);
+  animation-duration: var(--animate-duration);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__animated.animate__infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.animate__animated.animate__repeat-1 {
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: var(--animate-repeat);
+  animation-iteration-count: var(--animate-repeat);
+}
+.animate__animated.animate__repeat-2 {
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2;
+  -webkit-animation-iteration-count: calc(var(--animate-repeat) * 2);
+  animation-iteration-count: calc(var(--animate-repeat) * 2);
+}
+.animate__animated.animate__repeat-3 {
+  -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 3;
+  -webkit-animation-iteration-count: calc(var(--animate-repeat) * 3);
+  animation-iteration-count: calc(var(--animate-repeat) * 3);
+}
+.animate__animated.animate__delay-1s {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-delay: var(--animate-delay);
+  animation-delay: var(--animate-delay);
+}
+.animate__animated.animate__delay-2s {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 2);
+  animation-delay: calc(var(--animate-delay) * 2);
+}
+.animate__animated.animate__delay-3s {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 3);
+  animation-delay: calc(var(--animate-delay) * 3);
+}
+.animate__animated.animate__delay-4s {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 4);
+  animation-delay: calc(var(--animate-delay) * 4);
+}
+.animate__animated.animate__delay-5s {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 5);
+  animation-delay: calc(var(--animate-delay) * 5);
+}
+.animate__animated.animate__faster {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-duration: calc(var(--animate-duration) / 2);
+  animation-duration: calc(var(--animate-duration) / 2);
+}
+.animate__animated.animate__fast {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-duration: calc(var(--animate-duration) * 0.8);
+  animation-duration: calc(var(--animate-duration) * 0.8);
+}
+.animate__animated.animate__slow {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-duration: calc(var(--animate-duration) * 2);
+  animation-duration: calc(var(--animate-duration) * 2);
+}
+.animate__animated.animate__slower {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-duration: calc(var(--animate-duration) * 3);
+  animation-duration: calc(var(--animate-duration) * 3);
+}
+@media (prefers-reduced-motion: reduce), print {
+  .animate__animated {
+    -webkit-animation-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    -webkit-transition-duration: 1ms !important;
+    transition-duration: 1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+  }
+  .animate__animated[class*="Out"] {
+    opacity: 0;
+  }
+}
+
+.animate__animated.animate__flip {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate__fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+.animate__fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+.lg-container {
+  direction: ltr;
+}

@@ -6,6 +6,7 @@ use App\Filament\Resources\BlogPostResource\Pages;
 use App\Filament\Resources\BlogPostResource\RelationManagers;
 use App\Models\BlogPost;
 use Filament\Forms;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\Textarea;
@@ -35,7 +36,7 @@ class BlogPostResource extends Resource {
                                           ->unique(ignoreRecord: true)
                                           ->helperText('فقط حروف کوچک، اعداد و خط تیره مجاز است') ,
                                  SpatieMediaLibraryFileUpload::make('image')
-                                     ->collection('image')
+                                                             ->collection('image')
                                                              ->label('تصویر')
                                                              ->required()
                                                              ->rules([ 'image' ]) ,
@@ -53,6 +54,9 @@ class BlogPostResource extends Resource {
                                        ->preload()
                                        ->multiple()
                                        ->relationship('hashtags' , 'title') ,
+                                 DateTimePicker::make('created_at')
+                                               ->label('تاریخ')
+                                               ->jalali(weekdaysShort: true) ,
                              ]);
     }
 
@@ -72,6 +76,9 @@ class BlogPostResource extends Resource {
                                              ->label('هشتگ‌ها')
                                              ->limitList(2)
                                              ->bulleted() ,
+                                   TextColumn::make('created_at')
+                                             ->label('تاریخ')
+                                             ->jalaliDateTime() ,
                                ]);
     }
 

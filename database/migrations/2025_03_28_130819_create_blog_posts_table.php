@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->string('slug')->nullable()->unique()->index();
+            $table->text('summary')->nullable();
             $table->longText('body')->nullable();
             $table->unsignedBigInteger('admin_id')->nullable()->index();
             $table->timestamps();
