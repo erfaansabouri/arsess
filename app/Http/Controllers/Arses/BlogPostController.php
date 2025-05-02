@@ -26,4 +26,12 @@ class BlogPostController extends Controller {
 
         return view('arses.blog-posts.index' , compact('blog_posts' , 'blog_post_categories', 'category_id'));
     }
+
+    public function show ($slug) {
+        $blog_post = BlogPost::query()
+                             ->where('slug' , $slug)
+                             ->firstOrFail();
+
+        return view('arses.blog-posts.show' , compact('blog_post'));
+    }
 }

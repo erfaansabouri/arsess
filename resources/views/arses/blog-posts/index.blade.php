@@ -36,9 +36,9 @@
                         <div id="tabOne" class="tabcontent">
                             <div class="blogList">
                                 @foreach($blog_posts as $blog_post)
-                                    <a href="#" class="blogCard">
+                                    <a href="{{ route('blog-posts.show', ['slug' => $blog_post->slug])  }}" class="blogCard">
                                         <div class="blgCrdImg transitionCls">
-                                            <img src="{{ $blog_post->getFirstMediaUrl('image') }}" alt="img" />
+                                            <img src="{{ $blog_post->getFirstMediaUrl('image') }}" alt="img"/>
                                         </div>
                                         <div class="blgCrdInfo">
                                             <h2>{{ $blog_post->title }}</h2>

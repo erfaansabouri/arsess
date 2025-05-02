@@ -5,8 +5,8 @@
                 <div class="footerRow">
                     <div class="footerMenu">
                         <a href="#" class="d-block transitionCls"> سرسرای </a>
-                        <a href="#" class="d-block transitionCls"> درباره ما </a>
-                        <a href="#" class="d-block transitionCls"> تماس با ما </a>
+                        <a href="{{ route('about-us.show') }}" class="d-block transitionCls"> درباره ما </a>
+                        <a href="{{ route('contact-us.show') }}" class="d-block transitionCls"> تماس با ما </a>
                         <a href="{{ route('blog-posts.index') }}" class="d-block transitionCls"> نامه‌سرای </a>
                         <a href="#" class="d-block transitionCls"> حساب کاربری </a>
                     </div>
