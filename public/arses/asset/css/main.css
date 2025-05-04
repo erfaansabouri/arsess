@@ -269,19 +269,48 @@ body {
 .topLogoSec {
   height: 42px;
   padding: 10px 0;
+  width: 100%;
+  overflow: hidden;
+  direction: ltr;
 }
-.topLogoSec .topLgoSwpr .swiper-slide {
-  width: max-content;
+.topLogoSec ul {
+  width: 100%;
+  min-width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-shrink: 0;
+  white-space: nowrap;
+
+  width: calc(113px * 9 * 3);
+  animation: scroll 10s linear infinite;
 }
-.topLogoSec .topLgoSwpr .swiper-slide a {
-  width: max-content;
+.topLogoSec ul li {
+  width: 113px;
+  height: 100%;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+.topLogoSec ul a {
+  width: 100%;
   height: 22px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.topLogoSec .topLgoSwpr .swiper-slide a img {
-  width: max-content;
+.topLogoSec ul a img {
+  width: 100%;
   height: auto;
+  max-height: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /*==================sideMenu=================*/
@@ -2243,6 +2272,16 @@ footer .footerLeft .copyright a:hover {
   }
 }
 @media (max-width: 767px) {
+  .topLogoSec ul {
+    width: calc(90px * 10 * 2);
+    animation: scroll 10s linear infinite;
+  }
+  .topLogoSec ul li {
+    width: 90px;
+  }
+  .topLogoSec ul a {
+    height: 16px;
+  }
   .accontSec {
     padding: 100px 0;
     min-height: 100vh;
