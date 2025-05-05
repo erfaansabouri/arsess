@@ -5,6 +5,7 @@
 <body>
 
 <div class="bodyDiv overflow-hidden">
+    @stack('upper-content')
     @yield('content')
 
 
