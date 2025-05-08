@@ -107,107 +107,44 @@
         </div>
     </section>
 
-    <section class="newestSec position-relative">
-        <img src="{{ asset('arses/asset/img/vector02.png') }}" class="newestVctr" alt="img" />
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="arsesTitl position-relative">گنجینه شف‌شو</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="swprContainr">
-            <div class="newestSwper newestSwpr2">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img04.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img05.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img06.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img04.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img05.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+    @if($selected_products->count())
+        <section class="newestSec position-relative">
+            <img src="{{ asset('arses/asset/img/vector02.png') }}" class="newestVctr" alt="img" />
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="arsesTitl position-relative">گنجینه شف‌شو</h2>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <div class="swprContainr">
+                <div class="newestSwper newestSwpr2">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            @foreach($selected_products as $sp)
+                                <div class="swiper-slide">
+                                    <a href="{{ route('product.show', $sp->slug) }}" class="newestCrd position-relative transitionCls">
+                                        <div class="cardImg transitionCls">
+                                            <img src="{{ $sp->getFirstMediaUrl('image') }}" class="" alt="img" />
+                                        </div>
+                                        <div class="cardBdy">
+                                            <img src="{{ $sp->brand->getFirstMediaUrl('image') }}" alt="brand" />
+                                            <h2>{{ $sp->title }}</h2>
+                                            <div class="line transitionCls"></div>
+                                            <p>{{ $sp->summary }}</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    @endif
 
     <section class="newestSec position-relative">
         <img src="asset/img/vector02.png" class="newestVctr" alt="img" />
@@ -318,7 +255,7 @@
                     <h2 class="arsesTitl position-relative">دسته بندی‌ها</h2>
                     <div class="catSecList position-relative">
                         @foreach($categories as $category)
-                            <a href="#" class="catgryCard transitionCls">
+                            <a href="{{ route('product-categories.show', [ 'slug' => $category->slug ]) }}" class="catgryCard transitionCls">
                                 <p>{{ $category->title }}</p>
                                 <span class="icon-Next"></span>
                             </a>

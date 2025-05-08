@@ -25,29 +25,21 @@
                                                 <a href="#" class="hdrSubLnk">محصولات</a>
                                                 <span class="icon-Next openSub transitionCls"></span>
                                             </div>
+
                                             <ul class="hdrSubUl">
-                                                <li class="hdrSubLi prdctHasSub">
-                                                    <div class="prdctLnkBx">
-                                                        <a href="#">تجهیزات آشپزی</a>
-                                                        <span class="icon-Next opnPrdctSub transitionCls"></span>
-                                                    </div>
-                                                    <div class="prdctSubBx">
-                                                        <a href="#">تجهیزات آشپزی</a>
-                                                        <a href="#">تجهیزات قنادی و نانوایی</a>
-                                                        <a href="#">تجهیزات باریستایی</a>
-                                                    </div>
-                                                </li>
-                                                <li class="hdrSubLi prdctHasSub">
-                                                    <div class="prdctLnkBx">
-                                                        <a href="#">مواد اولیه آشپزی</a>
-                                                        <span class="icon-Next opnPrdctSub transitionCls"></span>
-                                                    </div>
-                                                    <div class="prdctSubBx">
-                                                        <a href="#"> مواد اولیه آشپزی </a>
-                                                        <a href="#"> مواد اولیه قنادی و نانوایی </a>
-                                                        <a href="#">مواد اولیه باریستایی</a>
-                                                    </div>
-                                                </li>
+                                                @foreach(\App\Models\ProductCategory::query()->parent()->get() as $pc)
+                                                    <li class="hdrSubLi prdctHasSub">
+                                                        <div class="prdctLnkBx">
+                                                            <a href="{{ route('product-categories.show', ['slug' => $pc->slug]) }}">{{ $pc->title }}</a>
+                                                            <span class="icon-Next opnPrdctSub transitionCls"></span>
+                                                        </div>
+                                                        <div class="prdctSubBx">
+                                                            @foreach($pc->children as $child)
+                                                                <a href="{{ route('product-categories.show', ['slug' => $child->slug]) }}">{{ $child->title }}</a>
+                                                            @endforeach
+                                                        </div>
+                                                    </li>
+                                                @endforeach
                                             </ul>
                                         </li>
                                         <li class="hdrMnuLi position-relative">

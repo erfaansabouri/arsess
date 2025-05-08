@@ -12,12 +12,18 @@ class HomeController extends Controller {
     public function index () {
         $banners = Banner::query()
                          ->get();
-        $categories = ProductCategory::all();
+        $categories = ProductCategory::query()
+                                     ->parent()
+                                     ->get();
         $newest_products = Product::query()
                                   ->latest()
                                   ->take(6)
                                   ->get();
+        $selected_products = Product::query()
+                                    ->where('is_selected' , true)
+                                    ->latest()
+                                    ->get();
 
-        return view('arses.home.index' , compact('banners' , 'categories', 'newest_products'));
+        return view('arses.home.index' , compact('banners' , 'categories' , 'newest_products' , 'selected_products'));
     }
 }
