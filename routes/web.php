@@ -3,6 +3,7 @@
 use App\Http\Controllers\Arses\AboutUsController;
 use App\Http\Controllers\Arses\AuthController;
 use App\Http\Controllers\Arses\BlogPostController;
+use App\Http\Controllers\Arses\CartController;
 use App\Http\Controllers\Arses\ContactUsController;
 use App\Http\Controllers\Arses\HomeController;
 use App\Http\Controllers\Arses\ProductCategoryController;
@@ -42,4 +43,9 @@ Route::middleware([])->prefix('products')->group(function (){
 
 Route::middleware([])->prefix('product-categories')->group(function (){
     Route::get('/{slug}', [ ProductCategoryController::class, 'show' ])->name('product-categories.show');
+});
+
+Route::middleware(['auth:web'])->prefix('cart')->group(function (){
+    Route::get('/', [ CartController::class, 'show' ])->name('cart.show');
+    Route::get('/remove/{id}', [ CartController::class, 'remove' ])->name('cart.remove');
 });
