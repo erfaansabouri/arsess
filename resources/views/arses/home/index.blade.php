@@ -5,44 +5,6 @@
         @include('arses.partials.search-bar')
     </section>
 
-    <div class="sideMenu transitionCls">
-        <span class="icon-Remove closeSide"></span>
-        <div class="sideMnuBx">
-            <a href="#" class="sideItem transitionCls">
-                <div>
-                    <strong>ظروف BergHOFF سری لئو</strong>
-                    <p>x۲</p>
-                </div>
-                <img src="asset/img/rec.png" alt="img" />
-            </a>
-            <a href="#" class="sideItem transitionCls">
-                <div>
-                    <strong>ظروف BergHOFF سری لئو</strong>
-                    <p>x۲</p>
-                </div>
-                <img src="asset/img/rec.png" alt="img" />
-            </a>
-            <a href="#" class="sideItem transitionCls">
-                <div>
-                    <strong>ظروف BergHOFF سری لئو</strong>
-                    <p>x۲</p>
-                </div>
-                <img src="asset/img/rec.png" alt="img" />
-            </a>
-            <a href="#" class="sideItem transitionCls">
-                <div>
-                    <strong>ظروف BergHOFF سری لئو</strong>
-                    <p>x۲</p>
-                </div>
-                <img src="asset/img/rec.png" alt="img" />
-            </a>
-            <div class="subtotal">جمع جزء: ۸۰,۰۰۰,۰۰۰ تومان</div>
-            <div class="sideBtns">
-                <a href="#" class="cartBtn transitionCls"> سبد خرید </a>
-                <a href="#" class="settlmntBtn transitionCls"> تسویه حساب </a>
-            </div>
-        </div>
-    </div>
 
     <section class="topBnnrSec">
         <div class="topBnnrSwpr">

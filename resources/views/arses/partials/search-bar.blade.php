@@ -1,3 +1,43 @@
+<div class="sideMenu transitionCls">
+    <span class="icon-Remove closeSide"></span>
+    <div class="sideMnuBx">
+        <a href="#" class="sideItem transitionCls">
+            <div>
+                <strong>ظروف BergHOFF سری لئو</strong>
+                <p>x۲</p>
+            </div>
+            <img src="asset/img/rec.png" alt="img" />
+        </a>
+        <a href="#" class="sideItem transitionCls">
+            <div>
+                <strong>ظروف BergHOFF سری لئو</strong>
+                <p>x۲</p>
+            </div>
+            <img src="asset/img/rec.png" alt="img" />
+        </a>
+        <a href="#" class="sideItem transitionCls">
+            <div>
+                <strong>ظروف BergHOFF سری لئو</strong>
+                <p>x۲</p>
+            </div>
+            <img src="asset/img/rec.png" alt="img" />
+        </a>
+        <a href="#" class="sideItem transitionCls">
+            <div>
+                <strong>ظروف BergHOFF سری لئو</strong>
+                <p>x۲</p>
+            </div>
+            <img src="asset/img/rec.png" alt="img" />
+        </a>
+        <div class="subtotal">جمع جزء: ۸۰,۰۰۰,۰۰۰ تومان</div>
+        <div class="sideBtns">
+            <a href="#" class="cartBtn transitionCls"> سبد خرید </a>
+            <a href="#" class="settlmntBtn transitionCls"> تسویه حساب </a>
+        </div>
+    </div>
+</div>
+
+
 <section class="headerSec position-relative">
     <div class="hdrCntnt">
         <div class="container">
@@ -71,14 +111,14 @@
                             </div>
                             <div class="menuVector"></div>
                         </div>
-                        <div class="topSrchBx">
+                        <form class="topSrchBx" action="{{ route('product.search') }}" method="GET">
                             <div class="input-group">
                                 <span class="input-group-text">
                                     <button class="searchBtn btn transitionCls">
                                         <span class="icon-Search"></span>
                                     </button>
                                 </span>
-                                <input type="text" class="form-control searchInput" placeholder="تجهیزات و مواد اولیه آشپزی خاص">
+                                <input name="search" type="text" class="form-control searchInput" placeholder="تجهیزات و مواد اولیه آشپزی خاص">
                                 <span class="input-group-text">
                                     <button class="nextBtn btn transitionCls">
                                         <span class="icon-Next"></span>
@@ -86,7 +126,7 @@
                                 </span>
                             </div>
                             <div class="afterBox"></div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
