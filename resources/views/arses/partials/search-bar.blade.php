@@ -1,42 +1,24 @@
+@php use App\Services\CartService; @endphp
+@php use App\Models\ProductCategory; @endphp
 <div class="sideMenu transitionCls">
     <span class="icon-Remove closeSide"></span>
     <div class="sideMnuBx">
-        <a href="#" class="sideItem transitionCls">
-            <div>
-                <strong>ظروف BergHOFF سری لئو</strong>
-                <p>x۲</p>
-            </div>
-            <img src="asset/img/rec.png" alt="img" />
-        </a>
-        <a href="#" class="sideItem transitionCls">
-            <div>
-                <strong>ظروف BergHOFF سری لئو</strong>
-                <p>x۲</p>
-            </div>
-            <img src="asset/img/rec.png" alt="img" />
-        </a>
-        <a href="#" class="sideItem transitionCls">
-            <div>
-                <strong>ظروف BergHOFF سری لئو</strong>
-                <p>x۲</p>
-            </div>
-            <img src="asset/img/rec.png" alt="img" />
-        </a>
-        <a href="#" class="sideItem transitionCls">
-            <div>
-                <strong>ظروف BergHOFF سری لئو</strong>
-                <p>x۲</p>
-            </div>
-            <img src="asset/img/rec.png" alt="img" />
-        </a>
-        <div class="subtotal">جمع جزء: ۸۰,۰۰۰,۰۰۰ تومان</div>
+        @foreach(CartService::getProducts() as $cart_item)
+            <a href="{{ route('product.show', $cart_item['product']->id) }}" class="sideItem transitionCls">
+                <div>
+                    <strong>{{ $cart_item['product']->title }}</strong>
+                    <p>x{{ $cart_item['quantity'] }}</p>
+                </div>
+                <img src="{{ $cart_item['product']->getFirstMediaUrl('image') }}" alt="img"/>
+            </a>
+        @endforeach
+        <div class="subtotal">جمع کل: {{ number_format(CartService::getTotalPrice()) }} تومان</div>
         <div class="sideBtns">
-            <a href="#" class="cartBtn transitionCls"> سبد خرید </a>
-            <a href="#" class="settlmntBtn transitionCls"> تسویه حساب </a>
+            <a href="{{ route('cart.show') }}" class="cartBtn transitionCls"> سبد خرید</a>
+            <a href="#" class="settlmntBtn transitionCls"> تسویه حساب</a>
         </div>
     </div>
 </div>
-
 
 <section class="headerSec position-relative">
     <div class="hdrCntnt">
@@ -45,7 +27,7 @@
                 <div class="col-12">
                     <div class="topSerch">
                         <div class="cartLink openSide topSrchLnk transitionCls">
-                            <i class="numberTag position-absolute">1</i>
+                            <i class="numberTag position-absolute">{{ CartService::getTotalQuantity() }}</i>
                             <span class="icon-Cart"></span>
                         </div>
                         <div class="headerMnu position-relative">
@@ -67,7 +49,7 @@
                                             </div>
 
                                             <ul class="hdrSubUl">
-                                                @foreach(\App\Models\ProductCategory::query()->parent()->get() as $pc)
+                                                @foreach(ProductCategory::query()->parent()->get() as $pc)
                                                     <li class="hdrSubLi prdctHasSub">
                                                         <div class="prdctLnkBx">
                                                             <a href="{{ route('product-categories.show', ['slug' => $pc->slug]) }}">{{ $pc->title }}</a>

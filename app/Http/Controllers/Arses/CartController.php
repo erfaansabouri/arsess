@@ -6,29 +6,47 @@ use App\Http\Controllers\Controller;
 use App\Models\PriceSetting;
 use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Services\CartService;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class CartController extends Controller {
     public function show ( Request $request ) {
-        $user = auth('web')->user();
-        $cart_items = $user->cartItems()
-                           ->with('product')
-                           ->get();
-        $shipping_price = PriceSetting::query()->firstOrCreate([])->shipping_price;
+        $products = CartService::getProducts();
 
-        return view('arses.cart.show' , compact('cart_items', 'user', 'shipping_price'));
+        return view('arses.cart.show' , compact('products'));
     }
 
-    public function remove ( $id ) {
-        $user = auth('web')->user();
-        $cart_item = $user->cartItems()
-                          ->where('id' , $id)
-                          ->firstOrFail();
-        $cart_item->delete();
+    public function remove ( $product_id ) {
+        $cart = CartService::getCart();
+        if ( !isset($cart[$product_id]) ) {
+            return redirect()
+                ->back()
+                ->with('error' , 'آیتمی برای حذف وجود ندارد');
+        }
+
+        CartService::removeFromCart($product_id);
 
         return redirect()
             ->back()
             ->with('success' , 'آیتم با موفقیت حذف شد');
+    }
+
+    public function add ($product_id) {
+        $product = Product::query()
+            ->where('id' , $product_id)
+            ->first();
+
+        if ( !$product ) {
+            return redirect()
+                ->back()
+                ->with('error' , 'محصولی برای اضافه کردن وجود ندارد');
+        }
+
+        CartService::addToCart($product_id);
+
+        return redirect()
+            ->back()
+            ->with('success' , 'محصول با موفقیت به سبد خرید اضافه شد');
     }
 }

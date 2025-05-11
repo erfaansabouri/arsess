@@ -4,6 +4,7 @@ use App\Http\Controllers\Arses\AboutUsController;
 use App\Http\Controllers\Arses\AuthController;
 use App\Http\Controllers\Arses\BlogPostController;
 use App\Http\Controllers\Arses\CartController;
+use App\Http\Controllers\Arses\CheckoutController;
 use App\Http\Controllers\Arses\ContactUsController;
 use App\Http\Controllers\Arses\HomeController;
 use App\Http\Controllers\Arses\ProductCategoryController;
@@ -45,7 +46,12 @@ Route::middleware([])->prefix('product-categories')->group(function (){
     Route::get('/{slug}', [ ProductCategoryController::class, 'show' ])->name('product-categories.show');
 });
 
-Route::middleware(['auth:web'])->prefix('cart')->group(function (){
+Route::middleware([])->prefix('cart')->group(function (){
     Route::get('/', [ CartController::class, 'show' ])->name('cart.show');
-    Route::get('/remove/{id}', [ CartController::class, 'remove' ])->name('cart.remove');
+    Route::get('/remove/{product_id}', [ CartController::class, 'remove' ])->name('cart.remove');
+    Route::get('/add/{product_id}', [ CartController::class, 'add' ])->name('cart.add');
+});
+
+Route::middleware(['auth:web'])->prefix('checkout')->group(function (){
+    Route::get('/show', [ CheckoutController::class, 'show' ])->name('checkout.show');
 });

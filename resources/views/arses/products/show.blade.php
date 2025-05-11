@@ -51,7 +51,7 @@
                             </div>
                         @endif
                         <div class="price">{{ number_format($product->price) }} تومان</div>
-                        <button class="btn transitionCls">افزودن به سبد خرید</button>
+                        <a href="{{ route('cart.add', $product->id) }}" class=""><button class="btn transitionCls">افزودن به سبد خرید</button></a>
                     </div>
                 </div>
                 <div class="prdctIntro">
