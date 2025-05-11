@@ -13,6 +13,6 @@
 </div>
 
 @include('arses.partials.scripts')
-
+@stack('scripts')
 </body>
 </html>

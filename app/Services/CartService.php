@@ -1,10 +1,15 @@
 <?php
 
 namespace App\Services;
+use App\Models\Coupon;
 use App\Models\PriceSetting;
 use App\Models\Product;
 
 class CartService {
+
+    public static function addCouponCode ($code) {
+        session()->put('coupon_code', $code); // Store the coupon code in the session
+    }
     public static function addToCart ($product_id, $quantity = 1) {
         $cart = session()->get('cart', []); // Retrieve the current cart from the session, or an empty array if none exists
 
@@ -89,5 +94,39 @@ class CartService {
     // get shipping price
     public static function getShippingPrice () {
         return PriceSetting::query()->firstOrCreate([])->shipping_price;
+    }
+
+    public static function getPaymentPrice () {
+        // decrese coupon if valid
+        $total = self::getTotalPrice() + self::getShippingPrice();
+        if (session()->has('coupon_code')) {
+            $code = session()->get('coupon_code');
+            $coupon = Coupon::where('code', $code)->first();
+            if ($coupon && $coupon->expire_at && $coupon->expire_at > now()) {
+                $discount = $coupon->discount_percent;
+                $discountAmount = ($total * $discount) / 100;
+                $total -= $discountAmount;
+            }
+        }
+        // check if total after discount is less than 1000
+        if ($total < 1000) {
+            $total = 1000;
+        }
+        return $total;
+    }
+
+    // get discount amount
+    public static function getDiscountAmount () {
+        $total = self::getTotalPrice() + self::getShippingPrice();
+        if (session()->has('coupon_code')) {
+            $code = session()->get('coupon_code');
+            $coupon = Coupon::where('code', $code)->first();
+            if ($coupon && $coupon->expire_at && $coupon->expire_at > now()) {
+                $discount = $coupon->discount_percent;
+                $discountAmount = ($total * $discount) / 100;
+                return $discountAmount;
+            }
+        }
+        return 0;
     }
 }

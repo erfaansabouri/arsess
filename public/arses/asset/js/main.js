@@ -284,3 +284,27 @@ $(document).ready(function () {
     });
   }
 });
+
+/********************discountCod*********************/
+$(window).on("resize", function () {
+    $(".discountBx").slideUp();
+});
+
+if ($(".discountCod").length) {
+    $(".discountCod").each(function () {
+        var thisBtn = $(this);
+        thisBtn.click(function (ev) {
+            ev.preventDefault();
+            $(".discountBx").slideUp();
+            thisBtn.next(".discountBx").slideDown(300);
+        });
+    });
+}
+
+if ($(".opnDiscntBx").length) {
+    $(".opnDiscntBx").click(function (ev) {
+        ev.preventDefault();
+        $(".discntBx").slideDown(300);
+        $(".hasCodeTxt").fadeOut();
+    });
+}

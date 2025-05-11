@@ -107,26 +107,39 @@
                                         <strong>{{ number_format(CartService::getShippingPrice()) }} تومان</strong>
                                     </li>
                                     <li>
+                                        <strong>تخفیف</strong>
+                                        <strong id="discount-amount">{{ number_format(CartService::getDiscountAmount()) }} تومان</strong>
+                                    </li>
+                                    <li>
                                         <strong>جمع کل</strong>
-                                        <strong>{{ number_format(CartService::getTotalPrice() + CartService::getShippingPrice()) }} تومان</strong>
+                                        <strong id="payment-price">{{ number_format(CartService::getTotalPrice() + CartService::getShippingPrice()) }} تومان</strong>
                                     </li>
                                 </ul>
                                 <div class="leftBoxCvr position-absolute"></div>
                             </div>
                             <div class="leftBox paymentBx">
-                                <p>اگر کوپن تخفیف دارید <a href="#">اینجا کلیک</a> کنید.</p>
+                                <p class="hasCodeTxt" style="display: block;">
+                                    اگر کوپن تخفیف دارید
+                                    <a href="#" class="opnDiscntBx">اینجا کلیک</a> کنید.
+                                </p>
+                                <div class="discntBx" style="display: none;" >
+                                    <div class="discountDiv transitionCls">
+                                        <input type="text" name="code" class="form-control" placeholder="کد تخفیف">
+                                        <button id="check-coupon" class="btn transitionCls">
+                                            <span class="icon-Next"></span>
+                                        </button>
+                                    </div>
+                                    <p class="text-danger" id="coupon-error"></p>
+                                    <p class="text-success" id="coupon-success"></p>
+                                </div>
+
                                 <div class="text">
                                     اطلاعات شخصی شما جهت استفاده در فرایند سفارش استفاده
                                     می‌شود. و برای موارد دیگر صفحه
                                     <a href="#">قوانین استفاده </a> را بخوانید
                                 </div>
                                 <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="payCheck"
-                                    />
+                                    <input class="form-check-input" type="checkbox" value="" id="payCheck">
                                     <label class="form-check-label" for="payCheck">
                                         شرایط و مقررات این سایت را خوانده‌ام و قبول دارم.
                                     </label>
@@ -142,6 +155,45 @@
 @endsection
 @push('upper-content')
     @include('arses.partials.top-moving-logo')
+@endpush
+@push('scripts')
+    {{-- do ajax call for discount --}}
+    <script>
+        $(document).ready(function () {
+            $('#check-coupon').on('click', function (e) {
+                e.preventDefault();
+                let code = $('input[name=code]').val();
+                $.ajax({
+                    url: "{{ route('checkout.check-coupon') }}",
+                    type: "POST",
+                    data: {
+                        code: code,
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function (response) {
+                        if (response.status === 'success') {
+                            $('#coupon-success').text('کد تخفیف با موفقیت اعمال شد');
+                            $('#coupon-error').text('');
+                            // number format and concat toman
+                            let discountAmount = new Intl.NumberFormat('fa-IR').format(response.discount);
+                            let totalPrice = new Intl.NumberFormat('fa-IR').format(response.total);
+                            $('#discount-amount').text(discountAmount + ' تومان');
+                            $('#payment-price').text(totalPrice + ' تومان');
+                        } else if (response.status === 'error') {
+                            $('#coupon-error').text('کد تخفیف نامعتبر است');
+                            $('#coupon-success').text('');
+                        } else {
+                            $('#coupon-error').text('خطا در پردازش درخواست');
+                            $('#coupon-success').text('');
+                        }
+                    },
+                    error: function (xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
 @endpush
 
 

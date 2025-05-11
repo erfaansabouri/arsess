@@ -1189,6 +1189,7 @@ body {
   color: #000;
   text-align: right;
   font-size: 16px;
+    cursor: pointer;
 }
 .cartSec .cartLeft .discountCod {
   margin: 80px auto 25px auto;
@@ -2616,4 +2617,85 @@ footer .footerLeft .copyright a:hover {
     max-height: 450px;
     height: 70%;
   }
+}
+
+.discountBx,
+.discntBx {
+    display: none;
+    width: 100%;
+}
+.discountBx .discountDiv,
+.discntBx .discountDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid #581214;
+    width: 100%;
+}
+.discountBx input,
+.discntBx input {
+    border: none;
+    color: #222020;
+    text-align: right;
+    font-size: 16px;
+    background: transparent;
+}
+.discountBx input:focus,
+.discntBx input:focus {
+    background: transparent;
+}
+.discountBx button {
+    font-size: 15px;
+    color: #222020;
+    padding-left: 5px;
+}
+.discountBx button:hover {
+    color: #581214;
+}
+.discountBx .discountDiv:has(input:focus),
+.discntBx .discountDiv:has(input:focus) {
+    border-bottom: 6px solid #581214;
+}
+
+.cartRight .discountBx {
+    position: absolute;
+    margin: 25px auto;
+    width: 100%;
+    max-width: 357px;
+    display: none;
+    z-index: 2;
+}
+.discntBx {
+    margin: 25px auto;
+    width: 100%;
+    display: none;
+    z-index: 2;
+}
+.cartRight .discountBx .discountDiv {
+    border-bottom: 2px solid #d9d9d9;
+}
+.cartRight .discountBx .discountDiv:has(input:focus) {
+    border-bottom: 6px solid #d9d9d9;
+}
+.cartRight .discountBx input,
+.cartRight .discountBx button {
+    color: #d9d9d9;
+}
+.cartRight .discountBx button:hover {
+    color: #fff;
+}
+
+.chkoutSec .paymentBx .discntBx button {
+    font-size: 15px;
+    color: #222020;
+    padding-left: 5px;
+
+    width: 30px;
+    height: 100%;
+    border: none;
+    background: transparent;
+}
+.chkoutSec .paymentBx .discntBx button:hover {
+    color: #581214;
+    background: transparent;
 }
