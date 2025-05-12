@@ -129,4 +129,11 @@ class CartService {
         }
         return 0;
     }
+
+    public static function getCouponCode () {
+        if (session()->has('coupon_code')) {
+            return session()->get('coupon_code');
+        }
+        return null;
+    }
 }

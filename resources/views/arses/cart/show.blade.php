@@ -28,7 +28,6 @@
                                 </a>
                             </div>
                             <div class="cartSvg"></div>
-                            <button class="btn discountCod">کوپن تخفیف دارید؟</button>
                         </div>
                         <div class="cartLeft">
                             <div class="table-responsive">
@@ -81,7 +80,6 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <button class="btn discountCod">کوپن تخفیف دارید؟</button>
                         </div>
                     </div>
                 </div>

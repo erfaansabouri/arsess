@@ -44,9 +44,8 @@ class CartController extends Controller {
         }
 
         CartService::addToCart($product_id);
-
+        toastr()->success('محصول با موفقیت به سبد خرید اضافه شد')->setTitle('تبریک');
         return redirect()
-            ->back()
-            ->with('success' , 'محصول با موفقیت به سبد خرید اضافه شد');
+            ->back();
     }
 }

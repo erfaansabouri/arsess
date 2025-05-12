@@ -55,4 +55,6 @@ Route::middleware([])->prefix('cart')->group(function (){
 Route::middleware(['auth:web'])->prefix('checkout')->group(function (){
     Route::get('/show', [ CheckoutController::class, 'show' ])->name('checkout.show');
     Route::any('/check-coupon', [ CheckoutController::class, 'checkCoupon' ])->name('checkout.check-coupon');
+    Route::post('/do-checkout', [ CheckoutController::class, 'doCheckout' ])->name('checkout.do-checkout');
+    Route::any('/verify', [ CheckoutController::class, 'verify' ])->name('checkout.verify')->withoutMiddleware(['auth:web']);
 });

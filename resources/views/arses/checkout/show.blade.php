@@ -10,7 +10,8 @@
                     </div>
                     <div class="chkoutRow">
                         <div class="chkoutRght position-relative">
-                            <form class="row gx-3 gy-5">
+                            <form id="main-form" method="POST" action="{{ route('checkout.do-checkout') }}" class="row gx-3 gy-5">
+                                @csrf
                                 <div class="col-xl-6 col-md-6 col-lg-12">
                                     <label for="inpt01" class="form-label">نام</label>
                                     <input
@@ -18,6 +19,9 @@
                                         class="form-control"
                                         id="inpt01"
                                         placeholder="نام"
+                                        name="first_name"
+                                        required
+                                        value="{{ old('first_name') }}"
                                     />
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-lg-12">
@@ -29,6 +33,9 @@
                                         class="form-control"
                                         id="inpt02"
                                         placeholder="نام خانوادگی"
+                                        name="last_name"
+                                        required
+                                        value="{{ old('last_name') }}"
                                     />
                                 </div>
                                 <div class="col-12">
@@ -38,6 +45,9 @@
                                         class="form-control"
                                         id="inpt04"
                                         placeholder="آدرس"
+                                        name="address"
+                                        required
+                                        value="{{ old('address') }}"
                                     />
                                 </div>
                                 <div class="col-12">
@@ -47,6 +57,9 @@
                                         class="form-control"
                                         id="inpt05"
                                         placeholder="کد پستی"
+                                        name="postal_code"
+                                        required
+                                        value="{{ old('postal_code') }}"
                                     />
                                 </div>
                                 <div class="col-12">
@@ -58,6 +71,10 @@
                                         class="form-control"
                                         id="inpt06"
                                         placeholder="شماره موبایل"
+                                        name="phone"
+                                        required
+                                        value="{{ old('phone') }}"
+
                                     />
                                 </div>
                                 <div class="col-12">
@@ -67,16 +84,18 @@
                                         class="form-control"
                                         id="inpt08"
                                         placeholder="ایمیل"
+                                        name="email"
+                                        value="{{ old('email') }}"
                                     />
                                 </div>
                                 <div class="col-12">
                                     <textarea
-                                        name=""
+                                        name="description"
                                         id="inpt09"
                                         rows="3"
                                         class="form-control"
                                         placeholder="می‌خواهید توضیحاتی را به سفارش ضمیمه کنید؟"
-                                    ></textarea>
+                                    >{{ old('description') }}</textarea>
                                 </div>
                             </form>
                         </div>
@@ -112,7 +131,7 @@
                                     </li>
                                     <li>
                                         <strong>جمع کل</strong>
-                                        <strong id="payment-price">{{ number_format(CartService::getTotalPrice() + CartService::getShippingPrice()) }} تومان</strong>
+                                        <strong id="payment-price">{{ number_format(CartService::getPaymentPrice()) }} تومان</strong>
                                     </li>
                                 </ul>
                                 <div class="leftBoxCvr position-absolute"></div>
@@ -144,7 +163,7 @@
                                         شرایط و مقررات این سایت را خوانده‌ام و قبول دارم.
                                     </label>
                                 </div>
-                                <button class="btn transitionCls">پرداخت</button>
+                                <button type="submit" id="payment-button" class="btn transitionCls">پرداخت</button>
                             </div>
                         </div>
                     </div>
@@ -191,6 +210,25 @@
                         console.log(xhr.responseText);
                     }
                 });
+            });
+
+            // if payCheck is off then disable payment button
+            $('#payCheck').on('change', function () {
+                if ($(this).is(':checked')) {
+                    $('#payment-button').removeAttr('disabled');
+                } else {
+                    $('#payment-button').attr('disabled', 'disabled');
+                }
+            });
+
+            // when payment button clicked then submit the form
+            $('#payment-button').on('click', function (e) {
+                e.preventDefault();
+                if ($('#payCheck').is(':checked')) {
+                    $('#main-form').submit();
+                } else {
+                    alert('لطفا شرایط و مقررات را بپذیرید');
+                }
             });
         });
     </script>
