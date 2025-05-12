@@ -257,18 +257,22 @@ $(document).ready(function () {
 
   /********************edit-account*********************/
   if ($(".editBtn").length) {
-    $(".editBtn").click(function () {
-      $(".editBtn").text("ذخیره");
-      $(".hideTable").fadeIn(300);
-      $(".accountInfo").addClass("editable").removeClass("readonlyInfo");
-      $(".accountInfo input").attr("readonly", false);
-    });
+
 
     $(".cancelBtn").click(function () {
+        $('#submit-btn').hide();
+        $('#edit-btn').show();
+        // hide edit-btn
       $(".editBtn").text("ویرایش");
       $(".hideTable").fadeOut(300);
       $(".accountInfo").removeClass("editable").addClass("readonlyInfo");
       $(".accountInfo input").attr("readonly", true);
+
+        // find input with id #profile-form and change value to not-ready
+            var inputField = $("#profile-form");
+            if (inputField.length) {
+                inputField.val("not_ready");
+            }
     });
   }
 

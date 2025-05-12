@@ -7,6 +7,7 @@ use App\Http\Controllers\Arses\CartController;
 use App\Http\Controllers\Arses\CheckoutController;
 use App\Http\Controllers\Arses\ContactUsController;
 use App\Http\Controllers\Arses\HomeController;
+use App\Http\Controllers\Arses\MyProfileController;
 use App\Http\Controllers\Arses\ProductCategoryController;
 use App\Http\Controllers\Arses\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -57,4 +58,10 @@ Route::middleware(['auth:web'])->prefix('checkout')->group(function (){
     Route::any('/check-coupon', [ CheckoutController::class, 'checkCoupon' ])->name('checkout.check-coupon');
     Route::post('/do-checkout', [ CheckoutController::class, 'doCheckout' ])->name('checkout.do-checkout');
     Route::any('/verify', [ CheckoutController::class, 'verify' ])->name('checkout.verify')->withoutMiddleware(['auth:web']);
+});
+
+Route::middleware(['auth:web'])->prefix('my-profile')->group(function (){
+    Route::get('/', [ MyProfileController::class, 'show' ])->name('my-profile.show');
+    Route::any('/update', [ MyProfileController::class, 'update' ])->name('my-profile.update');
+    Route::any('/logout', [ MyProfileController::class, 'logout' ])->name('my-profile.logout');
 });
