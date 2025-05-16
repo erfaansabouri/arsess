@@ -10,4 +10,9 @@ class Invoice extends Model
     public function invoiceItems (): HasMany {
         return $this->hasMany(InvoiceItem::class , 'invoice_id');
     }
+
+    // is paid attribute
+    public function getIsPaidAttribute (): bool {
+        return $this->paid_at !== null;
+    }
 }

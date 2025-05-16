@@ -9,6 +9,8 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\BadgeColumn;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -47,19 +49,10 @@ class InvoiceResource extends Resource
                                    Tables\Columns\TextColumn::make('tx_id')->label('کد تراکنش'),
                                    Tables\Columns\TextColumn::make('payment_price')->label('مبلغ پرداختی'),
                                    Tables\Columns\TextColumn::make('phone')->label('شماره تماس'),
-                                   BadgeColumn::make('status')
-                                              ->label('وضعیت پرداخت')
-                                              ->getStateUsing(function ($record) {
-                                                  return $record->paid_at ? 'paid' : 'unpaid';
-                                              })
-                                              ->colors([
-                                                           'success' => 'paid',
-                                                           'danger' => 'unpaid',
-                                                       ])
-                                              ->labels([
-                                                           'paid' => 'پرداخت شده',
-                                                           'unpaid' => 'پرداخت نشده',
-                                                       ]),
+                                   IconColumn::make('is_paid')
+                                             ->boolean()
+                                             ->trueIcon('heroicon-o-check-badge')
+                                             ->falseIcon('heroicon-o-x-mark')
                                    ])
                      ->actions([
                                    Tables\Actions\ViewAction::make()->label('مشاهده'),
