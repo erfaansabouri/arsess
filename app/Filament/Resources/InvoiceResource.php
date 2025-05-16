@@ -91,7 +91,7 @@ class InvoiceResource extends Resource {
                                    Action::make('openCustom')
                                              ->label('Custom View')
                                              ->icon('heroicon-o-external-link')
-                                             ->url(fn ($record) => Pages\CustomViewInvoice::getUrl())
+                                             ->url(fn ($record) => Pages\CustomViewInvoice::getUrl($record->id))
                                ])
                      ->bulkActions([])->defaultSort('id' , 'desc');
     }
