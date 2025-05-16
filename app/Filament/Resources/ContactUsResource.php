@@ -24,7 +24,7 @@ class ContactUsResource extends Resource {
                                                            ->label('شماره یک') ,
                                  Forms\Components\TextInput::make('phone_2')
                                                            ->maxLength(255)
-                                                           ->label('شماره ذو') ,
+                                                           ->label('شماره دو') ,
                                  Forms\Components\Textarea::make('address')
                                                           ->columnSpanFull()
                                                           ->label('آدرس') ,
