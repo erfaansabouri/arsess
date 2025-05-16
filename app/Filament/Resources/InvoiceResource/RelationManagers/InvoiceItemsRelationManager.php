@@ -11,6 +11,7 @@ class InvoiceItemsRelationManager extends RelationManager {
     protected static ?string $recordTitleAttribute = 'id';
     protected static ?string $label                = 'محصولات خریداری شده';
     protected static ?string $pluralLabel          = 'محصولات خریداری شده';
+    protected static ?string $title = 'محصولات خریداری شده';
 
     public static function canViewForRecord ( $ownerRecord , string $pageClass ): bool {
         return true;
