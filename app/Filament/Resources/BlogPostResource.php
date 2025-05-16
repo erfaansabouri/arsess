@@ -32,7 +32,6 @@ class BlogPostResource extends Resource {
                                  TextInput::make('slug')
                                           ->label('اسلاگ')
                                           ->required()
-                                          ->rules([ 'regex:/^[a-z0-9]+(?:-[a-z0-9]+)*$/' ])
                                           ->unique(ignoreRecord: true)
                                           ->helperText('فقط حروف کوچک، اعداد و خط تیره مجاز است') ,
                                  SpatieMediaLibraryFileUpload::make('image')
