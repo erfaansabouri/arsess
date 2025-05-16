@@ -6,6 +6,7 @@ use App\Filament\Resources\InvoiceResource;
 use Filament\Actions;
 use Filament\Infolists\Infolist;
 use Filament\Resources\Pages\ViewRecord;
+use Filament\Infolists;
 
 class ViewInvoicePro extends ViewRecord
 {
@@ -15,7 +16,7 @@ class ViewInvoicePro extends ViewRecord
     {
         return $infolist
             ->schema([
-                         // ...
+                         Infolists\Components\TextEntry::make('id'),
                      ]);
     }
 }
