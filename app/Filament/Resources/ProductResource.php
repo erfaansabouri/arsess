@@ -53,9 +53,9 @@ class ProductResource extends Resource {
 
     public static function table ( Table $table ): Table {
         return $table->columns([
-                                   Tables\Columns\TextColumn::make('brand_id')
-                                                            ->numeric()
-                                                            ->sortable()
+                                   // brand
+                                   Tables\Columns\TextColumn::make('brand.title')
+                                                            ->searchable()
                                                             ->label('برند') ,
                                    Tables\Columns\TextColumn::make('title')
                                                             ->searchable()
