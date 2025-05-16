@@ -42,7 +42,7 @@ class ProductResource extends Resource {
                                                            ->maxLength(255)
                                                            ->numeric()
                                                            ->label('قیمت') ,
-                                 Forms\Components\Textarea::make('description')
+                                 Forms\Components\RichEditor::make('description')
                                                           ->columnSpanFull()
                                                           ->label('توضیحات') ,
                                  Forms\Components\Toggle::make('is_selected')
