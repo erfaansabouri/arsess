@@ -88,7 +88,7 @@ class InvoiceResource extends Resource {
                                              ->falseIcon('heroicon-o-x-mark') ,
                                ])
                      ->actions([
-
+                                   Tables\Actions\ViewAction::make(),
 
                                ])
                      ->bulkActions([])->defaultSort('id' , 'desc');
@@ -103,7 +103,7 @@ class InvoiceResource extends Resource {
     public static function getPages (): array {
         return [
             'index' => Pages\ListInvoices::route('/') ,
-            'create' => Pages\CreateInvoice::route('/create') ,
+            'view' => Pages\ViewInvoice::route('/{record}') ,
         ];
     }
 
