@@ -105,7 +105,6 @@ class InvoiceResource extends Resource {
         return [
             'index' => Pages\ListInvoices::route('/') ,
             'create' => Pages\CreateInvoice::route('/create') ,
-            'edit' => Pages\CustomViewInvoice::route('/{record}/edit') ,
             'view-invoice'  => Pages\CustomViewInvoice::route('/{record}/view-invoice') ,
         ];
     }
