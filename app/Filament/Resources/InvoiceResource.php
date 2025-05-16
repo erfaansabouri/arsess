@@ -88,9 +88,8 @@ class InvoiceResource extends Resource {
                                              ->falseIcon('heroicon-o-x-mark') ,
                                ])
                      ->actions([
-                                   Action::make('openCustom')
-                                             ->label('Custom View')
-                                             ->url(fn ($record) => Pages\CustomViewInvoice::getUrl(['record' => $record]))
+
+
                                ])
                      ->bulkActions([])->defaultSort('id' , 'desc');
     }
@@ -105,7 +104,6 @@ class InvoiceResource extends Resource {
         return [
             'index' => Pages\ListInvoices::route('/') ,
             'create' => Pages\CreateInvoice::route('/create') ,
-            'view-invoice'  => Pages\CustomViewInvoice::route('/{record}/view-invoice') ,
         ];
     }
 
