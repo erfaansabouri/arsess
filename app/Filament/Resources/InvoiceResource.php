@@ -7,6 +7,7 @@ use App\Filament\Resources\InvoiceResource\RelationManagers;
 use App\Filament\Resources\InvoiceResource\RelationManagers\InvoiceItemsRelationManager;
 use App\Models\Invoice;
 use Filament\Forms;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -17,7 +18,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class InvoiceResource extends Resource {
-    protected static ?string $model = Invoice::class;
+    protected static ?string $model          = Invoice::class;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form ( Form $form ): Form {
@@ -61,12 +62,10 @@ class InvoiceResource extends Resource {
                                  Forms\Components\Textarea::make('description')
                                                           ->label('توضیحات')
                                                           ->disabled() ,
-                                 Forms\Components\DateTimePicker::make('paid_at')
-                                                                ->label('زمان پرداخت')
-                                                                ->disabled() ,
-                                 Forms\Components\DateTimePicker::make('failed_at')
-                                                                ->label('زمان ناموفق')
-                                                                ->disabled() ,
+                                 DateTimePicker::make('paid_at')
+                                               ->label('تاریخ پرداخت')
+                                               ->jalali(weekdaysShort: true)
+                                               ->disabled() ,
                              ]);
     }
 
@@ -84,7 +83,7 @@ class InvoiceResource extends Resource {
                                              ->boolean()
                                              ->label('وضعیت پرداخت')
                                              ->trueIcon('heroicon-o-check-badge')
-                                             ->falseIcon('heroicon-o-x-mark'),
+                                             ->falseIcon('heroicon-o-x-mark') ,
                                ])
                      ->actions([
                                    Tables\Actions\ViewAction::make()
