@@ -6,6 +6,7 @@ use App\Filament\Resources\BlogPostCategoryResource\Pages;
 use App\Filament\Resources\BlogPostCategoryResource\RelationManagers;
 use App\Models\BlogPostCategory;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -23,9 +24,10 @@ class BlogPostCategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->maxLength(255)
-                    ->default(null),
+                         TextInput::make('title')
+                                  ->label('عنوان')
+                                  ->required()
+                                  ->maxLength(255) ,
             ]);
     }
 
@@ -34,15 +36,9 @@ class BlogPostCategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('عنوان')
+                    ->searchable()
                     ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
