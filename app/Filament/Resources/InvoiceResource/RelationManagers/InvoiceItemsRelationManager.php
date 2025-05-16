@@ -41,14 +41,11 @@ class InvoiceItemsRelationManager extends RelationManager {
                                                             ->label('تعداد') ,
                                    Tables\Columns\TextColumn::make('price')
                                                             ->label('قیمت')
-                                                            ->numeric(),
+                                                            ->numeric() ,
                                    // total price
-                                      Tables\Columns\TextColumn::make('total_price')
-                                                                ->label('قیمت کل')
-                                                                ->numeric()
-                                                                ->formatStateUsing(function ($state, $record) {
-                                                                 return $record->quantity * $record->price;
-                                                                }),
+                                   Tables\Columns\TextColumn::make('total_price')
+                                                            ->label('قیمت کل')
+                                                            ->numeric();
                                ])
                      ->actions([]) // بدون اکشن
                      ->bulkActions([]); // بدون bulk
