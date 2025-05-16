@@ -47,8 +47,20 @@ class InvoiceResource extends Resource
                                    Tables\Columns\TextColumn::make('tx_id')->label('کد تراکنش'),
                                    Tables\Columns\TextColumn::make('payment_price')->label('مبلغ پرداختی'),
                                    Tables\Columns\TextColumn::make('phone')->label('شماره تماس'),
-                                   Tables\Columns\TextColumn::make('paid_at')->label('زمان پرداخت')->dateTime(),
-                               ])
+                                   BadgeColumn::make('status')
+                                              ->label('وضعیت پرداخت')
+                                              ->getStateUsing(function ($record) {
+                                                  return $record->paid_at ? 'paid' : 'unpaid';
+                                              })
+                                              ->colors([
+                                                           'success' => 'paid',
+                                                           'danger' => 'unpaid',
+                                                       ])
+                                              ->labels([
+                                                           'paid' => 'پرداخت شده',
+                                                           'unpaid' => 'پرداخت نشده',
+                                                       ]),
+                                   ])
                      ->actions([
                                    Tables\Actions\ViewAction::make()->label('مشاهده'),
                                ])
