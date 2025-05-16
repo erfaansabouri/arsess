@@ -12,6 +12,7 @@ use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\LinkAction;
 use Filament\Tables\Columns\BadgeColumn;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Table;
@@ -87,7 +88,10 @@ class InvoiceResource extends Resource {
                                              ->falseIcon('heroicon-o-x-mark') ,
                                ])
                      ->actions([
-
+                                   Action::make('openCustom')
+                                             ->label('Custom View')
+                                             ->icon('heroicon-o-external-link')
+                                             ->url(fn ($record) => Pages\CustomViewInvoice::getUrl())
                                ])
                      ->bulkActions([])->defaultSort('id' , 'desc');
     }
