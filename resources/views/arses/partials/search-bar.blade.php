@@ -39,12 +39,12 @@
                                     <ul class="hdrMnuUl">
                                         <li class="hdrMnuLi position-relative">
                                             <div class="hdrMnuLiBx">
-                                                <a href="#" class="hdrSubLnk">سرسرای</a>
+                                                <a href="{{ route('home') }}" class="hdrSubLnk">سرسرای</a>
                                             </div>
                                         </li>
                                         <li class="hdrMnuLi havSub position-relative">
                                             <div class="hdrMnuLiBx">
-                                                <a href="#" class="hdrSubLnk">محصولات</a>
+                                                <a href="{{ route('product.index') }}" class="hdrSubLnk">محصولات</a>
                                                 <span class="icon-Next openSub transitionCls"></span>
                                             </div>
 
@@ -66,27 +66,27 @@
                                         </li>
                                         <li class="hdrMnuLi position-relative">
                                             <div class="hdrMnuLiBx">
-                                                <a href="#" class="hdrSubLnk">درباره ما</a>
+                                                <a href="{{ route('about-us.show') }}" class="hdrSubLnk">درباره ما</a>
                                             </div>
                                         </li>
                                         <li class="hdrMnuLi position-relative">
                                             <div class="hdrMnuLiBx">
-                                                <a href="#" class="hdrSubLnk">تماس با ما</a>
+                                                <a href="{{ route('contact-us.show') }}" class="hdrSubLnk">تماس با ما</a>
                                             </div>
                                         </li>
                                         <li class="hdrMnuLi position-relative">
                                             <div class="hdrMnuLiBx">
-                                                <a href="#" class="hdrSubLnk">نامه‌سرای</a>
+                                                <a href="{{ route('blog-posts.index') }}" class="hdrSubLnk">نامه‌سرای</a>
                                             </div>
                                         </li>
                                         <li class="hdrMnuLi position-relative">
                                             <div class="hdrMnuLiBx">
-                                                <a href="#" class="hdrSubLnk">حساب کاربری</a>
+                                                <a href="{{ route('my-profile.show') }}" class="hdrSubLnk">حساب کاربری</a>
                                             </div>
                                         </li>
                                     </ul>
-                                    <a href="#" class="minCrtLink openSide topSrchLnk transitionCls">
-                                        <i class="numberTag position-absolute">1</i>
+                                    <a href="{{ route('cart.show') }}" class="minCrtLink openSide topSrchLnk transitionCls">
+                                        <i class="numberTag position-absolute">{{ CartService::getTotalQuantity() }}</i>
                                         <span class="icon-Cart"></span>
                                     </a>
                                 </div>

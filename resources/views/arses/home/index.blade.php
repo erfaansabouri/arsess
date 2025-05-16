@@ -48,7 +48,7 @@
                     <div class="swiper-wrapper">
                         @foreach($newest_products as $np)
                             <div class="swiper-slide">
-                                <a href="#" class="newestCrd position-relative transitionCls">
+                                <a href="{{ route('product.show', ['slug' => $np->slug]) }}" class="newestCrd position-relative transitionCls">
                                     <div class="cardImg transitionCls">
                                         <img src="{{ $np->getFirstMediaUrl('image') }}" class="" alt="img" />
                                     </div>
