@@ -45,7 +45,7 @@ class InvoiceItemsRelationManager extends RelationManager {
                                    // total price
                                    Tables\Columns\TextColumn::make('total_price')
                                                             ->label('قیمت کل')
-                                                            ->numeric();
+                                                            ->numeric(),
                                ])
                      ->actions([]) // بدون اکشن
                      ->bulkActions([]); // بدون bulk
