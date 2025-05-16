@@ -15,17 +15,17 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BannerResource extends Resource {
-    protected static ?string $model = Banner::class;
+    protected static ?string $model          = Banner::class;
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form ( Form $form ): Form {
         return $form->schema([
                                  Forms\Components\TextInput::make('title')
                                                            ->maxLength(255)
-                                                           ->default(null) ,
+                                                           ->label('عنوان') ,
                                  Forms\Components\TextInput::make('url')
                                                            ->maxLength(255)
-                                                           ->default(null) ,
+                                                           ->label('لینک') ,
                                  SpatieMediaLibraryFileUpload::make('image')
                                                              ->collection('image')
                                                              ->label('تصویر')
@@ -42,9 +42,11 @@ class BannerResource extends Resource {
     public static function table ( Table $table ): Table {
         return $table->columns([
                                    Tables\Columns\TextColumn::make('title')
-                                                            ->searchable() ,
+                                                            ->searchable()
+                                                            ->label('عنوان') ,
                                    Tables\Columns\TextColumn::make('url')
-                                                            ->searchable() ,
+                                                            ->searchable()
+                                                            ->label('لینک'),
                                ])
                      ->filters([//
                                ])
