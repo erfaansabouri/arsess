@@ -87,7 +87,7 @@ class InvoiceResource extends Resource {
                                ])
                      ->actions([
                                    Tables\Actions\ViewAction::make()
-                                        ->label('جزئیات');
+                                        ->label('جزئیات'),
                                ])
                      ->bulkActions([])->defaultSort('id' , 'desc');
     }
