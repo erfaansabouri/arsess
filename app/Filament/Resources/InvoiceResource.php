@@ -87,7 +87,7 @@ class InvoiceResource extends Resource {
                                ])
                      ->actions([
                                    Tables\Actions\ViewAction::make()
-                                                            ->label('مشاهده') ,
+                                        ->label('جزئیات');
                                ])
                      ->bulkActions([])->defaultSort('id' , 'desc');
     }
@@ -103,6 +103,7 @@ class InvoiceResource extends Resource {
             'index' => Pages\ListInvoices::route('/') ,
             'create' => Pages\CreateInvoice::route('/create') ,
             'edit' => Pages\EditInvoice::route('/{record}/edit') ,
+            'view'  => Pages\ViewInvoice::route('/{record}'),
         ];
     }
 
