@@ -48,6 +48,10 @@ class ProductResource extends Resource {
                                  Forms\Components\Toggle::make('is_selected')
                                                         ->required()
                                                         ->label('برگزیده') ,
+                                 // image
+                                    Forms\Components\SpatieMediaLibraryFileUpload::make('image')
+                                                                                ->collection('image')
+                                                                                ->label('تصویر') ,
                              ]);
     }
 
