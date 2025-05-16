@@ -88,8 +88,7 @@ class InvoiceResource extends Resource {
                                ])
                      ->actions([
                                    Action::make('view-invoice')
-                                         ->label('مشاهده فاکتور')
-                                       ->url(fn (Post $record): string => route('posts.edit', $record))                                         ->icon('heroicon-o-eye') ,
+                                         ->label('مشاهده فاکتور'),
                                ])
                      ->bulkActions([])->defaultSort('id' , 'desc');
     }
