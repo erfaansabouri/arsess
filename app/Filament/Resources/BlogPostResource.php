@@ -110,7 +110,7 @@ class BlogPostResource extends Resource {
 
     // (اختیاری) گروه‌بندی منابع در منو
     public static function getNavigationGroup (): ?string {
-        return 'مدیریت محتوا';
+        return 'بلاگ';
     }
 
     // آیکون نمایش داده‌شده در منو
