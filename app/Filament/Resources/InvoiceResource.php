@@ -87,8 +87,7 @@ class InvoiceResource extends Resource {
                                              ->falseIcon('heroicon-o-x-mark') ,
                                ])
                      ->actions([
-                                   Action::make('view-invoice')
-                                         ->label('مشاهده فاکتور'),
+
                                ])
                      ->bulkActions([])->defaultSort('id' , 'desc');
     }
