@@ -89,7 +89,7 @@ class InvoiceResource extends Resource {
                                    Tables\Actions\ViewAction::make()
                                                             ->label('مشاهده') ,
                                ])
-                     ->bulkActions([]);
+                     ->bulkActions([])->defaultSort('id' , 'desc');
     }
 
     public static function getRelations (): array {
