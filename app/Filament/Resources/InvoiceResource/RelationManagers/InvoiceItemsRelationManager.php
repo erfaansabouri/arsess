@@ -8,11 +8,11 @@ use Filament\Resources\RelationManagers\RelationManager;
 
 class InvoiceItemsRelationManager extends RelationManager
 {
-    protected static string $relationship = 'items';
+    protected static string $relationship = 'invoiceItems';
 
     protected static ?string $recordTitleAttribute = 'id';
 
-    protected static ?string $label = 'آیتم';
+    protected static ?string $label = 'محصولات خریداری شده';
     protected static ?string $pluralLabel = 'محصولات خریداری شده';
 
     public static function canViewForRecord( $ownerRecord , string $pageClass ): bool
