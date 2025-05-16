@@ -70,4 +70,28 @@ class CouponResource extends Resource {
             'edit' => Pages\EditCoupon::route('/{record}/edit') ,
         ];
     }
+
+    public static function getModelLabel (): string {
+        return 'کد های تخفیف';
+    }
+
+    // نام جمع مدل - مثلاً در لیست پست‌ها
+    public static function getPluralModelLabel (): string {
+        return 'کد تخفیف';
+    }
+
+    // عنوانی که در منوی سمت چپ Filament نمایش داده میشه
+    public static function getNavigationLabel (): string {
+        return 'کد های تخفیف';
+    }
+
+    // (اختیاری) گروه‌بندی منابع در منو
+    public static function getNavigationGroup (): ?string {
+        return 'مالی';
+    }
+
+    // آیکون نمایش داده‌شده در منو
+    public static function getNavigationIcon (): string {
+        return 'heroicon-o-pencil-square';
+    }
 }
