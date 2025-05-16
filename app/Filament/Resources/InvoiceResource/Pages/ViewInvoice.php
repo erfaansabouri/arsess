@@ -17,14 +17,8 @@ class ViewInvoice extends ViewRecord
     {
         return [
             Section::make()
-                ->heading('Invoice Details')
                 ->schema([
-                             InfoList::make()
-                                     ->label('Invoice Information')
-                                     ->columns(2)
-                                     ->items([
-                                                 'IDDD'  => $this->record->id,
-                                             ]),
+
                          ]),
         ];
     }
