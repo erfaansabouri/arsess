@@ -6,6 +6,7 @@ use App\Filament\Resources\BrandResource\Pages;
 use App\Filament\Resources\BrandResource\RelationManagers;
 use App\Models\Brand;
 use Filament\Forms;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -24,6 +25,11 @@ class BrandResource extends Resource {
                                           ->label('عنوان')
                                           ->required()
                                           ->maxLength(255) ,
+                                 SpatieMediaLibraryFileUpload::make('image')
+                                                             ->collection('image')
+                                                             ->label('تصویر')
+                                                             ->required()
+                                                             ->rules([ 'image' ]) ,
                              ]);
     }
 
