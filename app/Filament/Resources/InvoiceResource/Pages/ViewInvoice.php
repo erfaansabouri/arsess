@@ -13,12 +13,6 @@ class ViewInvoice extends ViewRecord
 
     protected static string $pageTitle = 'Invoice Details';
 
-    public function mount($record): void
-    {
-        parent::mount($record);
-        $this->record = $record;
-    }
-
     protected function getFormSchema(): array
     {
         return [
