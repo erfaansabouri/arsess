@@ -7,7 +7,7 @@ use Filament\Infolists\Infolist;
 use Filament\Resources\Pages\ViewRecord;
 use Filament\Forms\Components\Section;
 
-class ViewInvoice extends ViewRecord
+class CustomViewInvoice extends ViewRecord
 {
     protected static string $resource = InvoiceResource::class;
 

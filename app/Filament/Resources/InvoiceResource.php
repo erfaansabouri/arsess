@@ -6,6 +6,7 @@ use App\Filament\Resources\InvoiceResource\Pages;
 use App\Filament\Resources\InvoiceResource\RelationManagers;
 use App\Filament\Resources\InvoiceResource\RelationManagers\InvoiceItemsRelationManager;
 use App\Models\Invoice;
+use Filament\Actions\Action;
 use Filament\Forms;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Form;
@@ -86,8 +87,9 @@ class InvoiceResource extends Resource {
                                              ->falseIcon('heroicon-o-x-mark') ,
                                ])
                      ->actions([
-                                   Tables\Actions\ViewAction::make()
-                                        ->label('جزئیات'),
+                                   Action::make('view-invoice')
+                                         ->label('مشاهده فاکتور')
+                                       ->url(fn (Post $record): string => route('posts.edit', $record))                                         ->icon('heroicon-o-eye') ,
                                ])
                      ->bulkActions([])->defaultSort('id' , 'desc');
     }
@@ -102,8 +104,8 @@ class InvoiceResource extends Resource {
         return [
             'index' => Pages\ListInvoices::route('/') ,
             'create' => Pages\CreateInvoice::route('/create') ,
-            'edit' => Pages\ViewInvoice::route('/{record}/edit') ,
-            'view'  => Pages\ViewInvoice::route('/{record}'),
+            'edit' => Pages\CustomViewInvoice::route('/{record}/edit') ,
+            'view-invoice'  => Pages\CustomViewInvoice::route('/{record}/view-invoice') ,
         ];
     }
 
