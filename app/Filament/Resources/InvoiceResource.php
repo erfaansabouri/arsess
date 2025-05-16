@@ -88,10 +88,11 @@ class InvoiceResource extends Resource {
                                              ->falseIcon('heroicon-o-x-mark') ,
                                ])
                      ->actions([
-                                   Tables\Actions\ViewAction::make(),
-
+                                   Tables\Actions\ViewAction::make()
+                                                            ->url(fn ( $record ) => Pages\ViewInvoicePro::getUrl([ 'record' => $record ])),
                                ])
-                     ->bulkActions([])->defaultSort('id' , 'desc');
+                     ->bulkActions([])
+                     ->defaultSort('id' , 'desc');
     }
 
     public static function getRelations (): array {
@@ -104,6 +105,7 @@ class InvoiceResource extends Resource {
         return [
             'index' => Pages\ListInvoices::route('/') ,
             'view' => Pages\ViewInvoice::route('/{record}') ,
+            'view-pro' => Pages\ViewInvoicePro::route('/{record}/view-pro') ,
         ];
     }
 
