@@ -6,6 +6,7 @@ use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -73,6 +74,10 @@ class ProductResource extends Resource {
                                    Tables\Columns\IconColumn::make('is_selected')
                                                             ->boolean()
                                                             ->label('برگزیده') ,
+                                   // categories
+                                   Select::make('categories')
+                                         ->multiple()
+                                         ->relationship(titleAttribute: 'title')
                                ])
                      ->filters([])
                      ->actions([
