@@ -94,6 +94,7 @@ class ProductResource extends Resource {
     public static function getRelations (): array {
         return [
             RelationManagers\ProductAttributesRelationManager::class ,
+            RelationManagers\ProductPurchaseConditionsRelationManager::class ,
         ];
     }
 
