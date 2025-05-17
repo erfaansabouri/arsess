@@ -43,15 +43,15 @@ class ProductResource extends Resource {
                                                            ->numeric()
                                                            ->label('قیمت') ,
                                  Forms\Components\RichEditor::make('description')
-                                                          ->columnSpanFull()
-                                                          ->label('توضیحات') ,
+                                                            ->columnSpanFull()
+                                                            ->label('توضیحات') ,
                                  Forms\Components\Toggle::make('is_selected')
                                                         ->required()
                                                         ->label('برگزیده') ,
                                  // image
-                                    Forms\Components\SpatieMediaLibraryFileUpload::make('image')
-                                                                                ->collection('image')
-                                                                                ->label('تصویر') ,
+                                 Forms\Components\SpatieMediaLibraryFileUpload::make('image')
+                                                                              ->collection('image')
+                                                                              ->label('تصویر') ,
                              ]);
     }
 
@@ -74,8 +74,7 @@ class ProductResource extends Resource {
                                                             ->boolean()
                                                             ->label('برگزیده') ,
                                ])
-                     ->filters([//
-                               ])
+                     ->filters([])
                      ->actions([
                                    Tables\Actions\EditAction::make() ,
                                ])
@@ -87,7 +86,8 @@ class ProductResource extends Resource {
     }
 
     public static function getRelations (): array {
-        return [//
+        return [
+            RelationManagers\ProductAttributesRelationManager::class ,
         ];
     }
 
