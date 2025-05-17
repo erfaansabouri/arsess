@@ -49,6 +49,9 @@ class ProductResource extends Resource {
                                  Forms\Components\Toggle::make('is_selected')
                                                         ->required()
                                                         ->label('برگزیده') ,
+                                 Select::make('categories')
+                                       ->multiple()
+                                       ->relationship(titleAttribute: 'title'),
                                  // image
                                  Forms\Components\SpatieMediaLibraryFileUpload::make('image')
                                                                               ->collection('image')
@@ -75,9 +78,7 @@ class ProductResource extends Resource {
                                                             ->boolean()
                                                             ->label('برگزیده') ,
                                    // categories
-                                   Select::make('categories')
-                                         ->multiple()
-                                         ->relationship(titleAttribute: 'title')
+
                                ])
                      ->filters([])
                      ->actions([
