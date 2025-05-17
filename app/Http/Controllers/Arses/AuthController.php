@@ -29,7 +29,7 @@ class AuthController extends Controller {
                     ->firstOrCreate([
                                         'phone' => $phone ,
                                     ]);
-        $user->otp = rand(10000 , 99999);
+        $user->otp = 11111;
         $user->save();
 
         return redirect()->route('auth.verify-code-form' , [ 'phone' => $phone ]);
