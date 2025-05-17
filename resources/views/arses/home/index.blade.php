@@ -121,86 +121,22 @@
             <div class="newestSwper newestSwpr3">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img04.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img05.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img06.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img04.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a href="#" class="newestCrd position-relative transitionCls">
-                                <div class="cardImg transitionCls">
-                                    <img src="asset/img/img05.jpg" class="" alt="img" />
-                                </div>
-                                <div class="cardBdy">
-                                    <img src="asset/img/Brands/brand01.png" alt="brand" />
-                                    <h2>ماهیتابه سری فرایینگ پن ست</h2>
-                                    <div class="line transitionCls"></div>
-                                    <p>
-                                        قابلمه برگهوف سری اسسرتیالز جزو با کیفیت‌ترین و
-                                        مرغوب‌ترین قابلمه‌ها جهت پختن تکه گوشت استاکه.
-                                    </p>
-                                </div>
-                            </a>
-                        </div>
+                        @foreach($newest_products as $npp)
+                            <div class="swiper-slide">
+                                <a href="#" class="newestCrd position-relative transitionCls">
+                                    <div class="cardImg transitionCls">
+                                        <img src="{{ $npp->getFirstMediaUrl('image') }}" class="" alt="img" />
+                                    </div>
+                                    <div class="cardBdy">
+                                        <img src="{{ $npp->brand->getFirstMediaUrl('image') }}" alt="brand" />
+                                        <h2>{{ $npp->title }}</h2>
+                                        <div class="line transitionCls"></div>
+                                        <p>{{ $npp->summary }}</p>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
