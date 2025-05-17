@@ -61,4 +61,28 @@ class ProductCategoryResource extends Resource {
             'edit' => Pages\EditProductCategory::route('/{record}/edit') ,
         ];
     }
+
+    public static function getModelLabel (): string {
+        return 'دسته بندی محصولات';
+    }
+
+    // نام جمع مدل - مثلاً در لیست پست‌ها
+    public static function getPluralModelLabel (): string {
+        return 'دسته بندی محصولات';
+    }
+
+    // عنوانی که در منوی سمت چپ Filament نمایش داده میشه
+    public static function getNavigationLabel (): string {
+        return 'دسته بندی محصولات';
+    }
+
+    // (اختیاری) گروه‌بندی منابع در منو
+    public static function getNavigationGroup (): ?string {
+        return 'محصول ها';
+    }
+
+    // آیکون نمایش داده‌شده در منو
+    public static function getNavigationIcon (): string {
+        return 'heroicon-o-pencil-square';
+    }
 }
