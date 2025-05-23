@@ -1,6 +1,6 @@
 @php use App\Services\CartService; @endphp
 @php use App\Models\ProductCategory; @endphp
-<div class="sideMenu transitionCls">
+<div class="sideMenu transitionCls @if(session('open_side_cart')) opened @endif">
     <span class="icon-Remove closeSide"></span>
     <div class="sideMnuBx">
         <div class="sideItmsLst">
