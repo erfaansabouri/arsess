@@ -109,7 +109,7 @@
     @endif
 
     <section class="newestSec position-relative">
-        <img src="asset/img/vector02.png" class="newestVctr" alt="img" />
+        <img src="{{ asset('arses/asset/img/vector02.png') }}" class="newestVctr" alt="img" />
         <div class="container">
             <div class="row">
                 <div class="col-12">
