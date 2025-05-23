@@ -40,9 +40,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <a href="{{ route('home') }}" class="homHdrLogo d-block">
-                        <img src="{{ asset('arses/asset/img/logo.svg') }}" alt="logo">
-                    </a>
+                    @if(Route::is('home'))
+                        <a href="{{ route('home') }}" class="homHdrLogo d-block">
+                            <img src="{{ asset('arses/asset/img/logo.svg') }}" alt="logo">
+                        </a>
+                    @endif
+
                     <div class="topSerch setMargin">
                         <div class="cartLink openSide topSrchLnk transitionCls">
                             @if(CartService::getTotalQuantity() > 0)
