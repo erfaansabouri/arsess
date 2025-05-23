@@ -19,14 +19,16 @@
                         <ul>
 
                             @foreach($related_categories as $child)
-                                <li>
-                                    <a
-                                        href="{{ route('product-categories.show', ['slug' => $child->slug]) }}"
-                                        class="tablinks @if($category->id == $child->id) active @endif transitionCls position-relative"
-                                        tabId="tabTwo"
-                                    >{{ $child->title }}
-                                    </a>
-                                </li>
+                                @if($child->id != $category->id)
+                                    <li>
+                                        <a
+                                            href="{{ route('product-categories.show', ['slug' => $child->slug]) }}"
+                                            class="tablinks @if($category->id == $child->id) active @endif transitionCls position-relative"
+                                            tabId="tabTwo"
+                                        >{{ $child->title }}
+                                        </a>
+                                    </li>
+                                @endif
                             @endforeach
 
                         </ul>
