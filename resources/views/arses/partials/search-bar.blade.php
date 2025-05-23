@@ -21,7 +21,12 @@
                         <a href="{{ route('checkout.show') }}" class="settlmntBtn transitionCls"> تسویه حساب</a>
                     </div>
                 @else
-                    <div class="subtotal">سبد خرید شما خالی است.</div>
+                    <div class="cartEmpty emptyBox whiteEmpty">
+                        <p>
+                            سبد خرید شما خالی است؛ ما راضی نیستیم شما دست خالی به خانه
+                            برگردید! از <a href="{{ route('product.index') }}">محصولات ما</a> بازدید فرمایید.
+                        </p>
+                    </div>
                 @endif
 
             </div>
