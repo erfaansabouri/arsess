@@ -30,6 +30,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <a href="{{ route('home') }}" class="homHdrLogo d-block">
+                        <img src="{{ asset('arses/asset/img/logo.svg') }}" alt="logo">
+                    </a>
                     <div class="topSerch setMargin">
                         <div class="cartLink openSide topSrchLnk transitionCls">
                             <i class="numberTag position-absolute">{{ CartService::getTotalQuantity() }}</i>
