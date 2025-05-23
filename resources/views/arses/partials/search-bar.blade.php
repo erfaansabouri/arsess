@@ -58,7 +58,9 @@
                                                     <li class="hdrSubLi prdctHasSub">
                                                         <div class="prdctLnkBx">
                                                             <a href="{{ route('product-categories.show', ['slug' => $pc->slug]) }}">{{ $pc->title }}</a>
-                                                            <span class="icon-Next opnPrdctSub transitionCls"></span>
+                                                            @if($pc->children->count() != 0)
+                                                                <span class="icon-Next opnPrdctSub transitionCls"></span>
+                                                            @endif
                                                         </div>
                                                         <div class="prdctSubBx">
                                                             @foreach($pc->children as $child)
