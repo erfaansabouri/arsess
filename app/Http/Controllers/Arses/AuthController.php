@@ -23,6 +23,8 @@ class AuthController extends Controller {
                                    'required' ,
                                    new IranPhoneRule() ,
                                ] ,
+                           ] , [
+                               'phone.required' => 'لطفا شماره موبایل خود را به صورت صحیح و با اعداد انگلیسی وارد نمایید.' ,
                            ]);
         $phone = Fixer::englishNumbers($request->get('phone'));
         $user = User::query()
@@ -44,22 +46,30 @@ class AuthController extends Controller {
                                'code' => [
                                    'required' ,
                                    'numeric' ,
-                               ],
-                           ]);
+                               ] ,
+                           ],[
+                                 'phone.required' => 'لطفا شماره موبایل خود را به صورت صحیح و با اعداد انگلیسی وارد نمایید.' ,
+                                 'code.required' => 'لطفا کد تایید را وارد نمایید.' ,
+                                 'code.numeric' => 'لطفا کد تایید را به صورت صحیح و با اعداد انگلیسی وارد نمایید.' ,
+        ]);
         $phone = Fixer::englishNumbers($request->get('phone'));
         $code = Fixer::englishNumbers($request->get('code'));
         $user = User::query()
-                    ->where('phone', $phone)->firstOrFail();
-        if ($user->otp == $code){
+                    ->where('phone' , $phone)
+                    ->firstOrFail();
+        if ( $user->otp == $code ) {
             $user->otp = null;
             $user->save();
-
             auth()->login($user);
+
             return redirect()->route('home');
         }
 
-        return redirect()->back()->withErrors([
-                                                  'code' => 'کد وارد شده صحیح نمی باشد' ,
-                                              ])->withInput($request->only('phone'));
+        return redirect()
+            ->back()
+            ->withErrors([
+                             'code' => 'کد وارد شده صحیح نمی باشد' ,
+                         ])
+            ->withInput($request->only('phone'));
     }
 }

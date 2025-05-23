@@ -14,7 +14,7 @@ class IranPhoneRule implements ValidationRule {
      */
     public function validate ( string $attribute , mixed $value , Closure $fail ): void {
         if ( !preg_match('/^(0)?9\d{9}$/' , $value) ) {
-            $fail('فرمت شماره تلفن معتبر نمیباشد.');
+            $fail('لطفا شماره موبایل خود را به صورت صحیح و با اعداد انگلیسی وارد نمایید.');
         }
     }
 }
