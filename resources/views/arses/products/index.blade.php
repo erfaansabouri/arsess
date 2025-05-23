@@ -8,7 +8,7 @@
                         <div class="breadCrumb">
                             <a href="{{ route('home') }}">سرا </a>
                             <span class="icon-left"></span>
-                            <a href="{{ route('product.index') }}">سرا </a>
+                            <a href="{{ route('product.index') }}">محصولات </a>
                         </div>
                         <ul class="linksList">
                             @foreach($categories as $c)
