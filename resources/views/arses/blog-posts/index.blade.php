@@ -66,13 +66,15 @@
                                     </a>
                                 @endforeach
                             </div>
-                            <div class="pagination">
-                                @for ($i = 1; $i <= $blog_posts->lastPage(); $i++)
-                                    <a href="{{ $blog_posts->url($i) }}" class="{{ $blog_posts->currentPage() == $i ? 'active' : '' }}">
-                                        {{ $i }}
-                                    </a>
-                                @endfor
-                            </div>
+                            @if ($blog_posts->lastPage() > 1)
+                                <div class="pagination">
+                                    @for ($i = 1; $i <= $blog_posts->lastPage(); $i++)
+                                        <a href="{{ $blog_posts->url($i) }}" class="{{ $blog_posts->currentPage() == $i ? 'active' : '' }}">
+                                            {{ $i }}
+                                        </a>
+                                    @endfor
+                                </div>
+                            @endif
                         </div>
 
                     </div>
