@@ -13,12 +13,19 @@
                             <div class="cartSetlmnt">
                                 <ul class="setlmntUl">
                                     <li>
-                                        <strong>جمع سبد خرید</strong>
+                                        <strong>جمع کارت</strong>
                                     </li>
-
+                                    <li>
+                                        <span>جمع جزء</span>
+                                        <p>{{ number_format(CartService::getTotalPrice()) }} تومان</p>
+                                    </li>
+                                    <li>
+                                        <span>ارسال</span>
+                                        <p>محاسبه پس از ورود آدرس</p>
+                                    </li>
                                     <li>
                                         <strong>مجموع</strong>
-                                        <p>{{ number_format(CartService::getTotalPrice()) }} تومان</p>
+                                        <p>{{ number_format(CartService::getTotalPrice() - CartService::getDiscountAmount()) }} تومان</p>
                                     </li>
                                 </ul>
                                 <a href="{{ route('checkout.show') }}" class="setlmntBtn">
