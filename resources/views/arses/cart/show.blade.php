@@ -39,11 +39,13 @@
                             <div class="discountBx">
                                 <div class="discountDiv transitionCls">
                                     <input
+
                                         type="text"
                                         class="form-control"
                                         placeholder="کد تخفیف"
+                                        name="code"
                                     />
-                                    <button class="btn transitionCls">
+                                    <button id="check-coupon" class="btn transitionCls">
                                         <span class="icon-Next"></span>
                                     </button>
                                 </div>
@@ -103,8 +105,8 @@
                             <div class="discountCod">کوپن تخفیف دارید؟</div>
                             <div class="discountBx" style="display: block;">
                                 <div class="discountDiv transitionCls">
-                                    <input type="text" class="form-control" placeholder="کد تخفیف">
-                                    <button class="btn transitionCls">
+                                    <input name="code" type="text" class="form-control" placeholder="کد تخفیف">
+                                    <button id="check-coupon-2" class="btn transitionCls">
                                         <span class="icon-Next"></span>
                                     </button>
                                 </div>
@@ -118,4 +120,78 @@
 @endsection
 @push('upper-content')
     @include('arses.partials.top-moving-logo')
+@endpush
+
+@push('scripts')
+    {{-- do ajax call for discount --}}
+    <script>
+        $(document).ready(function () {
+            $('#check-coupon').on('click', function (e) {
+                console.log('clicked')
+                e.preventDefault();
+                let code = $('input[name=code]').val();
+                $.ajax({
+                    url: "{{ route('checkout.check-coupon') }}",
+                    type: "POST",
+                    data: {
+                        code: code,
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function (response) {
+                        if (response.status === 'success') {
+                            $('#coupon-success').text('کد تخفیف با موفقیت اعمال شد');
+                            $('#coupon-error').text('');
+                            // number format and concat toman
+                            let discountAmount = new Intl.NumberFormat('fa-IR').format(response.discount);
+                            let totalPrice = new Intl.NumberFormat('fa-IR').format(response.total);
+                            $('#discount-amount').text(discountAmount + ' تومان');
+                            $('#payment-price').text(totalPrice + ' تومان');
+                        } else if (response.status === 'error') {
+                            $('#coupon-error').text('کد تخفیف نامعتبر است');
+                            $('#coupon-success').text('');
+                        } else {
+                            $('#coupon-error').text('خطا در پردازش درخواست');
+                            $('#coupon-success').text('');
+                        }
+                    },
+                    error: function (xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+            $('#check-coupon-2').on('click', function (e) {
+                console.log('clicked')
+                e.preventDefault();
+                let code = $('input[name=code]').val();
+                $.ajax({
+                    url: "{{ route('checkout.check-coupon') }}",
+                    type: "POST",
+                    data: {
+                        code: code,
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function (response) {
+                        if (response.status === 'success') {
+                            $('#coupon-success').text('کد تخفیف با موفقیت اعمال شد');
+                            $('#coupon-error').text('');
+                            // number format and concat toman
+                            let discountAmount = new Intl.NumberFormat('fa-IR').format(response.discount);
+                            let totalPrice = new Intl.NumberFormat('fa-IR').format(response.total);
+                            $('#discount-amount').text(discountAmount + ' تومان');
+                            $('#payment-price').text(totalPrice + ' تومان');
+                        } else if (response.status === 'error') {
+                            $('#coupon-error').text('کد تخفیف نامعتبر است');
+                            $('#coupon-success').text('');
+                        } else {
+                            $('#coupon-error').text('خطا در پردازش درخواست');
+                            $('#coupon-success').text('');
+                        }
+                    },
+                    error: function (xhr) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
 @endpush

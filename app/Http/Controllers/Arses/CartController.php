@@ -26,15 +26,14 @@ class CartController extends Controller {
         $cart = CartService::getCart();
         if ( !isset($cart[$product_id]) ) {
             return redirect()
-                ->back()
-                ->with('error' , 'آیتمی برای حذف وجود ندارد');
+                ->back();
         }
 
         CartService::removeFromCart($product_id);
 
         return redirect()
             ->back()
-            ->with('success' , 'آیتم با موفقیت حذف شد');
+            ->with('custom_success' , 'آیتم  از سبد خرید با موفقیت حذف شد');
     }
 
     public function add ($product_id) {
