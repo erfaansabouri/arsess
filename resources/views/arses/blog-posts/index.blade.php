@@ -54,7 +54,7 @@
                                                 </div>
                                             @endif
 
-                                            @if(!$blog_post->hashtags->count() != 0)
+                                            @if($blog_post->hashtags->count() != 0)
                                                 <div class="category mt-5">
                                                     <span>هشتگ ها</span>
                                                     @foreach($blog_post->hashtags as $hashtag)
