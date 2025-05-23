@@ -49,7 +49,9 @@
                                                 <div class="category">
                                                     <span>دسته بندی ها</span>
                                                     @foreach($blog_post->categories as $category)
-                                                        <a href="{{ route('blog-posts.index', ['category_title' => $category->title]) }}">{{ $category->title }}</a>
+                                                        <p>
+                                                            <a href="{{ route('blog-posts.index', ['category_title' => $category->title]) }}">{{ $category->title }}</a>
+                                                        </p>
                                                     @endforeach
                                                 </div>
                                             @endif
@@ -58,7 +60,9 @@
                                                 <div class="category mt-5">
                                                     <span>هشتگ ها</span>
                                                     @foreach($blog_post->hashtags as $hashtag)
-                                                        <a href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->title]) }}">{{ $hashtag->title }}</a>
+                                                        <p>
+                                                            <a href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->title]) }}">{{ $hashtag->title }}</a>
+                                                        </p>
                                                     @endforeach
                                                 </div>
                                             @endif
