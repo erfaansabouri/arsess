@@ -93,7 +93,8 @@ class CartService {
 
     // get shipping price
     public static function getShippingPrice () {
-        return PriceSetting::query()->firstOrCreate([])->shipping_price;
+        return 0;
+        //return PriceSetting::query()->firstOrCreate([])->shipping_price;
     }
 
     public static function getPaymentPrice () {

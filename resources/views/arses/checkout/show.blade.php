@@ -123,7 +123,7 @@
                                     </li>
                                     <li>
                                         <strong>ارسال</strong>
-                                        <strong>{{ number_format(CartService::getShippingPrice()) }} تومان</strong>
+                                        <strong>پس کرایه</strong>
                                     </li>
                                     <li>
                                         <strong>تخفیف</strong>
