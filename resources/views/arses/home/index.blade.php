@@ -123,7 +123,7 @@
                     <div class="swiper-wrapper">
                         @foreach($newest_products as $npp)
                             <div class="swiper-slide">
-                                <a href="#" class="newestCrd position-relative transitionCls">
+                                <a href="{{ route('product.show', ['slug' => $npp->slug]) }}" class="newestCrd position-relative transitionCls">
                                     <div class="cardImg transitionCls">
                                         <img src="{{ $npp->getFirstMediaUrl('image') }}" class="" alt="img" />
                                     </div>
