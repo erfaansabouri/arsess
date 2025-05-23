@@ -12,19 +12,6 @@
                         <div class="cartRight position-relative">
                             <div class="cartSetlmnt"></div>
                             <div class="cartSvg"></div>
-                            <div class="discountCod">کوپن تخفیف دارید؟</div>
-                            <div class="discountBx">
-                                <div class="discountDiv transitionCls">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        placeholder="کد تخفیف"
-                                    />
-                                    <button class="btn transitionCls">
-                                        <span class="icon-Next"></span>
-                                    </button>
-                                </div>
-                            </div>
                         </div>
                         <div class="cartLeft">
                             <div class="cartEmpty emptyBox whiteEmpty">
