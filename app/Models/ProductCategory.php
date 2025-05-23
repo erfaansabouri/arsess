@@ -34,10 +34,10 @@ class ProductCategory extends Model {
         $ids = [];
         $ids[] = $category->id;
         if ($parent){
-            $ids[] = $parent->id;
+            //$ids[] = $parent->id;
         }
         foreach ($sibling as $s) {
-            $ids[] = $s->id;
+            //$ids[] = $s->id;
         }
         foreach ($children as $c) {
             $ids[] = $c->id;
