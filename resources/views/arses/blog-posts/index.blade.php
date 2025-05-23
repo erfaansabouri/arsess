@@ -58,7 +58,7 @@
                                                 <div class="category mt-5">
                                                     <span>هشتگ ها</span>
                                                     @foreach($blog_post->hashtags as $hashtag)
-                                                        <p href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->title]) }}">{{ $hashtag->title }}</p>
+                                                        <span href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->title]) }}">{{ $hashtag->title }}</span>
                                                     @endforeach
                                                 </div>
                                             @endif
