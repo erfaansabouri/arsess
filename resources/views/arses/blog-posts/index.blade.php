@@ -45,20 +45,20 @@
                                             <div class="text">
                                                 {{ $blog_post->summary }}
                                             </div>
-                                            @if(!empty($blog_post->categories))
+                                            @if($blog_post->categories->count() != 0)
                                                 <div class="category">
                                                     <span>دسته بندی ها</span>
                                                     @foreach($blog_post->categories as $category)
-                                                        <p>{{ $category->title }}</p>
+                                                        <a href="{{ route('blog-posts.index', ['category_title' => $category->title]) }}">{{ $category->title }}</a>
                                                     @endforeach
                                                 </div>
                                             @endif
 
-                                            @if(!empty($blog_post->hashtags))
+                                            @if(!$blog_post->hashtags->count() != 0)
                                                 <div class="category mt-5">
                                                     <span>هشتگ ها</span>
                                                     @foreach($blog_post->hashtags as $hashtag)
-                                                        <p>{{ $hashtag->title }}</p>
+                                                        <a href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->title]) }}">{{ $hashtag->title }}</a>
                                                     @endforeach
                                                 </div>
                                             @endif
