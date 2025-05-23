@@ -6,9 +6,9 @@
                 <div class="col-12">
                     <div class="blogPgBox setMargin">
                         <div class="breadCrumb">
-                            <a href="{{ route('blog-posts.index') }}">سرسرای </a>
+                            <a href="{{ route('home') }}">سرسرای </a>
                             <span class="icon-left"></span>
-                            <a href="#">نامه‌سرای</a>
+                            <a href="{{ route('blog-posts.index') }}">نامه‌سرای</a>
                             @if(count($blog_post->categories))
                                 <span class="icon-left"></span>
                                 @foreach($blog_post->categories as $c)
