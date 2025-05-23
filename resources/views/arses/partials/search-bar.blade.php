@@ -35,7 +35,9 @@
                     </a>
                     <div class="topSerch setMargin">
                         <div class="cartLink openSide topSrchLnk transitionCls">
-                            <i class="numberTag position-absolute">{{ CartService::getTotalQuantity() }}</i>
+                            @if(CartService::getTotalQuantity() > 0)
+                                <i class="numberTag position-absolute">{{ CartService::getTotalQuantity() }}</i>
+                            @endif
                             <span class="icon-Cart"></span>
                         </div>
                         <div class="headerMnu position-relative">
