@@ -97,7 +97,7 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <a href="{{ route('cart.show') }}" class="minCrtLink openSide topSrchLnk transitionCls">
+                                    <a href="#" class="minCrtLink openSide topSrchLnk transitionCls">
                                         <i class="numberTag position-absolute">{{ CartService::getTotalQuantity() }}</i>
                                         <span class="icon-Cart"></span>
                                     </a>
