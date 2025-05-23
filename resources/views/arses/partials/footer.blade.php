@@ -12,7 +12,7 @@
                         <a href="{{ route('my-profile.show') }}" class="d-block transitionCls"> حساب کاربری </a>
                     </div>
                     <div class="footerLeft">
-                        <a href="{{ route('home') }}" class="d-block footerLogo">
+                        <a href="#" class="d-block footerLogo">
                             <img src="{{ asset('arses/asset/img/footer-logo.svg') }}" alt="logo" />
                         </a>
                         <a href="#" class="d-block foterNamad">
