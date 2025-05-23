@@ -18,7 +18,7 @@
                     <div class="subtotal">جمع کل: {{ number_format(CartService::getTotalPrice()) }} تومان</div>
                     <div class="sideBtns">
                         <a href="{{ route('cart.show') }}" class="cartBtn transitionCls"> سبد خرید</a>
-                        <a href="#" class="settlmntBtn transitionCls"> تسویه حساب</a>
+                        <a href="{{ route('checkout.show') }}" class="settlmntBtn transitionCls"> تسویه حساب</a>
                     </div>
                 @else
                     <div class="subtotal">سبد خرید شما خالی است.</div>
