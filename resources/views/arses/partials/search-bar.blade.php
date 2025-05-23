@@ -3,20 +3,25 @@
 <div class="sideMenu transitionCls">
     <span class="icon-Remove closeSide"></span>
     <div class="sideMnuBx">
-        @foreach(CartService::getProducts() as $cart_item)
-            <a href="{{ route('product.show', $cart_item['product']->id) }}" class="sideItem transitionCls">
-                <div>
-                    <strong>{{ $cart_item['product']->title }}</strong>
-                    <p>x{{ $cart_item['quantity'] }}</p>
+        <div class="sideItmsLst">
+            @foreach(CartService::getProducts() as $cart_item)
+                <a href="{{ route('product.show', $cart_item['product']->id) }}" class="sideItem transitionCls">
+                    <div>
+                        <strong>{{ $cart_item['product']->title }}</strong>
+                        <p>x{{ $cart_item['quantity'] }}</p>
+                    </div>
+                    <img src="{{ $cart_item['product']->getFirstMediaUrl('image') }}" alt="img"/>
+                </a>
+            @endforeach
+            <div class="sideBottom">
+                <div class="subtotal">جمع کل: {{ number_format(CartService::getTotalPrice()) }} تومان</div>
+                <div class="sideBtns">
+                    <a href="{{ route('cart.show') }}" class="cartBtn transitionCls"> سبد خرید</a>
+                    <a href="#" class="settlmntBtn transitionCls"> تسویه حساب</a>
                 </div>
-                <img src="{{ $cart_item['product']->getFirstMediaUrl('image') }}" alt="img"/>
-            </a>
-        @endforeach
-        <div class="subtotal">جمع کل: {{ number_format(CartService::getTotalPrice()) }} تومان</div>
-        <div class="sideBtns">
-            <a href="{{ route('cart.show') }}" class="cartBtn transitionCls"> سبد خرید</a>
-            <a href="#" class="settlmntBtn transitionCls"> تسویه حساب</a>
+            </div>
         </div>
+
     </div>
 </div>
 
@@ -25,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="topSerch">
+                    <div class="topSerch setMargin">
                         <div class="cartLink openSide topSrchLnk transitionCls">
                             <i class="numberTag position-absolute">{{ CartService::getTotalQuantity() }}</i>
                             <span class="icon-Cart"></span>

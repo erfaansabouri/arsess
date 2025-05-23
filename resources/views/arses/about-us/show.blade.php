@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="aboutSecBx">
-                        <a href="#" class="d-block aboutLogo">
+                    <div class="aboutSecBx setMargin">
+                        <div class="d-block aboutLogo">
                             <img src="{{ asset('arses/asset/img/footer-logo.svg') }}" alt="logo" />
-                        </a>
+                        </div>
                         <div class="title">
                             <p>فروشگاه ملزومات آشپزی خاص و حرفه‌ای</p>
                             <h1>آرمــــــان ما خلاقیـــــــــت از اصــــــــــالت است.</h1>

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="arsesTitl position-relative">
+                    <h2 class="arsesTitl setMargin position-relative">
                         نامه‌سرای ملزومات آشپزی خاص
                     </h2>
                     <div class="tabBox">

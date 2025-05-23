@@ -14,6 +14,11 @@ class CartController extends Controller {
     public function show ( Request $request ) {
         $products = CartService::getProducts();
 
+        if (count($products) == 0){
+            return view('arses.cart.empty-card');
+
+        }
+
         return view('arses.cart.show' , compact('products'));
     }
 

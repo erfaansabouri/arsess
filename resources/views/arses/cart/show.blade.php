@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="cartPgTitle">
+                    <div class="cartPgTitle setMargin">
                         <h2>سبد خرید</h2>
                     </div>
                     <div class="cartRow">

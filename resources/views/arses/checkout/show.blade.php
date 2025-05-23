@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="chkoutHed">
+                    <div class="chkoutHed setMargin">
                         <h1>اطلاعات پرداخت</h1>
                     </div>
                     <div class="chkoutRow">

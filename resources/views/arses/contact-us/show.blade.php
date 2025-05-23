@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="contactHed">
+                    <div class="contactHed setMargin">
                         <h1>تماس با سرای</h1>
                     </div>
                     <div class="contactRow">

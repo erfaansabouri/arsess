@@ -277,15 +277,17 @@ $(document).ready(function () {
   }
 
   /********************margin*********************/
-  if ($(".arsesTitl").length) {
-    var offset = $(".arsesTitl").offset();
-    $(".swprContainr").css("marginRight", offset.left);
+    if ($(".setMargin").length) {
+        var offset = $(".setMargin").offset();
+        $(".swprContainr").css("marginRight", offset.left);
+        $(".notifBox").css("marginRight", offset.left);
 
-    // Update on window resize
-    $(window).on("resize", function () {
-      var offset = $(".arsesTitl").offset();
-      $(".swprContainr").css("marginRight", offset.left);
-    });
+        // Update on window resize
+        $(window).on("resize", function () {
+            var offset = $(".setMargin").offset();
+            $(".swprContainr").css("marginRight", offset.left);
+            $(".notifBox").css("marginRight", offset.left);
+        });
   }
 });
 

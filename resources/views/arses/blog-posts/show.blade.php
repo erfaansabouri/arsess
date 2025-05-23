@@ -4,9 +4,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="blogPgBox">
+                    <div class="blogPgBox setMargin">
                         <div class="breadCrumb">
-                            <a href="{{ route('blog-posts.index') }}">سرانامه‌سرای</a>
+                            <a href="{{ route('blog-posts.index') }}">سرسرای </a>
+                            <span class="icon-left"></span>
+                            <a href="#">نامه‌سرای</a>
                             @if(count($blog_post->categories))
                                 <span class="icon-left"></span>
                                 @foreach($blog_post->categories as $c)

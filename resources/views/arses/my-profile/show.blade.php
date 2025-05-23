@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="chkoutRow chkoutRow2">
+                    <div class="chkoutRow chkoutRow2 setMargin">
                         <div class="chkoutRght tableSide position-relative">
                             <div class="chkutBxHed">سفارشات</div>
                             <div class="orderTbl">

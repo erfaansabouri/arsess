@@ -36,7 +36,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="arsesTitl position-relative">
+                    <h2 class="arsesTitl setMargin  position-relative">
                         جدید ترین‌های سرای آرسس
                     </h2>
                 </div>

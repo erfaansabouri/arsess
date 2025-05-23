@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="saraTopLnks pb-5">
-                    <div class="breadCrumb">
-                        <a href="{{ route('home') }}">سرا </a>
+                    <div class="breadCrumb setMargin">
+                        <a href="{{ route('home') }}">سرسرای  </a>
                         <span class="icon-left"></span>
-                        <p>محصولات</p>
+                        <a href="{{ route('product.index') }}">محصولات</a>
                         <span class="icon-left"></span>
                         <strong>{{ $category->title }}</strong>
                     </div>
