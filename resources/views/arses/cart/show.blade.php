@@ -35,6 +35,19 @@
                                 </a>
                             </div>
                             <div class="cartSvg"></div>
+                            <div class="discountCod">کوپن تخفیف دارید؟</div>
+                            <div class="discountBx">
+                                <div class="discountDiv transitionCls">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="کد تخفیف"
+                                    />
+                                    <button class="btn transitionCls">
+                                        <span class="icon-Next"></span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="cartLeft">
                             <div class="table-responsive">
@@ -86,6 +99,15 @@
                                     @endforeach
                                     </tbody>
                                 </table>
+                            </div>
+                            <div class="discountCod">کوپن تخفیف دارید؟</div>
+                            <div class="discountBx" style="display: block;">
+                                <div class="discountDiv transitionCls">
+                                    <input type="text" class="form-control" placeholder="کد تخفیف">
+                                    <button class="btn transitionCls">
+                                        <span class="icon-Next"></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
