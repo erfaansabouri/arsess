@@ -21,8 +21,8 @@
                                         <p>{{ number_format(CartService::getTotalPrice()) }} تومان</p>
                                     </li>
                                 </ul>
-                                <a href="{{ route('checkout.show') }}">
-                                    <button class="setlmntBtn btn transitionCls">
+                                <a href="{{ route('checkout.show') }}" class="setlmntBtn btn transitionCls">
+                                    <button>
                                         تسویه حساب
                                     </button>
                                 </a>
