@@ -5,15 +5,16 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadCrumb">
-                    <a href="{{ route('home') }}">سرا</a>
+                    <a href="{{ route('home') }}">سرسرای</a>
                     <span class="icon-left"></span>
-                    <a href="{{ route('home') }}">محصولات </a>
+                    <a href="{{ route('product.index') }}">محصولات </a>
                     <span class="icon-left"></span>
-                    <a href="{{ route('home') }}">
-                        @foreach($product->categories as $c)
+                    @foreach($product->categories as $c)
+                        <a href="{{ route('product-categories.show', ['slug' => $c->slug]) }}">
                             {{ $c->title }}
-                        @endforeach
-                    </a>
+                        </a>
+                    @endforeach
+
                     <span class="icon-left"></span>
                     <strong>{{ $product->title }}</strong>
                 </div>
