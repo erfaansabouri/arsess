@@ -164,3 +164,6 @@
         </div>
     </section>
 @endsection
+@push('upper-content')
+    @include('arses.partials.top-moving-logo')
+@endpush

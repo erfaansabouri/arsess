@@ -7,8 +7,6 @@
 <div class="bodyDiv overflow-hidden">
     @stack('upper-content')
     @yield('content')
-
-
     @include('arses.partials.footer')
 </div>
 
