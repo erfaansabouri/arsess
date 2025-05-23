@@ -22,7 +22,7 @@
                                     </li>
                                 </ul>
                                 <a href="{{ route('checkout.show') }}" class="setlmntBtn btn transitionCls">
-                                    <button>
+                                    <button class="setlmntBtn btn transitionCls">
                                         تسویه حساب
                                     </button>
                                 </a>
