@@ -18,6 +18,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class BlogPostResource extends Resource {
     protected static ?string $model          = BlogPost::class;
@@ -39,7 +40,7 @@ class BlogPostResource extends Resource {
                                                              ->label('تصویر')
                                                              ->required()
                                                              ->rules([ 'image' ]) ,
-                                 Forms\Components\MarkdownEditor::make('body')
+                                 TinyEditor::make('body')
                                                             ->label('متن')
                                                             ->required()
                                                             ->columnSpanFull() ,

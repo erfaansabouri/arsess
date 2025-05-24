@@ -13,6 +13,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class ProductResource extends Resource {
     protected static ?string $model          = Product::class;
@@ -43,7 +44,7 @@ class ProductResource extends Resource {
                                                            ->maxLength(255)
                                                            ->numeric()
                                                            ->label('قیمت') ,
-                                 Forms\Components\MarkdownEditor::make('description')
+                                 TinyEditor::make('description')
                                                             ->columnSpanFull()
                                                             ->label('توضیحات') ,
                                  Forms\Components\Toggle::make('is_selected')
