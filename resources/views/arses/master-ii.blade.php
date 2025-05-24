@@ -6,6 +6,7 @@
 
 <div class="bodyDiv overflow-hidden">
     @include('arses.partials.custom-success-toast')
+    @include('arses.partials.custom-error-toast')
     @stack('upper-content')
     @yield('content')
     @include('arses.partials.footer')

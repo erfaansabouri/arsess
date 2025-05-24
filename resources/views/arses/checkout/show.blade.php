@@ -1,6 +1,12 @@
 @php use App\Services\CartService; @endphp
 @extends('arses.master-ii')
 @section('content')
+    <div id="rules-check" class="notif notifBox errorNotif" style="display: none">
+        <p>
+            لطفا شرایط و مقررات سایت را پیش از ثبت سفارش بپذیرید.
+        </p>
+    </div>
+
     <section class="chkoutSec">
         <div class="container">
             <div class="row">
@@ -21,7 +27,7 @@
                                         placeholder="نام"
                                         name="first_name"
                                         required
-                                        value="{{ old('first_name') }}"
+                                        value="{{ old('first_name') ?? (auth()->user() ? auth()->user()->first_name : '') }}"
                                     />
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-lg-12">
@@ -35,7 +41,7 @@
                                         placeholder="نام خانوادگی"
                                         name="last_name"
                                         required
-                                        value="{{ old('last_name') }}"
+                                        value="{{ old('last_name') ?? (auth()->user() ? auth()->user()->last_name : '') }}"
                                     />
                                 </div>
                                 <div class="col-12">
@@ -47,7 +53,7 @@
                                         placeholder="آدرس"
                                         name="address"
                                         required
-                                        value="{{ old('address') }}"
+                                        value="{{ old('address') ?? (auth()->user() ? auth()->user()->address : '') }}"
                                     />
                                 </div>
                                 <div class="col-12">
@@ -73,7 +79,7 @@
                                         placeholder="شماره موبایل"
                                         name="phone"
                                         required
-                                        value="{{ old('phone') }}"
+                                        value="{{ old('phone') ?? (auth()->user() ? auth()->user()->phone : '') }}"
 
                                     />
                                 </div>
@@ -227,7 +233,11 @@
                 if ($('#payCheck').is(':checked')) {
                     $('#main-form').submit();
                 } else {
-                    alert('لطفا شرایط و مقررات را بپذیرید');
+                    $('#rules-check').show();
+                    // hide after 5 sec
+                    setTimeout(function () {
+                        $('#rules-check').hide();
+                    }, 5000);
                 }
             });
         });

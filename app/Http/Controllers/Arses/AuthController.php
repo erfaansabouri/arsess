@@ -62,7 +62,7 @@ class AuthController extends Controller {
             $user->save();
             auth()->login($user);
 
-            return redirect()->route('home');
+            return redirect()->route('my-profile.show');
         }
 
         return redirect()

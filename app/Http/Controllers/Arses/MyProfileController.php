@@ -22,7 +22,7 @@ class MyProfileController extends Controller {
 
     public function logout () {
         auth()->logout();
-        return redirect()->route('home')->with('success', 'خروج با موفقیت انجام شد');
+        return redirect()->route('home')->with('custom_success', 'خروج با موفقیت انجام شد');
     }
 
     public function update () {

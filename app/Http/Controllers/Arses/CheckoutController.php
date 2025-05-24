@@ -76,12 +76,10 @@ class CheckoutController extends Controller {
         if ( $v->fails() ) {
             $error_message = $v->errors()
                                ->first();
-            toastr()
-                ->error($error_message)
-                ->setTitle('خطا');
 
             return redirect()
                 ->back()
+                ->with('custom_error' , $error_message)
                 ->withInput($request->all());
         }
         $invoice = new Invoice();
@@ -125,11 +123,9 @@ class CheckoutController extends Controller {
                           ->whereNull('failed_at')
                           ->first();
         if ( !$invoice ) {
-            toastr()
-                ->error('فاکتور یافت نشد')
-                ->setTitle('خطا');
-
-            return redirect()->route('home');
+            return redirect()
+                ->route('my-profile.show')
+                ->with('custom_error' , 'فاکتور یافت نشد یا قبلا پرداخت شده است');
         }
         try {
             $result = Payment::amount($invoice->payment_price)
@@ -140,21 +136,19 @@ class CheckoutController extends Controller {
             $invoice->save();
             // clear cart
             CartService::clearCart();
-            toastr()
-                ->success('پرداخت با موفقیت انجام شد')
-                ->setTitle('موفقیت');
 
-            return redirect()->route('home');
+
+            return redirect()
+                ->route('my-profile.show')
+                ->with('custom_success' , 'پرداخت با موفقیت انجام شد');
         }
         catch ( Exception $e ) {
             // update invoice status
             $invoice->failed_at = now();
             $invoice->save();
-            toastr()
-                ->error('پرداخت ناموفق بود')
-                ->setTitle('خطا');
-
-            return redirect()->route('home');
+            return redirect()
+                ->route('my-profile.show')
+                ->with('custom_error' , 'پرداخت ناموفق بود: ' . $e->getMessage());
         }
     }
 }

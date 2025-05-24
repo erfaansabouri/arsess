@@ -2496,7 +2496,7 @@ body {
 
 .chkoutSec .chkoutRow .leftBox {
     width: 100%;
-    min-height: 407px;
+    min-height: 300px;
     padding: 45px 30px;
     display: flex;
     align-items: flex-end;
