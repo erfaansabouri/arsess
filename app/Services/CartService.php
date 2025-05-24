@@ -103,7 +103,7 @@ class CartService {
         if (session()->has('coupon_code')) {
             $code = session()->get('coupon_code');
             $coupon = Coupon::where('code', $code)->first();
-            if ($coupon && $coupon->expire_at && $coupon->expire_at > now()) {
+            if ($coupon && ($coupon->expire_at && $coupon->expire_at > now()) || !$coupon->expire_at) {
                 $discount = $coupon->discount_percent;
                 $discountAmount = ($total * $discount) / 100;
                 $total -= $discountAmount;
