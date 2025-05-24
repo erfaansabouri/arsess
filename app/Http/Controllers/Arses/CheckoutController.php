@@ -121,13 +121,21 @@ class CheckoutController extends Controller {
     public function verify ( Request $request ) {
         $authority = $request->input('trackId');
         $invoice = Invoice::where('tx_id' , $authority)
-                          ->whereNull('paid_at')
-                          ->whereNull('failed_at')
                           ->first();
         if ( !$invoice ) {
             return redirect()
                 ->route('my-profile.show')
-                ->with('custom_error' , 'فاکتور یافت نشد یا قبلا پرداخت شده است');
+                ->with('custom_error' , 'فاکتور یافت نشد ');
+        }
+        if ( $invoice->paid_at ) {
+            return redirect()
+                ->route('my-profile.show')
+                ->with('custom_error' , 'این فاکتور قبلا پرداخت شده است');
+        }
+        if ( $invoice->failed_at ) {
+            return redirect()
+                ->route('my-profile.show')
+                ->with('custom_error' , 'این فاکتور قبلا پرداخت ناموفق داشته است');
         }
         try {
             $result = Payment::amount($invoice->payment_price)
@@ -139,7 +147,6 @@ class CheckoutController extends Controller {
             // clear cart
             CartService::clearCart();
 
-
             return redirect()
                 ->route('my-profile.show')
                 ->with('custom_success' , 'پرداخت با موفقیت انجام شد');
@@ -148,6 +155,7 @@ class CheckoutController extends Controller {
             // update invoice status
             $invoice->failed_at = now();
             $invoice->save();
+
             return redirect()
                 ->route('my-profile.show')
                 ->with('custom_error' , 'پرداخت ناموفق بود: ' . $e->getMessage());
