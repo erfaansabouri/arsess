@@ -81,7 +81,7 @@ class BrandResource extends Resource {
 
     // (اختیاری) گروه‌بندی منابع در منو
     public static function getNavigationGroup (): ?string {
-        return 'محصولات';
+        return 'محصول ها';
     }
 
     // آیکون نمایش داده‌شده در منو

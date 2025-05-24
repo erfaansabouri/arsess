@@ -48,7 +48,7 @@ class ProductResource extends Resource {
                                                             ->label('توضیحات') ,
                                  Forms\Components\Toggle::make('is_selected')
                                                         ->required()
-                                                        ->label('برگزیده') ,
+                                                        ->label('گنجینه') ,
                                  Select::make('categories')
                                        ->multiple()
                                        ->preload()
@@ -77,7 +77,7 @@ class ProductResource extends Resource {
                                                             ->label('قیمت') ,
                                    Tables\Columns\IconColumn::make('is_selected')
                                                             ->boolean()
-                                                            ->label('برگزیده') ,
+                                                            ->label('گنجینه') ,
                                    // categories
                                ])
                      ->filters([])
