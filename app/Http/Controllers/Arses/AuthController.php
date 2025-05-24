@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Arses;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Rules\IranPhoneRule;
+use App\Services\CartService;
 use App\Services\Fixer;
 use Illuminate\Http\Request;
 
@@ -61,6 +62,10 @@ class AuthController extends Controller {
             $user->otp = null;
             $user->save();
             auth()->login($user);
+
+            if (!empty(CartService::getCart())){
+                return redirect()->route('checkout.show');
+            }
 
             return redirect()->route('my-profile.show');
         }
