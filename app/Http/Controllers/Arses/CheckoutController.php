@@ -135,7 +135,7 @@ class CheckoutController extends Controller {
         if ( $invoice->failed_at ) {
             return redirect()
                 ->route('my-profile.show')
-                ->with('custom_error' , 'این فاکتور قبلا پرداخت ناموفق داشته است');
+                ->with('custom_error' , 'پرداخت نا موفق');
         }
         try {
             $result = Payment::amount($invoice->payment_price)
