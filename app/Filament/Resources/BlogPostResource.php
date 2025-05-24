@@ -39,7 +39,7 @@ class BlogPostResource extends Resource {
                                                              ->label('تصویر')
                                                              ->required()
                                                              ->rules([ 'image' ]) ,
-                                 Forms\Components\RichEditor::make('body')
+                                 Forms\Components\MarkdownEditor::make('body')
                                                             ->label('متن')
                                                             ->required()
                                                             ->columnSpanFull() ,
