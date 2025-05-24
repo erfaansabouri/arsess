@@ -1,5 +1,6 @@
 @php use App\Services\CartService; @endphp
 @php use App\Models\ProductCategory; @endphp
+
 <div class="sideMenu transitionCls @if(session('open_side_cart')) opened @endif">
     <span class="icon-Remove closeSide"></span>
     <div class="sideMnuBx">
@@ -13,28 +14,28 @@
                     <img src="{{ $cart_item['product']->getFirstMediaUrl('image') }}" alt="img"/>
                 </a>
             @endforeach
-            <div class="sideBottom">
-                @if(CartService::getTotalPrice() > 0)
-                    <div class="subtotal">جمع کل: {{ number_format(CartService::getTotalPrice()) }} تومان</div>
-                    <div class="sideBtns">
-                        <a href="{{ route('cart.show') }}" class="cartBtn transitionCls"> سبد خرید</a>
-                        <a href="{{ route('checkout.show') }}" class="settlmntBtn transitionCls"> تسویه حساب</a>
-                    </div>
-                @else
-                    <div class="cartEmpty emptyBox whiteEmpty">
-                        <p>
-                            سبد خرید شما خالی است؛ ما راضی نیستیم شما دست خالی به خانه
-                            برگردید! از <a href="{{ route('product.index') }}">محصولات ما</a> بازدید فرمایید.
-                        </p>
-                    </div>
-                @endif
 
-            </div>
+
         </div>
+        <div class="sideBottom">
+            @if(CartService::getTotalPrice() > 0)
+                <div class="subtotal">جمع کل: {{ number_format(CartService::getTotalPrice()) }} تومان</div>
+                <div class="sideBtns">
+                    <a href="{{ route('cart.show') }}" class="cartBtn transitionCls"> سبد خرید</a>
+                    <a href="{{ route('checkout.show') }}" class="settlmntBtn transitionCls"> تسویه حساب</a>
+                </div>
+            @else
+                <div class="cartEmpty emptyBox whiteEmpty">
+                    <p>
+                        سبد خرید شما خالی است؛ ما راضی نیستیم شما دست خالی به خانه
+                        برگردید! از <a href="{{ route('product.index') }}">محصولات ما</a> بازدید فرمایید.
+                    </p>
+                </div>
+            @endif
 
+        </div>
     </div>
 </div>
-
 <section class="headerSec position-relative">
     <div class="hdrCntnt">
         <div class="container">
