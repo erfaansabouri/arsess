@@ -18,7 +18,15 @@
                                 @endforeach
                             @endif
                             <span class="icon-left"></span>
-                            <p>{{ $blog_post->title }}</p>
+                            @php
+                            $agent = new \Jenssegers\Agent\Agent();
+                            $is_mobile = $agent->isMobile();
+                            @endphp
+                            @if($is_mobile && strlen($blog_post->title) > 20)
+                                <p>{{ mb_substr($blog_post->title, 0, 20) }}...</p>
+                            @else
+                                <p>{{ $blog_post->title }}</p>
+                            @endif
                         </div>
                         <div class="blogPost">
                             <div class="blgPostImg transitionCls">
