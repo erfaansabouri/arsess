@@ -22,8 +22,8 @@
                             $agent = new \Jenssegers\Agent\Agent();
                             $is_mobile = $agent->isMobile();
                             @endphp
-                            @if($is_mobile && strlen($blog_post->title) > 20)
-                                <p>{{ mb_substr($blog_post->title, 0, 20) }}...</p>
+                            @if($is_mobile && strlen($blog_post->title) > 50)
+                                <p>{{ mb_substr($blog_post->title, 0, 50) }}...</p>
                             @else
                                 <p>{{ $blog_post->title }}</p>
                             @endif
