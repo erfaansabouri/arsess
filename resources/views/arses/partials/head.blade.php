@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>سرای آرسس</title>
     <link rel="stylesheet" href="{{ asset('arses/asset/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('arses/asset/css/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('arses/asset/css/main.css?2') }}" />
     <link rel="stylesheet" href="{{ asset('arses/asset/css/icomoon.css') }}" />
     <link rel="stylesheet" href="{{ asset('arses/asset/css/swiper-bundle.min.css') }}" />
 
