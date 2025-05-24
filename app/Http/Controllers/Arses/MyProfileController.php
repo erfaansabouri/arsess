@@ -32,6 +32,7 @@ class MyProfileController extends Controller {
             'last_name' => 'required|string|max:255',
             'postal_code' => 'nullable|string|max:10',
             'address' => 'nullable|string',
+            'national_code' => 'nullable|string',
         ]);
 
         $user->update($data);

@@ -36,34 +36,40 @@
                         <div id="tabOne" class="tabcontent">
                             <div class="blogList">
                                 @foreach($blog_posts as $blog_post)
-                                    <a href="{{ route('blog-posts.show', ['slug' => $blog_post->slug])  }}" class="blogCard">
-                                        <div class="blgCrdImg transitionCls">
+                                    <div class="blogCard">
+                                        <a href="{{ route('blog-posts.show', ['slug' => $blog_post->slug])  }}" class="blgCrdImg transitionCls">
                                             <img src="{{ $blog_post->getFirstMediaUrl('image') }}" alt="img"/>
-                                        </div>
+                                        </a>
                                         <div class="blgCrdInfo">
-                                            <h2>{{ $blog_post->title }}</h2>
+                                            <a href="{{ route('blog-posts.show', ['slug' => $blog_post->slug])  }}">
+                                                <h2>{{ $blog_post->title }}</h2>
+                                            </a>
                                             <div class="text">
                                                 {{ $blog_post->summary }}
                                             </div>
                                             @if($blog_post->categories->count() != 0)
                                                 <div class="category">
-                                                    <span>دسته بندی ها</span>
+                                                    <a href="#"><span>دسته بندی ها</span></a>
                                                     @foreach($blog_post->categories as $category)
-                                                        <p href="{{ route('blog-posts.index', ['category_title' => $category->title]) }}">{{ $category->title }}</p>
+                                                        <a href="{{ route('blog-posts.index', ['category_title' => $category->title]) }}">
+                                                            <p>{{ $category->title }}</p>
+                                                        </a>
                                                     @endforeach
                                                 </div>
                                             @endif
 
                                             @if($blog_post->hashtags->count() != 0)
                                                 <div class="category mt-5">
-                                                    <span>هشتگ ها</span>
+                                                    <a href="#"><span>هشتگ ها</span></a>
                                                     @foreach($blog_post->hashtags as $hashtag)
-                                                        <span href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->title]) }}">{{ $hashtag->title }}</span>
+                                                        <a href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->title]) }}">
+                                                            <p>#{{ $hashtag->title }}</p>
+                                                        </a>
                                                     @endforeach
                                                 </div>
                                             @endif
                                         </div>
-                                    </a>
+                                    </div>
                                 @endforeach
                             </div>
                             @if ($blog_posts->lastPage() > 1)

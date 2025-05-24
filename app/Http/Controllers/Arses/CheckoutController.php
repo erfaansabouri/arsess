@@ -71,6 +71,7 @@ class CheckoutController extends Controller {
             'postal_code' => 'required|string|max:10' ,
             'phone' => 'required|string|max:15' ,
             'email' => 'nullable|email|max:255' ,
+            'national_code' => 'required|string|max:255' ,
             'description' => 'nullable|string' ,
         ]);
         if ( $v->fails() ) {
@@ -88,6 +89,7 @@ class CheckoutController extends Controller {
         $invoice->last_name = $request->input('last_name');
         $invoice->address = $request->input('address');
         $invoice->postal_code = $request->input('postal_code');
+        $invoice->national_code = $request->input('national_code');
         $invoice->phone = $request->input('phone');
         $invoice->email = $request->input('email');
         $invoice->description = $request->input('description');

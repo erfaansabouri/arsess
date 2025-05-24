@@ -68,6 +68,20 @@
                                         value="{{ old('postal_code') }}"
                                     />
                                 </div>
+                                {{----}}
+                                <div class="col-12">
+                                    <label for="inpt005" class="form-label">کد ملی </label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="inpt005"
+                                        placeholder="کد ملی "
+                                        name="national_code"
+                                        value="{{ old('national_code') ?? (auth()->user() ? auth()->user()->national_code : '') }}"
+
+                                    />
+                                </div>
+                                    {{----}}
                                 <div class="col-12">
                                     <label for="inpt06" class="form-label"
                                     >شماره موبایل</label
@@ -135,10 +149,10 @@
                                         <strong>تخفیف</strong>
                                         <strong id="discount-amount">{{ number_format(CartService::getDiscountAmount()) }} تومان</strong>
                                     </li>
-                                    <li>
+                                    <div class="ulLastChild">
                                         <strong>جمع کل</strong>
                                         <strong id="payment-price">{{ number_format(CartService::getPaymentPrice()) }} تومان</strong>
-                                    </li>
+                                    </div>
                                 </ul>
                                 <div class="leftBoxCvr position-absolute"></div>
                             </div>

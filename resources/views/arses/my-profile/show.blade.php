@@ -78,8 +78,12 @@
 
                                     <strong>شماره تماس</strong>
                                     <input  type="text" class="mb-3" value="{{ $user->phone }}" readonly="readonly">
-                                    <strong>آدرس</strong>
 
+                                    <strong>کد ملی</strong>
+                                    <input name="national_code" type="text" class="mb-3" value="{{ $user->national_code }}" readonly="">
+
+
+                                    <strong>آدرس</strong>
                                     <input name="address" type="text" value="{{ $user->address }}" readonly="">
                                     <button id="edit-btn" style="display: block" class="editBtn btn transitionCls">ویرایش</button>
                                     <button id="submit-btn" style="display: none" class="editBtn btn transitionCls">ذخیره</button>
@@ -121,6 +125,7 @@
                     first_name: $('input[name="first_name"]').val(),
                     last_name: $('input[name="last_name"]').val(),
                     address: $('input[name="address"]').val(),
+                    national_code: $('input[name="national_code"]').val(),
                     _token: '{{csrf_token()}}'
                 };
                 $.ajax({

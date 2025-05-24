@@ -24,8 +24,12 @@
                                         <p>پس کرایه</p>
                                     </li>
                                     <li>
+                                        <span>تخفیف</span>
+                                        <p id="discount-amount">{{ number_format(CartService::getDiscountAmount()) }} تومان</p>
+                                    </li>
+                                    <li>
                                         <strong>مجموع</strong>
-                                        <p>{{ number_format(CartService::getTotalPrice() - CartService::getDiscountAmount()) }} تومان</p>
+                                        <p id="payment-price">{{ number_format(CartService::getPaymentPrice()) }} تومان</p>
                                     </li>
                                 </ul>
                                 <a href="{{ route('checkout.show') }}" class="setlmntBtn">
@@ -105,12 +109,14 @@
                             <div class="discountCod">کوپن تخفیف دارید؟</div>
                             <div class="discountBx" style="display: block;">
                                 <div class="discountDiv transitionCls">
-                                    <input name="code" type="text" class="form-control" placeholder="کد تخفیف">
+                                    <input name="code2" type="text" class="form-control" placeholder="کد تخفیف">
                                     <button id="check-coupon-2" class="btn transitionCls">
                                         <span class="icon-Next"></span>
                                     </button>
                                 </div>
                             </div>
+                            <p class="text-danger mt-2" id="coupon-error"></p>
+                            <p class="text-success mt-2" id="coupon-success"></p>
                         </div>
                     </div>
                 </div>
@@ -162,7 +168,7 @@
             $('#check-coupon-2').on('click', function (e) {
                 console.log('clicked')
                 e.preventDefault();
-                let code = $('input[name=code]').val();
+                let code = $('input[name=code2]').val();
                 $.ajax({
                     url: "{{ route('checkout.check-coupon') }}",
                     type: "POST",

@@ -15,7 +15,6 @@ body {
     width: 100%;
     overflow: hidden;
 }
-
 .image_inner {
     position: absolute;
     top: 0;
@@ -23,12 +22,10 @@ body {
     width: 100%;
     height: 100%;
 }
-
 .image_parent:after {
     content: "";
     display: block;
 }
-
 .image_parent img {
     position: absolute;
     top: 0;
@@ -37,7 +34,6 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
 .btn {
     border-radius: 0;
 }
@@ -46,11 +42,9 @@ body {
 .headerSec {
     padding: 35px 0;
 }
-
 .headerSec.homTopSec {
     padding: 0 0 220px 0;
 }
-
 .headerSec .homeHdrImg {
     width: 100%;
     height: auto;
@@ -60,24 +54,20 @@ body {
     z-index: 1;
     display: block;
 }
-
 .headerSec .homHdrCntnt {
     position: relative;
     margin-top: -80px;
     width: 100%;
 }
-
 .headerSec .homHdrLogo {
     margin: 10px auto 100px auto;
     width: 205px;
     height: auto;
 }
-
 .headerSec .homHdrLogo img {
     width: 100%;
     height: auto;
 }
-
 .topSerch {
     width: 100%;
     max-width: 852px;
@@ -88,7 +78,6 @@ body {
     justify-content: center;
     gap: 45px;
 }
-
 .topSerch .topSrchLnk {
     display: flex;
     align-items: center;
@@ -105,18 +94,15 @@ body {
     font-size: 17px;
     color: #000;
 }
-
 .topSerch .topSrchLnk:hover {
     color: #fff;
     background: #581214;
     border-color: #581214;
 }
-
 .topSerch .cartLink,
 .topSerch .minCrtLink {
     position: relative;
 }
-
 .topSerch .cartLink .numberTag,
 .topSerch .minCrtLink .numberTag {
     right: 4px;
@@ -132,12 +118,10 @@ body {
     justify-content: center;
     font-size: 14px;
 }
-
 .topSerch .topSrchLnk:hover .numberTag {
     background: #fff;
     color: #581214;
 }
-
 .topSerch .subBox {
     display: none;
     z-index: 5;
@@ -145,17 +129,14 @@ body {
     right: -10px;
     top: 45px;
 }
-
 .topSerch .subBox .minCrtLink {
     display: none;
 }
-
 .topSerch .subBox .mnuBox {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
-
 .topSerch .subBox .mnuBox .hdrMnuUl {
     padding: 10px 0;
     width: 303px;
@@ -165,11 +146,9 @@ body {
     border-left: 6px solid #b3b3b3;
     background: #fff;
 }
-
 .topSerch .hdrMnuLi {
     width: 100%;
 }
-
 .topSerch .hdrMnuLi .hdrMnuLiBx,
 .topSerch .hdrMnuLi .prdctLnkBx {
     width: 100%;
@@ -178,24 +157,20 @@ body {
     justify-content: space-between;
     padding: 14px 15px;
 }
-
 .topSerch .hdrMnuLi .hdrMnuLiBx.open,
 .topSerch .hdrMnuLi .prdctLnkBx.open {
     border-bottom: 1px solid #b3b3b3;
 }
-
 .topSerch .hdrMnuLi .hdrMnuLiBx span,
 .topSerch .hdrMnuLi .prdctLnkBx span,
 .topSerch .hdrSubUl .prdctSubBx span {
     cursor: pointer;
 }
-
 .topSerch .hdrMnuLi .hdrMnuLiBx.open span,
 .topSerch .hdrMnuLi .prdctLnkBx.open span,
 .topSerch .hdrSubUl .prdctSubBx.open span {
     transform: rotate(-90deg);
 }
-
 .topSerch .hdrSubLnk,
 .topSerch .hdrMnuLi .prdctLnkBx a {
     display: block;
@@ -205,29 +180,24 @@ body {
     font-size: 16px;
     transition: all 0.6s;
 }
-
 .topSerch .hdrMnuLiBx:hover .hdrSubLnk,
 .topSerch .prdctLnkBx:hover a,
 .topSerch .hdrSubUl .prdctSubBx a:hover {
     color: #581214;
     font-family: "Darvish_Medium";
 }
-
 .topSerch .hdrMnuLiBx.open .hdrSubLnk,
 .topSerch .prdctLnkBx.open a {
     font-family: "Darvish_Bold";
 }
-
 .topSerch .hdrSubUl {
     display: none;
     padding: 10px 0;
 }
-
 .topSerch .hdrSubUl .prdctSubBx {
     display: none;
     padding: 10px 5px;
 }
-
 .topSerch .hdrSubUl .prdctSubBx a {
     display: block;
     color: #000;
@@ -236,7 +206,6 @@ body {
     width: 100%;
     padding: 12px 15px;
 }
-
 .topSerch .topSrchBx {
     width: 100%;
     max-width: 662px;
@@ -245,7 +214,6 @@ body {
     background: #fff;
     position: relative;
 }
-
 .headerMnu .menuVector {
     position: absolute;
     width: 303px;
@@ -257,7 +225,6 @@ body {
     transform: skew(329deg);
     background: #581214;
 }
-
 .topSerch .topSrchBx .afterBox {
     position: absolute;
     height: 1329px;
@@ -269,20 +236,17 @@ body {
     transform: skew(329deg);
     background: #581214;
 }
-
 .topSerch .topSrchBx .input-group {
     width: 100%;
     height: 100%;
     border: none;
     background: transparent;
 }
-
 .topSerch .topSrchBx .input-group-text {
     border: none;
     padding: 0;
     background: transparent;
 }
-
 .topSerch .topSrchBx .form-control {
     background: transparent;
     border: none;
@@ -290,7 +254,6 @@ body {
     color: #000000;
     padding: 0;
 }
-
 .topSerch .topSrchBx .input-group-text button {
     height: 100%;
     width: 100%;
@@ -301,12 +264,13 @@ body {
     outline: none;
     box-shadow: none;
 }
-
-.topSerch .topSrchBx .input-group-text button:hover {
-    color: #581214;
+.topSerch .topSrchBx .input-group-text button:focus {
     border: none;
     outline: none;
     box-shadow: none;
+}
+.topSerch .topSrchBx .input-group-text button:hover {
+    color: #581214;
 }
 
 /*==================topLogoSec=================*/
@@ -317,7 +281,6 @@ body {
     overflow: hidden;
     direction: ltr;
 }
-
 .topLogoSec ul {
     width: 100%;
     min-width: 100%;
@@ -330,14 +293,12 @@ body {
     width: calc(113px * 9 * 3);
     animation: scroll 10s linear infinite;
 }
-
 .topLogoSec ul li {
     width: 113px;
     height: 100%;
     margin: 0 10px;
     vertical-align: middle;
 }
-
 .topLogoSec ul a {
     width: 100%;
     height: 22px;
@@ -345,7 +306,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .topLogoSec ul a img {
     width: 100%;
     height: auto;
@@ -374,21 +334,17 @@ body {
     padding: 30px;
     z-index: 15;
 }
-
 .sideMenu.opened {
     right: 0;
 }
-
 .sideMenu .closeSide {
     color: #222020;
     font-size: 16px;
     cursor: pointer;
 }
-
 .sideMenu .closeSide:hover {
     color: #581214;
 }
-
 .sideMenu .sideMnuBx {
     padding: 25px 30px 20px 0;
     min-height: 100%;
@@ -397,7 +353,6 @@ body {
     justify-content: space-between;
     flex-direction: column;
 }
-
 .sideMenu .sideMnuBx.emptySide {
     padding: 25px 0 20px 0;
     min-height: calc(100% - 150px);
@@ -405,7 +360,7 @@ body {
 .sideMenu .sideMnuBx .sideItmsLst {
     width: 100%;
 }
-    .sideMenu .sideMnuBx .sideItem {
+.sideMenu .sideMnuBx .sideItem {
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -414,7 +369,6 @@ body {
     padding: 12px 0;
     border-bottom: 2px solid #000;
 }
-
 .sideMenu .sideMnuBx .sideItem strong {
     display: block;
     margin-bottom: 14px;
@@ -424,7 +378,6 @@ body {
     font-size: 16px;
     font-family: "Darvish_Bold";
 }
-
 .sideMenu .sideMnuBx .sideItem p {
     color: #b3b3b3;
     text-align: right;
@@ -434,25 +387,20 @@ body {
     font-weight: 400;
     line-height: normal;
 }
-
 .sideMenu .sideMnuBx .sideItem img {
     width: 53px;
     height: 53px;
     background: #d9d9d9;
 }
-
 .sideMenu .sideMnuBx .sideItem:hover {
     border-color: #581214;
 }
-
 .sideMenu .sideMnuBx .sideItem:hover strong {
     color: #581214;
 }
-
 .sideMenu .sideMnuBx .sideBottom {
     width: 100%;
 }
-
 .sideMenu .sideMnuBx .subtotal {
     color: #000;
     text-align: center;
@@ -460,7 +408,6 @@ body {
     font-family: "Darvish_Bold";
     margin: 30px auto 50px auto;
 }
-
 .sideMenu .sideMnuBx .sideBtns {
     display: flex;
     align-items: center;
@@ -468,7 +415,6 @@ body {
     gap: 10px;
     width: 100%;
 }
-
 .sideMenu .sideBtns a {
     display: flex;
     align-items: center;
@@ -478,19 +424,16 @@ body {
     font-size: 16px;
     height: 57px;
 }
-
 .sideMenu .sideBtns a.cartBtn {
     background: #d9d9d9;
     color: #222020;
     width: 40%;
 }
-
 .sideMenu .sideBtns a.settlmntBtn {
     background: #581214;
     color: #ffffff;
     width: 60%;
 }
-
 .sideMenu .sideBtns a:hover {
     background: #222020;
     color: #ffffff;
@@ -502,20 +445,16 @@ body {
     /* z-index: 2; */
     /* background: #ffffff; */
 }
-
 .topBnnrSec .topBnnrSwpr {
     width: 100%;
 }
-
 .topBnnrSec .topBnrCrd {
     display: block;
     width: 100%;
 }
-
 .topBnnrSec .image_parent:after {
     padding-top: 34%;
 }
-
 .topBnnrSec .topBnrTxt {
     text-align: left;
     position: absolute;
@@ -526,7 +465,6 @@ body {
     padding: 50px 100px;
     z-index: 2;
 }
-
 .topBnnrSec .topBnrTxt .adTag {
     width: max-content;
     min-width: 52px;
@@ -544,7 +482,6 @@ body {
     font-family: "DarvishExpand_Bold";
     font-size: 24px;
 }
-
 .topBnnrSec .topBnrTxt img {
     width: 261px;
     height: auto;
@@ -553,7 +490,6 @@ body {
     mix-blend-mode: multiply;
     flex-shrink: 0;
 }
-
 .topBnnrSec .topBnrTxt h2 {
     color: #222020;
     font-size: 24px;
@@ -566,7 +502,6 @@ body {
     margin-bottom: 430px;
     z-index: 2;
 }
-
 .catgorySec .ctgryVector {
     position: absolute;
     left: 0;
@@ -575,7 +510,6 @@ body {
     height: auto;
     max-height: 1000px;
 }
-
 .arsesTitl {
     color: #222020;
     text-align: right;
@@ -583,7 +517,6 @@ body {
     font-size: 24px;
     margin-bottom: 50px;
 }
-
 .catgorySec .catSecList {
     display: flex;
     align-items: center;
@@ -592,7 +525,6 @@ body {
     flex-wrap: wrap;
     z-index: 2;
 }
-
 .catgorySec .catSecList .catgryCard {
     width: 300px;
     height: 300px;
@@ -608,7 +540,6 @@ body {
     background: #fff;
     color: #000;
 }
-
 .catgorySec .catgryCard p {
     font-family: "DarvishExpand_Bold";
     font-size: 20px;
@@ -620,11 +551,9 @@ body {
     text-underline-offset: auto;
     text-underline-position: from-font;
 }
-
 .catgorySec .catgryCard span {
     font-size: 18px;
 }
-
 .catgorySec .catSecList .catgryCard:hover {
     color: #ffffff;
     background: #581214;
@@ -636,7 +565,6 @@ body {
     z-index: 2;
     background: #ffffff;
 }
-
 .newestSec .newestVctr {
     position: absolute;
     left: 0;
@@ -646,25 +574,20 @@ body {
     height: auto;
     z-index: 1;
 }
-
 .newestSec .swprContainr {
     margin: 0 auto 0 0;
 }
-
 .newestSec .swprContainr .swiper-wrapper {
     min-width: 100%;
 }
-
 .newestSwper .swiper-slide {
     width: max-content;
     transition: all 0.6s;
 }
-
 .newestCrd {
     width: 303px;
     display: block;
 }
-
 .newestCrd .cardImg {
     width: 100%;
     height: 606px;
@@ -679,49 +602,41 @@ body {
     background: #ffffff;
     overflow: hidden;
 }
-
 .newestCrd .cardImg img {
     width: auto;
     height: 100%;
     display: block;
 }
-
 .newestCrd .cardBdy img {
     width: auto;
     height: 30px;
     display: block;
     margin: 10px auto 12px 0;
 }
-
 .newestCrd .cardBdy h2 {
     color: #222020;
     text-align: left;
     font-family: "DarvishExpand_Bold";
     font-size: 16px;
 }
-
 .newestCrd .cardBdy .line {
     width: 204px;
     height: 6px;
     background: #b3b3b3;
     margin: 10px auto 10px 0;
 }
-
 .newestCrd .cardBdy p {
     color: #222020;
     text-align: right;
     font-size: 16px;
     line-height: 1.6;
 }
-
 .newestCrd:hover .cardImg {
     border-color: #581214;
 }
-
 .newestCrd:hover .line {
     background: #581214;
 }
-
 .newestSwper .swiper-button-prev:after,
 .newestSwper .swiper-rtl .swiper-button-next:after,
 .newestSwper .swiper-button-next:after,
@@ -731,22 +646,18 @@ body {
     color: #581214;
     font-size: 34px;
 }
-
 .newestSwper .swiper-button-prev:after,
 .newestSwper .swiper-rtl .swiper-button-prev:after {
     transform: rotate(180deg);
 }
-
 .newestSwper .swiper-button-next.swiper-button-disabled,
 .newestSwper .swiper-button-prev.swiper-button-disabled {
     display: none;
 }
-
 /*==================searchSec=================*/
 .searchSec {
     padding: 100px 0;
 }
-
 .searchSec .noResult {
     width: 100%;
     padding: 20px;
@@ -757,14 +668,12 @@ body {
     background: #fff;
     margin-bottom: 50px;
 }
-
 .searchSec .noResult p {
     color: #581214;
     text-align: right;
     font-family: "Darvish_Light";
     font-size: 16px;
 }
-
 .srchResult {
     display: flex;
     align-items: flex-start;
@@ -772,21 +681,17 @@ body {
     gap: 50px 192px;
     flex-wrap: wrap;
 }
-
 .srchResult .newestCrd {
     width: 303px;
     background: #fff;
 }
-
 .srchResult .newestCrd .cardImg {
     height: 303px;
 }
-
 .srchResult .newestCrd .cardBdy h2 {
     font-family: "Darvish_Regular";
     transition: all 0.6s;
 }
-
 .srchResult .newestCrd:hover .cardBdy h2 {
     font-family: "Darvish_Bold";
 }
@@ -796,7 +701,6 @@ body {
     /* position: relative;
     z-index: 2; */
 }
-
 .breadCrumb {
     display: flex;
     align-items: center;
@@ -805,35 +709,30 @@ body {
     margin-bottom: 25px;
     flex-wrap: wrap;
 }
-
 .breadCrumb a,
 .breadCrumb p {
     display: block;
     color: #000;
     text-align: right;
     font-size: 12px;
-    line-height: 1;
+    line-height: 1.7;
     min-width: max-content;
     font-family: "DarvishExpand_Regular";
 }
-
 .breadCrumb strong {
     display: block;
     color: #000;
     font-family: "DarvishExpand_Bold";
     font-size: 12px;
-    min-width: max-content;
+    line-height: 1.7;
 }
-
 .breadCrumb a:hover {
     color: #581214;
 }
-
 .breadCrumb span {
     color: #000;
     font-size: 12px;
 }
-
 .saraTopLnks .linksList {
     display: flex;
     align-items: center;
@@ -841,7 +740,6 @@ body {
     gap: 25px;
     flex-wrap: wrap;
 }
-
 .saraTopLnks .linksList a {
     width: max-content;
     height: 30px;
@@ -858,7 +756,6 @@ body {
     border-left: 6px solid #b3b3b3;
     background: #fff;
 }
-
 .saraTopLnks .linksList a:hover {
     color: #581214;
     border-color: #581214;
@@ -868,7 +765,6 @@ body {
 .tabBox .tabHeader {
     margin-bottom: 50px;
 }
-
 .tabBox .tabHeader ul {
     display: flex;
     align-items: flex-start;
@@ -878,21 +774,18 @@ body {
     padding-bottom: 5px;
     overflow: auto;
 }
-
 .tabBox .tabHeader ul::-webkit-scrollbar {
     width: 5px;
     height: 5px;
     background-color: #fff;
     border-radius: 35px;
 }
-
 .tabBox .tabHeader ul::-webkit-scrollbar-thumb {
     border-radius: 35px;
     background-color: #75171a;
     --webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
     inset 0 -1px 0 rgba(0, 0, 0, 0.07);
 }
-
 .tabBox .tabHeader .tablinks {
     width: max-content;
     height: 37px;
@@ -909,11 +802,9 @@ body {
     border-left: 6px solid #b3b3b3;
     background: #fff;
 }
-
 .tabBox .tabHeader .tablinks:hover {
     border-color: #581214;
 }
-
 .tabBox .tabHeader .tablinks.active {
     border-color: #581214;
     background: #581214;
@@ -921,11 +812,9 @@ body {
     padding: 0px 30px;
     font-family: "DarvishExpand_Bold";
 }
-
 .tabBox .tabcontent {
     display: none;
 }
-
 .tabBox #tabOne {
     display: block;
 }
@@ -934,7 +823,6 @@ body {
 .aboutSec {
     padding: 100px 0;
 }
-
 .aboutSec .aboutSecBx {
     display: flex;
     align-items: center;
@@ -943,44 +831,36 @@ body {
     flex-direction: column;
     margin-bottom: 100px;
 }
-
 .aboutSec .aboutSecBx .aboutLogo {
     width: 205px;
     height: auto;
 }
-
 .aboutSec .aboutSecBx .aboutLogo img {
     width: 100%;
     height: auto;
 }
-
 .aboutSec .aboutSecBx .title {
     text-align: center;
 }
-
 .aboutSec .aboutSecBx .title p {
     color: #000;
     font-size: 20px;
     margin-bottom: 50px;
 }
-
 .aboutSec .aboutSecBx .title h1 {
     color: #581214;
     font-size: 20px;
     font-family: "DarvishExpand_ExBold";
 }
-
 .aboutSec .aboutSecBx .aboutImg {
     width: 100%;
     max-width: 443px;
     height: auto;
 }
-
 .aboutSec .aboutSecBx .aboutImg img {
     width: 100%;
     height: auto;
 }
-
 .aboutSec .aboutVector {
     width: 100%;
     height: auto;
@@ -990,30 +870,24 @@ body {
 .blogSec {
     padding: 100px 0;
 }
-
 .blogSec .arsesTitl {
     text-align: center;
 }
-
 .blogSec .tabHeader {
     width: max-content;
     margin: 50px auto;
 }
-
 .blogSec .tabBox .tabHeader ul {
     gap: 93px;
     height: 59px;
 }
-
 .blogSec .tabBox .tabHeader .tablinks {
     color: #000000;
     height: 49px;
 }
-
 .blogSec .tabBox .tabHeader .tablinks.active {
     color: #ffffff;
 }
-
 .blogCard {
     margin-bottom: 45px;
     display: flex;
@@ -1021,11 +895,9 @@ body {
     justify-content: flex-start;
     gap: 15px;
 }
-
 .blogCard:last-child {
     margin-bottom: 0;
 }
-
 .blogCard .blgCrdImg {
     width: 303px;
     min-width: 303px;
@@ -1036,18 +908,15 @@ body {
     border-left: 6px solid #b3b3b3;
     background: #fff;
 }
-
 .blogCard .blgCrdImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-
 .blogCard .blgCrdInfo {
     text-align: right;
 }
-
 .blogCard .blgCrdInfo h2,
 .blogPgSec .blogPost .blgPostInfo h2 {
     color: #000;
@@ -1056,7 +925,6 @@ body {
     margin-bottom: 12px;
     line-height: 1.6;
 }
-
 .blogCard .blgCrdInfo .text {
     color: #000;
     font-size: 16px;
@@ -1068,11 +936,9 @@ body {
     line-height: 1.6;
     max-width: 707px;
 }
-
 .blogPgSec .blgPostInfo .category a {
     display: block;
 }
-
 .blogCard .blgCrdInfo .category,
 .blogPgSec .blgPostInfo .category {
     display: flex;
@@ -1081,16 +947,19 @@ body {
     gap: 10px;
     flex-wrap: wrap;
 }
-
+.blogCard .blgCrdInfo .category a {
+    display: block;
+}
+.blogCard .blgCrdInfo .category a:first-child {
+    width: 100%;
+}
 .blogCard .blgCrdInfo .category span {
     color: #000;
     display: block;
     font-size: 16px;
-    width: 100%;
     font-family: "DarvishExpand_Regular";
     cursor: pointer;
 }
-
 .blogCard .blgCrdInfo .category p,
 .blogPgSec .blgPostInfo .category p {
     color: #000;
@@ -1099,21 +968,17 @@ body {
     cursor: pointer;
     transition: all 0.6s;
 }
-
 .blogCard .blgCrdInfo .category span:hover {
     color: #581214;
 }
-
 .blogCard .blgCrdInfo .category p:hover,
 .blogPgSec .blgPostInfo .category p:hover {
     color: #581214;
     font-family: "DarvishExpand_SemiBold";
 }
-
 .blogCard:hover .blgCrdImg {
     border-color: #581214;
 }
-
 .blogCard:hover .blgCrdInfo h2 {
     color: #581214;
 }
@@ -1122,17 +987,14 @@ body {
 .blogPgSec {
     padding: 100px 0;
 }
-
 .blogPgSec .blogPgBox {
     margin: 0 auto;
     width: 100%;
     max-width: 719px;
 }
-
 .blogPgSec .blogPost {
     margin-top: 50px;
 }
-
 .blogPgSec .blogPost .blgPostImg {
     width: 303px;
     height: 303px;
@@ -1143,36 +1005,29 @@ body {
     background: #fff;
     margin-bottom: 30px;
 }
-
 .blogPgSec .blogPost .blgPostImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-
-
 .blogPgSec .blogPost .blgPostInfo {
     width: 100%;
     max-width: 719px;
 }
-
 .blogPgSec .blogPost .blgPostInfo h2 {
     margin-bottom: 20px;
 }
-
 .blogPgSec .blgPostInfo .text {
     color: #000;
     margin-bottom: 50px;
 }
-
 .blogPgSec .blgPostInfo .text p {
     margin-bottom: 10px;
-    line-height: 1.6;
+    line-height: 1.7;
     font-size: 16px;
-    font-family: "DarvishExpand_Regular";
+    font-family: "Darvish_Regular";
 }
-
 .blogPgSec .blgPostInfo .category span {
     color: #000;
     display: block;
@@ -1187,7 +1042,6 @@ body {
     padding: 100px 0 0 0;
     min-height: 95vh;
 }
-
 .cartSec .cartPgTitle {
     color: #000;
     text-align: right;
@@ -1195,7 +1049,6 @@ body {
     font-family: "Darvish_Light";
     margin-bottom: 50px;
 }
-
 .cartSec .cartRow {
     margin-top: 50px;
     display: flex;
@@ -1203,12 +1056,10 @@ body {
     justify-content: flex-start;
     padding-bottom: 150px;
 }
-
 .cartSec .cartRow .cartRight {
     width: 408px;
     min-width: 408px;
 }
-
 .cartSec .cartRight .cartSvg {
     position: absolute;
     background: #581214;
@@ -1219,7 +1070,6 @@ body {
     z-index: 0;
     transform: skew(18deg);
 }
-
 .cartSec .cartRight .cartSetlmnt {
     position: relative;
     z-index: 2;
@@ -1236,7 +1086,6 @@ body {
     justify-content: space-between;
     flex-direction: column;
 }
-
 .cartSec .cartRight .setlmntBtn {
     display: flex;
     flex-direction: column;
@@ -1254,16 +1103,13 @@ body {
     font-size: 16px;
     font-family: "Darvish_Bold";
 }
-
 .cartSec .cartRight .setlmntBtn:hover {
     background: #222020;
 }
-
 .cartSec .cartRight .setlmntUl {
     margin-bottom: 50px;
     width: 100%;
 }
-
 .cartSec .cartRight .setlmntUl li {
     display: flex;
     align-items: center;
@@ -1271,39 +1117,31 @@ body {
     color: #000;
     margin-bottom: 18px;
 }
-
 .cartSec .cartRight .setlmntUl li:last-child {
     margin-bottom: 0;
     margin-top: 35px;
 }
-
 .cartSec .cartRight .setlmntUl li:first-child {
     margin-bottom: 35px;
 }
-
 .cartSec .cartRight .setlmntUl strong {
     text-align: right;
     font-family: "Darvish_Bold";
 }
-
 .cartSec .cartRight .setlmntUl li:first-child strong {
     font-size: 12px;
 }
-
 .cartSec .cartRight .setlmntUl li:last-child strong {
     font-size: 14px;
 }
-
 .cartSec .cartRight .setlmntUl p {
     text-align: left;
     font-size: 14px;
 }
-
 .cartSec .cartRight .setlmntUl span {
     text-align: right;
     font-size: 14px;
 }
-
 .cartSec .cartRight .setlmntUl a,
 .cartSec .cartRight .setlmntUl i {
     text-align: right;
@@ -1311,11 +1149,9 @@ body {
     color: #000;
     display: block;
 }
-
 .cartSec .cartRight .setlmntUl a:hover {
     color: #581214;
 }
-
 .cartSec .cartRow .cartLeft {
     width: calc(100% - 408px);
     padding-right: 30px;
@@ -1324,321 +1160,125 @@ body {
     z-index: 2;
     min-height: 407px;
 }
-
 .emptyBox {
-
-
     padding: 10px 12px;
-
-
     border-top: 1px solid #b3b3b3;
-
-
     border-right: 1px solid #b3b3b3;
-
-
     border-bottom: 6px solid #b3b3b3;
-
-
     border-left: 6px solid #b3b3b3;
-
-
     background: #fff;
-
-
 }
-
-
 .emptyBox.cartEmpty {
-
-
     width: 100%;
-
-
     max-width: 342px;
-
-
     margin: 100px auto 100px auto;
-
-
 }
-
-
 .emptyBox.sideEmptyBx {
-
-
     width: 100%;
-
-
     margin: 80px 0;
-
-
 }
-
-
 .emptyBox.whiteEmpty p {
-
-
     color: #581214;
-
-
     text-align: right;
-
-
     font-family: "Darvish_Light";
-
-
     font-size: 16px;
-
-
     line-height: 1.7;
-
-
 }
-
-
 .emptyBox.whiteEmpty a {
-
-
     color: #581214;
-
-
     font-size: 16px;
-
-
     font-family: "Darvish_Light";
-
-
     text-decoration-line: underline;
-
-
     text-decoration-style: solid;
-
-
     text-decoration-skip-ink: auto;
-
-
     text-decoration-thickness: auto;
-
-
     text-underline-offset: auto;
-
-
     text-underline-position: from-font;
-
-
 }
-
-
 .emptyBox.whiteEmpty a:hover {
-
-
     color: #75171a;
-
-
 }
-
-
 .notif {
-
-
     display: flex;
-
-
     align-items: flex-start;
-
-
     justify-content: start;
-
-
     gap: 10px;
-
-
     width: max-content;
-
-
     max-width: 100%;
-
-
     padding: 19px 15px;
-
-
     border-top: 1px solid #b3b3b3;
-
-
     border-right: 1px solid #b3b3b3;
-
-
     border-bottom: 6px solid #b3b3b3;
-
-
     border-left: 6px solid #b3b3b3;
-
-
 }
-
-
 .notif.notifBox {
-
-
     position: fixed;
-
-
     right: 0;
-
-
     top: 80px;
-
-
     z-index: 11;
-
-
 }
-
-
 .notif.sideNotif {
-
-
     margin: 20px auto;
-
-
 }
-
-
 .notif.loginNotif {
-
-
     margin: 25px auto;
-
-
 }
-
-
-.notif.formNotif {
-
-
-    position: absolute;
-
-
-    left: 0;
-
-
-    top: calc(100% + 5px);
-
-
-    z-index: 2;
-
-
-}
-
-
 .notif.errorNotif {
-
-
     background: #fff;
-
-
     padding: 19px 30px;
-
-
 }
-
-
 .notif.successNotif {
-
-
     background: #581214;
-
-
 }
-
-
-.notif img {
-
-
-    width: 27px;
-
-
-    height: auto;
-
-
+.notif.formNotif {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    z-index: 2;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 15px;
 }
-
-
-.notif p {
-
-
-    text-align: right;
-
-
+.chkoutSec .paymentBx .notif.formNotif p {
+    padding: 0;
+    color: #581214;
     font-family: "Darvish_Light";
-
-
     font-size: 16px;
-
-
+}
+.notif img {
+    width: 27px;
+    height: auto;
+}
+.notif p {
+    text-align: right;
+    font-family: "Darvish_Light";
+    font-size: 16px;
     margin-top: 4px;
-
-
     line-height: 1.7;
-
-
 }
-
-
 .notif strong {
-
-
     font-family: "Darvish_Bold";
-
-
     font-size: 16px;
-
-
     text-decoration-line: underline;
-
-
     text-decoration-style: solid;
-
-
     text-decoration-skip-ink: auto;
-
-
     text-decoration-thickness: auto;
-
-
     text-underline-offset: auto;
-
-
     text-underline-position: from-font;
-
-
 }
-
-
 .notif.successNotif p,
 .notif.successNotif strong {
-
-
     color: #fff;
-
-
 }
-
-
 .notif.errorNotif p,
 .notif.errorNotif strong {
-
-
     color: #581214;
 }
-
 .cartSec table th,
 .cartSec table td {
     border-bottom: 2px solid #000;
     text-align: center;
 }
-
 .cartSec table th {
     color: #b3b3b3;
     font-size: 16px;
@@ -1646,11 +1286,9 @@ body {
     font-family: "Darvish_Regular";
     font-weight: 400;
 }
-
 .cartSec table td {
     padding: 12px 8px;
 }
-
 .cartSec table .price {
     display: flex;
     align-items: center;
@@ -1659,12 +1297,10 @@ body {
     color: #b3b3b3;
     font-size: 16px;
 }
-
 .cartSec table .number {
     color: #000;
     font-size: 16px;
 }
-
 .cartSec table .removeBtn {
     font-size: 16px;
     color: #b3b3b3;
@@ -1672,50 +1308,49 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .cartSec table .removeBtn:hover {
     color: #581214;
 }
-
 .cartSec table td h2 {
     color: #000;
     font-size: 14px;
     font-family: "Darvish_Medium";
     min-width: 200px;
 }
-
 .cartSec table .tblImg {
     width: 35px;
     height: 35px;
     background: #d9d9d9;
 }
-
 .cartSec table .tblImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-
 .cartSec .discountCod {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 12px;
     width: 100%;
     height: 38px;
     background: #d9d9d9;
+}
+.cartSec .discountCod p {
+    padding: 0 12px;
+    width: 100%;
+    height: 100%;
     color: #000;
     text-align: right;
     font-size: 16px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
-
 .cartSec .cartLeft .discountCod {
     margin: 80px auto 25px auto;
     max-width: 600px;
 }
-
 .cartSec .cartRight .discountCod {
     position: relative;
     margin: 25px auto;
@@ -1723,6 +1358,79 @@ body {
     max-width: 357px;
     display: none;
     z-index: 2;
+}
+.cartSec .cartLeft .discountCod.clicked {
+    background: #fff;
+}
+.cartSec .cartRight .discountCod.clicked {
+    background: transparent;
+}
+
+.discountBx,
+.discntBx {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.discountBx .discountDiv,
+.discntBx .discountDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid #581214;
+    width: 100%;
+}
+.discountBx input,
+.discntBx input {
+    border: none;
+    color: #222020;
+    text-align: right;
+    font-size: 16px;
+    background: transparent;
+}
+.discountBx input:focus,
+.discntBx input:focus {
+    background: transparent;
+}
+.discountBx button {
+    font-size: 15px;
+    color: #222020;
+    padding-left: 5px;
+}
+.discountBx button:hover {
+    color: #581214;
+}
+.discountBx .discountDiv:has(input:focus),
+.discntBx .discountDiv:has(input:focus) {
+    border-bottom: 6px solid #581214;
+}
+
+.cartRight .discountBx {
+    position: absolute;
+    margin: 25px auto;
+    width: 100%;
+    max-width: 357px;
+    display: none;
+    z-index: 2;
+}
+.discntBx {
+    margin: 25px auto;
+    width: 100%;
+    display: none;
+    z-index: 2;
+}
+.cartRight .discountBx .discountDiv {
+    border-bottom: 2px solid #d9d9d9;
+}
+.cartRight .discountBx .discountDiv:has(input:focus) {
+    border-bottom: 6px solid #d9d9d9;
+}
+.cartRight .discountBx input,
+.cartRight .discountBx button {
+    color: #d9d9d9;
+}
+.cartRight .discountBx button:hover {
+    color: #fff;
 }
 
 /*==================pagination=================*/
@@ -1733,7 +1441,6 @@ body {
     gap: 30px;
     margin: 50px auto 40px auto;
 }
-
 .pagination a {
     width: 50px;
     height: 50px;
@@ -1750,11 +1457,9 @@ body {
     font-size: 16px;
     font-family: "DarvishExpand_Regular";
 }
-
 .pagination a:hover {
     border-color: #581214;
 }
-
 .pagination a.active {
     background: #581214;
     border-color: #581214;
@@ -1765,19 +1470,16 @@ body {
 .productSec {
     padding: 100px 0;
 }
-
 .productSec .productRow {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
 }
-
 .productSec .productRow .productImg {
     width: 407px;
     min-width: 407px;
     height: 407px;
 }
-
 .productSec .productImg img {
     width: 100%;
     height: 100%;
@@ -1789,7 +1491,6 @@ body {
     border-bottom: 6px solid #b3b3b3;
     border-left: 6px solid #b3b3b3;
 }
-
 .productSec .productImg .imgAfter {
     background: #581214;
     left: 189px;
@@ -1799,7 +1500,6 @@ body {
     z-index: 0;
     transform: skew(49deg);
 }
-
 .productSec .productImg .imgLeftBx {
     width: 100%;
     height: 100%;
@@ -1809,7 +1509,6 @@ body {
     z-index: 2;
     display: none;
 }
-
 .productSec .productRow .prodctInfo {
     width: 100%;
     background: #ffffff;
@@ -1817,7 +1516,6 @@ body {
     padding: 15px 55px 0 0;
     min-height: 407px;
 }
-
 .productSec .prodctInfo h1 {
     color: #000;
     text-align: right;
@@ -1825,36 +1523,30 @@ body {
     font-family: "Darvish_Bold";
     margin-bottom: 25px;
 }
-
 .productSec .prodctInfo .features {
     text-align: right;
     color: #000;
     margin-bottom: 25px;
 }
-
 .productSec .prodctInfo .features strong {
     font-size: 16px;
     font-family: "Darvish_Bold";
     display: block;
     margin-bottom: 20px;
 }
-
 .productSec .prodctInfo .features ul {
     list-style: inside;
 }
-
 .productSec .prodctInfo .features li {
     font-size: 16px;
     margin-bottom: 18px;
 }
-
 .productSec .prodctInfo .price {
     color: #000;
     text-align: right;
     font-size: 16px;
     margin: 35px 0 10px auto;
 }
-
 .productSec .prodctInfo button {
     width: 302px;
     max-width: 100%;
@@ -1868,7 +1560,6 @@ body {
     font-size: 16px;
     font-family: "Darvish_Bold";
 }
-
 .productSec .prodctInfo button:hover {
     background: #222020;
 }
@@ -1885,193 +1576,12 @@ body {
     position: relative;
     z-index: 2;
 }
-
-.discountBx,
-.discntBx {
-
-
-    display: none;
-
-
-    width: 100%;
-
-
-}
-
-
-.discountBx .discountDiv,
-.discntBx .discountDiv {
-
-
-    display: flex;
-
-
-    align-items: center;
-
-
-    justify-content: flex-start;
-
-
-    border-bottom: 2px solid #581214;
-
-
-    width: 100%;
-
-
-}
-
-
-.discountBx input,
-.discntBx input {
-
-
-    border: none;
-
-
-    color: #222020;
-
-
-    text-align: right;
-
-
-    font-size: 16px;
-
-
-    background: transparent;
-
-
-}
-
-
-.discountBx input:focus,
-.discntBx input:focus {
-
-
-    background: transparent;
-
-
-}
-
-
-.discountBx button {
-
-
-    font-size: 15px;
-
-
-    color: #222020;
-
-
-    padding-left: 5px;
-
-
-}
-
-
-.discountBx button:hover {
-
-
-    color: #581214;
-
-
-}
-
-
-.discountBx .discountDiv:has(input:focus),
-.discntBx .discountDiv:has(input:focus) {
-
-
-    border-bottom: 6px solid #581214;
-
-
-}
-
-
-.cartRight .discountBx {
-
-
-    position: absolute;
-
-
-    margin: 25px auto;
-
-
-    width: 100%;
-
-
-    max-width: 357px;
-
-
-    display: none;
-
-
-    z-index: 2;
-
-
-}
-
-
-.discntBx {
-
-
-    margin: 25px auto;
-
-
-    width: 100%;
-
-
-    display: none;
-
-
-    z-index: 2;
-
-
-}
-
-
-.cartRight .discountBx .discountDiv {
-
-
-    border-bottom: 2px solid #d9d9d9;
-
-
-}
-
-
-.cartRight .discountBx .discountDiv:has(input:focus) {
-
-
-    border-bottom: 6px solid #d9d9d9;
-
-
-}
-
-
-.cartRight .discountBx input,
-.cartRight .discountBx button {
-
-
-    color: #d9d9d9;
-
-
-}
-
-
-.cartRight .discountBx button:hover {
-
-
-    color: #fff;
-
-}
-
-
 .prdctIntro h2 {
     color: #000;
     text-align: right;
     font-size: 20px;
     font-family: "Darvish_Bold";
 }
-
 .prdctIntro .introBox .introTxt {
     color: #000;
     text-align: right;
@@ -2079,7 +1589,6 @@ body {
     margin-bottom: 25px;
     line-height: 1.7;
 }
-
 .prdctIntro .introBox .introHed,
 .prdctIntro .introBox .introTtl {
     color: #000;
@@ -2089,13 +1598,11 @@ body {
     display: block;
     line-height: 1.7;
 }
-
 .prdctIntro .introBox .introUl {
     list-style: inside;
     margin-top: 30px;
     margin-bottom: 35px;
 }
-
 .prdctIntro .introBox .introUl li {
     color: #000;
     font-size: 16px;
@@ -2103,7 +1610,6 @@ body {
     margin-bottom: 12px;
     line-height: 1.7;
 }
-
 .prdctIntro .introBox .introImg {
     width: 303px;
     height: 303px;
@@ -2113,7 +1619,6 @@ body {
     border-left: 2px solid #000;
     background: #fff;
 }
-
 .prdctIntro .introBox .introImg img {
     width: 100%;
     height: 100%;
@@ -2121,11 +1626,9 @@ body {
     object-position: center;
     aspect-ratio: 2/1;
 }
-
 .prdctIntro .introBox .rightImg {
     margin: 45px 0 45px auto;
 }
-
 .prdctIntro .introBox .leftImg {
     margin: 45px auto 45px 0;
 }
@@ -2136,25 +1639,21 @@ body {
     position: relative;
     z-index: 2;
 }
-
 .contactSec .contactHed {
     text-align: right;
     margin-bottom: 35px;
 }
-
 .contactSec .contactHed h1 {
     color: #000;
     font-size: 24px;
     font-family: "DarvishExpand_ExBold";
 }
-
 .contactSec .contactRow {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 12px;
 }
-
 .contactSec .contactBox {
     width: 407px;
     height: 407px;
@@ -2166,7 +1665,6 @@ body {
     padding: 40px 30px;
     z-index: 2;
 }
-
 .contactSec .contactBox strong {
     color: #000;
     text-align: right;
@@ -2175,7 +1673,6 @@ body {
     display: block;
     margin-bottom: 15px;
 }
-
 .contactSec .contactBox p {
     color: #000;
     text-align: right;
@@ -2190,11 +1687,9 @@ body {
     margin-bottom: 15px;
     line-height: 1.7;
 }
-
 .contactSec .contactMap {
     width: 407px;
 }
-
 .contactSec .contactMap .mapBox {
     width: 100%;
     height: 407px;
@@ -2205,12 +1700,10 @@ body {
     background: #fff;
     z-index: 2;
 }
-
 .contactSec .contactMap iframe {
     width: 100%;
     height: 100%;
 }
-
 .contactSec .contactMap .afterMap {
     position: absolute;
     height: 817px;
@@ -2221,7 +1714,6 @@ body {
     transform: skew(296deg);
     background: #581214;
 }
-
 .contactSec .contactMap .mapWhitBx {
     position: absolute;
     height: 812px;
@@ -2237,14 +1729,12 @@ body {
     padding: 150px 0 100px 0;
     min-height: calc(100vh - 80px);
 }
-
 .loginSec .loginBox {
     width: 100%;
     max-width: 616px;
     margin: 0 auto;
     padding: 0 50px;
 }
-
 .loginSec .loginBox .loginHed h1 {
     color: #000;
     text-align: right;
@@ -2252,7 +1742,6 @@ body {
     font-family: "Darvish_Light";
     margin-bottom: 35px;
 }
-
 .loginSec .loginBox label {
     color: #000;
     text-align: right;
@@ -2260,7 +1749,6 @@ body {
     font-family: "DarvishExpand_Bold";
     margin-bottom: 15px;
 }
-
 .loginSec .loginBox input {
     width: 100%;
     border: none;
@@ -2270,11 +1758,9 @@ body {
     padding: 10px 0px;
     transition: all 0.6s;
 }
-
 .loginSec .loginBox input:focus {
     border-bottom: 6px solid #581214;
 }
-
 .loginSec .loginBox button {
     width: 50px;
     height: 50px;
@@ -2289,7 +1775,6 @@ body {
     border-left: 2px solid #fff;
     background: #581214;
 }
-
 .loginSec .loginBox button:hover {
     background: #222020;
 }
@@ -2298,29 +1783,24 @@ body {
 .chkoutSec {
     padding: 100px 0;
 }
-
 .accontSec {
     padding: 100px 0 300px 0;
     min-height: 100vh;
 }
-
 .chkoutSec .chkoutHed {
     margin-bottom: 60px;
 }
-
 .chkoutSec .chkoutHed h1 {
     color: #000;
     text-align: right;
     font-size: 20px;
     font-family: "Darvish_Light";
 }
-
 .chkoutSec .chkoutRow {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
 }
-
 .chkoutSec .chkoutRow .chkutBxHed {
     color: #000;
     text-align: right;
@@ -2328,7 +1808,6 @@ body {
     font-size: 20px;
     margin-bottom: 25px;
 }
-
 .chkoutSec .chkoutRow form label {
     color: #000;
     text-align: right;
@@ -2336,11 +1815,9 @@ body {
     font-family: "Darvish_Bold";
     margin-bottom: 15px;
 }
-
 .chkoutSec .chkoutRow form input {
     height: 50px;
 }
-
 .chkoutSec .chkoutRow form input,
 .chkoutSec .chkoutRow form textarea {
     color: #000;
@@ -2352,23 +1829,22 @@ body {
     border-radius: 0;
     transition: all 0.6s;
 }
-
 .chkoutSec .chkoutRow form input:focus,
 .chkoutSec .chkoutRow form textarea:focus {
     border-color: #581214;
     border-width: 6px;
 }
-
 .chkoutSec .chkoutRow .chkoutRght {
     background: #fff;
     z-index: 4;
     padding-left: 45px;
 }
-
-.chkoutSec .chkoutRow .chkoutRght.tableSide {
-    width: calc(100% - 407px);
+.chkoutSec .chkoutRow .chkoutRght form div[class*="col-"] {
+    position: relative;
 }
-
+.chkoutSec .chkoutRow .chkoutRght.tableSide {
+    width: calc(100% - 444px);
+}
 .chkoutSec .chkoutRow .hideTable {
     left: 0;
     top: -10px;
@@ -2381,7 +1857,6 @@ body {
     padding: 15px 8px;
     display: none;
 }
-
 .chkoutSec .chkoutRow .hideTable .cancelBtn {
     display: flex;
     align-items: center;
@@ -2395,16 +1870,13 @@ body {
     box-shadow: none;
     outline: none;
 }
-
 .chkoutSec .chkoutRow .hideTable .cancelBtn span {
     font-size: 150px;
 }
-
 .chkoutSec .chkoutRow .hideTable .cancelBtn p {
     font-size: 12px;
     font-family: "Darvish_Medium";
 }
-
 .chkoutSec .chkoutRow .hideTable .cancelBtn:hover {
     color: #581214;
 }
@@ -2412,20 +1884,17 @@ body {
 .orderTbl {
     min-height: 500px;
 }
-
 .orderTbl .table-responsive::-webkit-scrollbar {
     width: 18px;
     height: 18px;
     background: #fff;
 }
-
 ::-webkit-scrollbar-thumb {
     border-radius: 0;
     background: #d9d9d9;
     --webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),
     inset 0 -1px 0 rgba(0, 0, 0, 0.07);
 }
-
 .chkoutSec .chkoutRow .ordersHed {
     color: #581214;
     font-size: 24px;
@@ -2436,11 +1905,9 @@ body {
     display: none;
     z-index: 2;
 }
-
 .orderTbl td {
     padding: 12px;
 }
-
 .orderTbl p {
     color: #000;
     text-align: right;
@@ -2449,7 +1916,6 @@ body {
     line-height: 1.6;
     min-width: max-content;
 }
-
 .orderTbl .dwnldBtn {
     display: flex;
     align-items: center;
@@ -2459,7 +1925,6 @@ body {
     line-height: 1.6;
     min-width: max-content;
 }
-
 .orderTbl .dwnldBtn i {
     font-size: 16px;
     font-style: normal;
@@ -2472,48 +1937,41 @@ body {
     text-underline-offset: auto;
     text-underline-position: from-font;
 }
-
 .orderTbl .dwnldBtn span {
     font-size: 16px;
 }
-
 .orderTbl .dwnldBtn:hover {
     color: #581214;
 }
-
 .orderTbl .dwnldBtn:disabled {
     border: none;
 }
-
 .orderTbl .grayColor {
     color: #b3b3b3;
 }
-
 .chkoutSec .chkoutRow .chkoutLft {
-    width: 407px;
-    min-width: 407px;
+    width: 444px;
+    min-width: 444px;
 }
-
 .chkoutSec .chkoutRow .leftBox {
     width: 100%;
-    min-height: 300px;
-    padding: 45px 30px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-direction: column;
+    min-height: 177px;
     border-top: 1px solid #b3b3b3;
     border-right: 1px solid #b3b3b3;
     border-bottom: 6px solid #b3b3b3;
     border-left: 6px solid #b3b3b3;
     background: #fff;
+    padding: 45px 30px;
 }
-
+.chkoutSec .chkoutRow .leftBox.paymentBx {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+}
 .chkoutSec .chkoutRow .leftBox.accountBox {
-    justify-content: flex-start;
-    padding: 18px 24px;
+    padding: 25px 30px;
 }
-
 .chkoutSec .factorBox:after,
 .chkoutSec .accountBox:after {
     position: absolute;
@@ -2526,14 +1984,24 @@ body {
     transform: skew(302deg);
     background: #581214;
 }
-
+.chkoutSec .paymentBx .payHasCode {
+    position: relative;
+    width: 100%;
+    height: 38px;
+    border-bottom: 2px solid #b3b3b3;
+}
+.chkoutSec .paymentBx .payHasCode.clicked {
+    border-bottom: none;
+}
+.chkoutSec .paymentBx .payHasCode .discntBx {
+    margin: 0;
+}
 .chkoutSec .paymentBx p {
     color: #000;
     text-align: right;
     font-size: 16px;
-    padding: 10px;
+    padding: 0 10px 10px 10px;
 }
-
 .chkoutSec .paymentBx p a {
     color: #000;
     font-size: 16px;
@@ -2545,20 +2013,16 @@ body {
     text-underline-offset: auto;
     text-underline-position: from-font;
 }
-
 .chkoutSec .paymentBx p a:hover {
     color: #581214;
 }
-
 .chkoutSec .paymentBx .text {
     padding: 21px 0;
-    border-top: 2px solid #b3b3b3;
     color: #000;
     text-align: right;
     font-size: 14px;
     line-height: 1.6;
 }
-
 .chkoutSec .paymentBx .text a {
     color: #000;
     font-size: 14px;
@@ -2571,18 +2035,15 @@ body {
     text-underline-offset: auto;
     text-underline-position: from-font;
 }
-
 .chkoutSec .paymentBx .text a:hover {
     color: #581214;
 }
-
 .chkoutSec .paymentBx .form-check {
     padding-right: 1.5em;
     padding-left: 0;
     margin-bottom: 25px;
     width: 100%;
 }
-
 .chkoutSec .paymentBx .form-check input {
     width: 14px;
     height: 14px;
@@ -2597,7 +2058,6 @@ body {
     border-radius: 0;
     position: relative;
 }
-
 .chkoutSec .paymentBx .form-check input:after {
     position: absolute;
     content: url("../img/tick.png");
@@ -2608,22 +2068,18 @@ body {
     display: none;
     z-index: 2;
 }
-
 .chkoutSec .paymentBx .form-check label {
     color: #000;
     text-align: right;
     font-size: 14px;
     padding-top: 3px;
 }
-
 .chkoutSec .paymentBx .form-check input:checked {
     background: #fff;
 }
-
 .chkoutSec .paymentBx .form-check input:checked:after {
     display: block;
 }
-
 .chkoutSec .paymentBx button {
     width: 100%;
     height: 50px;
@@ -2636,53 +2092,26 @@ body {
     font-family: "Darvish_Bold";
     font-size: 16px;
 }
-
 .chkoutSec .paymentBx button:hover {
     background: #222020;
 }
-
 .chkoutSec .paymentBx .discntBx button {
-
-
     font-size: 15px;
-
-
     color: #222020;
-
-
     padding-left: 5px;
 
-
     width: 30px;
-
-
     height: 100%;
-
-
     border: none;
-
-
     background: transparent;
-
-
 }
-
-
 .chkoutSec .paymentBx .discntBx button:hover {
-
-
     color: #581214;
-
-
     background: transparent;
-
-
 }
-
 .chkoutSec .factorBox {
     margin-bottom: 20px;
 }
-
 .chkoutSec .leftBox .leftBoxCvr {
     left: 100.3%;
     top: 0;
@@ -2692,40 +2121,53 @@ body {
     background: #fff;
     display: none;
 }
-
+.chkoutSec .chkoutRow .leftBox.factorBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
 .chkoutSec .factorBox ul {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 }
-
 .chkoutSec .factorBox li {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 18px;
 }
-
 .chkoutSec .factorBox li:first-child {
     margin-bottom: 35px;
 }
-
 .chkoutSec .factorBox li:last-child {
+    margin-bottom: 0;
+}
+.chkoutSec .factorBox .ulLastChild {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
     margin-top: 50px;
 }
-
 .chkoutSec .factorBox li div {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 5px;
 }
-
 .chkoutSec .factorBox li span,
 .chkoutSec .factorBox li p {
     color: #000;
     font-size: 14px;
 }
-
+.chkoutSec .factorBox .ulLastChild strong,
 .chkoutSec .factorBox strong {
     color: #000;
     font-family: "Darvish_Bold";
@@ -2735,33 +2177,30 @@ body {
 .ordrPgPadng {
     padding-bottom: 160px;
 }
-
 .accountInfo {
     width: 100%;
 }
-
 .accountInfo .accountHed {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 12px;
 }
-
 .accountInfo strong {
     color: #000;
     text-align: right;
     font-size: 16px;
     font-family: "Darvish_Bold";
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     display: block;
 }
-
 .accountInfo .accountHed strong {
     margin-bottom: 0;
 }
-
 .accountInfo .accountHed button {
     color: #b3b3b3;
     font-size: 12px;
+    padding: 0;
     font-style: normal;
     line-height: normal;
     text-decoration-line: underline;
@@ -2771,11 +2210,9 @@ body {
     text-underline-offset: auto;
     text-underline-position: from-font;
 }
-
 .accountInfo .accountHed button:hover {
     color: #581214;
 }
-
 .accountInfo.readonlyInfo input,
 .accountInfo p {
     color: #000;
@@ -2783,16 +2220,14 @@ body {
     font-size: 14px;
     font-family: "Darvish_Medium";
     line-height: 1.6;
-    margin-bottom: 8px;
     border: none;
     cursor: default;
+    margin-bottom: 9px;
 }
-
 .accountInfo.readonlyInfo input.gray,
 .accountInfo p.gray {
     color: #b3b3b3;
 }
-
 .accountInfo .editBtn,
 .accountInfo .saveBtn {
     color: #000;
@@ -2812,14 +2247,12 @@ body {
     margin: 10px auto 0 0;
     padding: 0 5px;
 }
-
 .accountInfo .editBtn:hover,
 .accountInfo .saveBtn:hover {
     background: #581214;
     border-color: #581214;
     color: #ffffff;
 }
-
 .accountInfo input {
     border: none;
     border-bottom: 1px solid #b3b3b3;
@@ -2829,12 +2262,11 @@ body {
     font-size: 14px;
     font-family: "Darvish_Medium";
     line-height: 1.6;
-    margin-bottom: 12px;
+    margin-bottom: 9px;
     width: 100%;
     height: 26px;
     transition: all 0.6s;
 }
-
 .accountInfo input:focus {
     border-color: #581214;
     border-width: 6px;
@@ -2845,65 +2277,54 @@ footer {
     padding: 60px 0;
     background: #ffffff;
 }
-
 footer .footerRow {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
-
 footer .footerMenu a {
     color: #000;
     text-align: right;
     font-size: 16px;
     margin-bottom: 40px;
 }
-
 footer .footerMenu a:last-child {
     margin-bottom: 0;
 }
-
 footer .footerMenu a:hover {
     color: #581214;
     font-family: "Darvish_SemiBold";
 }
-
 footer .footerLeft .footerLogo {
     width: 172px;
     height: auto;
     text-align: left;
     margin: 0 auto 10px 0;
 }
-
 footer .footerLeft .footerLogo img {
     width: 100%;
     height: auto;
 }
-
 footer .footerLeft .foterNamad {
     width: 161px;
     height: auto;
     margin: 10px auto 10px 0;
 }
-
 footer .footerLeft .foterNamad img {
     width: 100%;
     height: auto;
     display: block;
 }
-
 footer .footerLeft .copyright {
     color: #000;
     text-align: left;
     font-size: 20px;
     font-family: "Darvish_Light";
 }
-
 footer .footerLeft .copyright a {
     color: #000;
 }
-
 footer .footerLeft .copyright a:hover {
     color: #581214;
 }
@@ -2914,22 +2335,18 @@ footer .footerLeft .copyright a:hover {
         margin: 106px 0 100px 0;
     }
 }
-
 @media (min-width: 768px) and (max-width: 1399px) {
     .headerSec.homTopSec {
         padding: 0px 0 180px 0;
     }
 }
-
 @media (min-width: 1200px) and (max-width: 1399px) {
     .orderTbl p {
         font-size: 14px;
     }
-
     .contactSec {
         padding: 100px 0 280px 0;
     }
-
     .productSec .productImg .imgAfter {
         left: 172px;
         top: 27%;
@@ -2937,39 +2354,31 @@ footer .footerLeft .copyright a:hover {
         height: 800px;
         transform: skew(59deg);
     }
-
     .srchResult {
         gap: 45px 103px;
     }
-
     .headerSec .homHdrCntnt {
         margin-top: -45px;
     }
 }
-
 @media (max-width: 1199px) {
 }
-
 @media (min-width: 768px) and (max-width: 1199px) {
     .catgorySec .ctgryVector {
         max-height: 800px;
     }
-
     .homTopSec .homHdrCntnt {
         margin-top: -40px;
     }
 }
-
 @media (min-width: 992px) and (max-width: 1199px) {
     .catgorySec .catSecList .catgryCard {
         width: 270px;
         height: 270px;
     }
-
     .contactSec {
         padding: 100px 0 160px 0;
     }
-
     .productSec .productImg .imgAfter {
         left: 179px;
         top: 40%;
@@ -2977,99 +2386,82 @@ footer .footerLeft .copyright a:hover {
         height: 651px;
         transform: skew(65deg);
     }
-
     .srchResult {
         gap: 44px;
     }
-
     .srchResult .newestCrd {
         width: 282px;
     }
-
     .srchResult .newestCrd .cardImg {
         height: 282px;
     }
 }
-
 @media (max-width: 991px) {
+    .cartSec .cartRow .cartLeft {
+        min-height: unset;
+    }
     .contactSec .contactRow {
         flex-direction: column;
         gap: 20px;
     }
-
     .contactSec .contactBox {
         width: 100%;
         max-width: 407px;
         margin: 0 auto;
     }
-
     .contactSec .contactMap {
         width: 100%;
         max-width: 407px;
         margin: 0 auto;
     }
-
     .contactSec .contactMap .mapWhitBx {
         width: 767px;
     }
-
     .cartSec .cartRight .cartSvg {
         left: 132px;
         top: 82%;
     }
-
     .orderTbl {
         min-height: unset;
         background: #fff;
     }
-
     .chkoutSec .chkoutRow .chkoutRght.tableSide {
         width: 100%;
     }
-
     .chkoutSec .leftBox .leftBoxCvr {
         display: block;
     }
-
     .chkoutSec .chkoutRow {
         flex-direction: column;
         gap: 40px;
     }
-
     .chkoutSec .chkoutRow.chkoutRow2 {
         flex-direction: column-reverse;
     }
-
     .chkoutSec .chkoutRow .chkoutRght {
         width: 100%;
         padding-left: 0;
         background: transparent;
     }
-
     .chkoutSec .chkoutRow .chkoutLft {
         max-width: 100%;
         margin: 0 auto;
         min-width: unset;
     }
-
     .productSec .prdctIntro {
         flex-direction: column;
         gap: 25px;
         padding: 50px 0;
     }
-
     .productSec .productRow {
         flex-direction: column;
     }
-
     .productSec .productRow .productImg {
         margin: 0 auto;
     }
-
     .productSec .productImg .imgLeftBx {
         display: block;
     }
-
     .productSec .productRow .prodctInfo {
         width: 100%;
         max-width: 407px;
@@ -3078,74 +2470,59 @@ footer .footerLeft .copyright a:hover {
         min-height: unset;
         padding: 0;
     }
-
     .cartSec .cartLeft .discountCod {
         display: none;
     }
-
     .cartSec .cartRight .discountCod {
         display: flex;
     }
-
     .cartSec .cartRow {
         flex-direction: column-reverse;
         gap: 35px;
     }
-
     .cartSec .cartRow .cartLeft {
         width: 100%;
         padding-right: 0;
     }
-
     .cartSec .cartRow .cartRight {
         width: 407px;
         max-width: 100%;
         min-width: unset;
         margin: 0 auto;
     }
-
     .blogSec .tabHeader {
         width: 100%;
         max-width: 100%;
         margin: 50px 0 50px auto;
     }
-
     .saraTopLnks .linksList .empty {
         width: 100%;
     }
-
     .saraTopLnks .linksList {
         gap: 15px 20px;
     }
 }
-
 @media (min-width: 768px) and (max-width: 991px) {
     .catgorySec .catSecList {
         gap: 32px 30px;
     }
-
     .catgorySec .catSecList .catgryCard {
         width: 212px;
         height: 212px;
     }
-
     .chkoutSec .chkoutRow .hideTable {
         top: -175px;
         height: calc(100% + 175px);
     }
-
     .ordrPgPadng {
         padding-bottom: 25px;
     }
-
     .contactSec {
         padding: 100px 0 170px 0;
     }
-
     .productSec .productRow {
         gap: 112px;
     }
-
     .productSec .productImg .imgAfter {
         left: 204px;
         top: 43%;
@@ -3153,153 +2530,107 @@ footer .footerLeft .copyright a:hover {
         height: 557px;
         transform: skew(77deg);
     }
-
     .blogSec .tabBox .tabHeader ul {
         gap: 75px;
     }
-
     .blogCard .blgCrdImg {
         width: 250px;
         min-width: 250px;
         height: 250px;
     }
-
     .blogCard .blgCrdInfo .text {
         margin-bottom: 45px;
     }
-
     .srchResult {
         gap: 35px 90px;
     }
-
     .catgorySec .ctgryVector {
         max-height: 700px;
     }
-
     .catgorySec {
         margin-bottom: 270px;
     }
-
     .headerSec .homHdrLogo {
         margin: 10px auto 70px auto;
     }
-
     .topBnnrSec .topBnrTxt {
         padding: 50px;
     }
 }
-
 @media (max-width: 767px) {
     .notif {
-
-
         padding: 12px 14px;
-
-
         max-width: 92%;
-
-
     }
-
-
     .notif.errorNotif {
-
-
         padding: 12px 15px;
-
-
     }
-
-
     .notif.sideNotif,
     .notif.errorNotif.loginNotif {
-
-
         max-width: 100%;
-
-
     }
-
     .topLogoSec ul {
         width: calc(90px * 10 * 2);
         animation: scroll 10s linear infinite;
     }
-
     .topLogoSec ul li {
         width: 90px;
     }
-
     .topLogoSec ul a {
         height: 16px;
     }
-
     .accontSec {
         padding: 100px 0;
         min-height: 100vh;
     }
-
     .contactSec .contactMap .afterMap {
         top: 0px;
     }
-
     .cartSec .cartRight .cartSvg {
         width: 100%;
     }
-
     .chkoutSec .chkoutRow .hideTable {
         top: -70px;
         height: calc(100% + 70px);
     }
-
     .ordrPgPadng {
         padding-bottom: 30px;
     }
-
     /* .chkoutSec .chkoutRow .ordersHed {
       display: block;
     } */
     .contactSec {
         padding: 100px 0 100px 0;
     }
-
     .productSec .productRow {
         gap: 160px;
     }
-
     .prdctIntro .introBox .introImg {
         width: 265px;
         height: 265px;
     }
-
     .headerMnu .menuVector {
         width: 295px;
         top: 50px;
     }
-
     .cartSec table td {
         padding: 10px 4px;
     }
-
     .cartSec table th {
         padding: 12px 4px;
     }
-
     .tabBox .tabHeader ul {
         gap: 55px;
     }
-
     .topSerch .subBox {
         right: 0;
     }
-
     .topSerch .subBox .mnuBox .hdrMnuUl {
         width: 220px;
     }
-
     .newestSec {
         padding: 50px 0;
     }
-
     /* .newestSec .newestCrd {
       width: 230px;
     }
@@ -3312,52 +2643,41 @@ footer .footerLeft .copyright a:hover {
     .catgorySec .catgryCard span {
         display: none;
     }
-
     footer .footerLeft .foterNamad {
         width: 150px;
     }
-
     footer .footerLeft .footerLogo img {
         width: 155px;
     }
-
     footer .footerLeft .copyright,
     footer .footerLeft .footerLogo p,
     footer .footerMenu a {
         font-size: 14px;
     }
-
     .topSerch .topSrchBx .form-control {
         font-size: 15px;
     }
-
     .headerSec .homHdrLogo {
         margin: 10px auto 55px auto;
     }
-
     .topSerch {
         gap: 10px;
     }
-
     .topSerch .topSrchLnk {
         border-bottom: 4px solid #b3b3b3;
         border-left: 4px solid #b3b3b3;
     }
-
     .topSerch .topSrchLnk.cartLink {
         display: none;
     }
-
     .topSerch .subBox .minCrtLink {
         display: flex;
     }
-
     .topBnnrSec .topBnrTxt img {
         width: 191px;
         margin: 20px auto 10px 0;
     }
 }
-
 @media (min-width: 440px) and (max-width: 767px) {
     .productSec .productImg .imgAfter {
         top: 19%;
@@ -3365,45 +2685,36 @@ footer .footerLeft .copyright a:hover {
         transform: skew(69deg);
     }
 }
-
 @media (min-width: 481px) and (max-width: 767px) {
     .contactSec .contactMap .afterMap {
         right: 408px;
         width: 836px;
     }
 }
-
 @media (min-width: 576px) and (max-width: 767px) {
     .catgorySec .catgryCard p {
         font-size: 18px;
     }
-
     .blogCard .blgCrdImg {
         width: 230px;
         min-width: 230px;
         height: 230px;
     }
-
     .blogCard .blgCrdInfo h2 {
         margin-bottom: 5px;
     }
-
     .blogCard .blgCrdInfo .text {
         margin-bottom: 10px;
     }
-
     .blogSec .tabBox .tabHeader ul {
         gap: 40px;
     }
-
     .srchResult .newestCrd {
         width: 236px;
     }
-
     .srchResult {
         gap: 44px;
     }
-
     .srchResult .newestCrd .cardImg {
         height: 236px;
     }
@@ -3411,205 +2722,163 @@ footer .footerLeft .copyright a:hover {
     .homTopSec .homHdrCntnt {
         margin-top: -30px;
     }
-
     .catgorySec .catSecList {
         gap: 28px 25px;
     }
-
     .catgorySec .catSecList .catgryCard {
         width: 155px;
         height: 155px;
     }
-
     .catgorySec .ctgryVector {
         max-height: 500px;
         top: 250px;
     }
-
     .catgorySec {
         margin-bottom: 150px;
     }
-
     .topBnnrSec .topBnrTxt h2 {
         font-size: 20px;
     }
-
     .topBnnrSec .topBnrTxt {
         padding: 25px;
     }
-
     .topBnnrSec .image_parent:after {
         padding-top: 50%;
     }
 }
-
 @media (max-width: 575px) {
     .catgorySec .catgryCard p {
         font-size: 16px;
     }
-
     .blogPgSec .blogPost .blgPostImg {
         max-width: 100%;
     }
-
     .blogCard {
         flex-direction: column;
         width: 100%;
         max-width: 373px;
         margin: 0 auto 95px auto;
     }
-
     .blogCard .blgCrdInfo .text {
         margin-bottom: 10px;
     }
-
     .blogCard .blgCrdImg {
         width: 100%;
     }
-
     .blogSec .tabBox .tabHeader ul {
         gap: 30px;
     }
-
     .srchResult .newestCrd {
         max-width: 100%;
         min-width: auto;
     }
-
     .srchResult {
         gap: 35px 20px;
     }
-
     .sideMenu {
         width: 280px;
         right: -280px;
         padding: 20px 15px;
     }
-
     .sideMenu .sideMnuBx {
         padding: 20px 15px 20px 0;
     }
-
     .sideMenu .sideBtns a,
     .sideMenu .sideMnuBx .subtotal,
     .sideMenu .sideMnuBx .sideItem strong {
         font-size: 15px;
     }
-
     .homTopSec .homHdrCntnt {
         margin-top: 0px;
     }
-
     .catgorySec .ctgryVector {
         max-height: 450px;
         height: 50%;
         top: 220px;
     }
-
     .catgorySec {
         margin-bottom: 10px;
         padding: 100px 0 140px 0;
     }
-
     footer .footerLeft .foterNamad {
         margin: 0 auto 0 0;
     }
-
     footer .footerMenu a {
         margin-bottom: 20px;
     }
-
     footer {
         padding: 30px 0;
     }
-
     .topBnnrSec .topBnrTxt h2 {
         font-size: 16px;
     }
-
     .topBnnrSec .topBnrTxt {
         padding: 15px;
     }
 }
-
 @media (min-width: 390px) and (max-width: 575px) {
     .blogCard .blgCrdImg {
         height: 370px;
     }
 }
-
 @media (min-width: 481px) and (max-width: 575px) {
     .catgorySec .catSecList {
         gap: 35px;
     }
-
     .catgorySec .catSecList .catgryCard {
         width: 125px;
         height: 125px;
     }
-
     .topBnnrSec .image_parent:after {
         padding-top: 60%;
     }
 }
-
 @media (max-width: 480px) {
     .contactSec .contactMap .afterMap {
         right: 101%;
         width: 829px;
     }
-
     .loginSec .loginBox {
         width: 100%;
         max-width: 616px;
         margin: 0 auto;
         padding: 0 30px;
     }
-
     .catgorySec .catSecList {
         gap: 20px;
     }
-
     .catgorySec .catSecList .catgryCard {
         width: 120px;
         height: 120px;
     }
-
     .chkoutSec .chkoutRow .leftBox {
         padding: 25px 18px;
     }
-
     .chkoutSec .factorBox li {
         gap: 14px;
     }
-
     .chkoutSec .factorBox li span,
     .chkoutSec .factorBox li p {
         font-size: 13px;
     }
-
     .topBnnrSec .image_parent:after {
         padding-top: 80%;
     }
-
     footer .footerRow {
         flex-direction: column;
         gap: 30px;
     }
-
     footer .footerRow .footerMenu,
     footer .footerRow .footerLeft {
         width: 100%;
     }
 }
-
 @media (max-width: 439px) {
     .productSec .productRow .productImg {
         width: 282px;
         height: 282px;
         min-width: unset;
     }
-
     .productSec .productImg .imgAfter {
         left: 139px;
         top: 45%;
@@ -3617,7 +2886,6 @@ footer .footerLeft .copyright a:hover {
         height: 413px;
         transform: skew(69deg);
     }
-
     .chkoutSec .accountBox:after {
         right: 155px;
         top: 95px;
@@ -3625,7 +2893,6 @@ footer .footerLeft .copyright a:hover {
         transform: skew(302deg);
     }
 }
-
 @media (min-width: 390px) and (max-width: 480px) {
     .chkoutSec .factorBox:after {
         right: 136px;
@@ -3633,113 +2900,22 @@ footer .footerLeft .copyright a:hover {
         width: 566px;
     }
 }
-
+@media (max-width: 430px) {
+    .chkoutSec .chkoutRow .leftBox {
+        min-height: 366px;
+    }
+}
 @media (max-width: 389px) {
     .chkoutSec .factorBox:after {
         right: 278px;
         top: 43%;
         width: 514px;
     }
-
     .blogCard .blgCrdImg {
         height: 300px;
     }
-
     .catgorySec .ctgryVector {
         max-height: 450px;
         height: 70%;
     }
-}
-
-.discountBx,
-.discntBx {
-    display: none;
-    width: 100%;
-}
-
-.discountBx .discountDiv,
-.discntBx .discountDiv {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border-bottom: 2px solid #581214;
-    width: 100%;
-}
-
-.discountBx input,
-.discntBx input {
-    border: none;
-    color: #222020;
-    text-align: right;
-    font-size: 16px;
-    background: transparent;
-}
-
-.discountBx input:focus,
-.discntBx input:focus {
-    background: transparent;
-}
-
-.discountBx button {
-    font-size: 15px;
-    color: #222020;
-    padding-left: 5px;
-}
-
-.discountBx button:hover {
-    color: #581214;
-}
-
-.discountBx .discountDiv:has(input:focus),
-.discntBx .discountDiv:has(input:focus) {
-    border-bottom: 6px solid #581214;
-}
-
-.cartRight .discountBx {
-    position: absolute;
-    margin: 25px auto;
-    width: 100%;
-    max-width: 357px;
-    display: none;
-    z-index: 2;
-}
-
-.discntBx {
-    margin: 25px auto;
-    width: 100%;
-    display: none;
-    z-index: 2;
-}
-
-.cartRight .discountBx .discountDiv {
-    border-bottom: 2px solid #d9d9d9;
-}
-
-.cartRight .discountBx .discountDiv:has(input:focus) {
-    border-bottom: 6px solid #d9d9d9;
-}
-
-.cartRight .discountBx input,
-.cartRight .discountBx button {
-    color: #d9d9d9;
-}
-
-.cartRight .discountBx button:hover {
-    color: #fff;
-}
-
-.chkoutSec .paymentBx .discntBx button {
-    font-size: 15px;
-    color: #222020;
-    padding-left: 5px;
-
-    width: 30px;
-    height: 100%;
-    border: none;
-    background: transparent;
-}
-
-.chkoutSec .paymentBx .discntBx button:hover {
-    color: #581214;
-    background: transparent;
 }

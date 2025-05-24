@@ -162,7 +162,7 @@ return [
         "password_confirmation" => "تاییدیه ی رمز عبور",
         "city" => "شهر",
         "country" => "کشور",
-        "address" => "نشانی",
+        "address" => "آدرس",
         "phone" => "تلفن",
         "mobile" => "تلفن همراه",
         "age" => "سن",
@@ -247,6 +247,6 @@ return [
         "phone_number" => "شماره تماس",
         "point" => "امتیاز",
         "price" => "مبلغ",
-
+        "postal_code" => "کد پستی",
     ],
 ];
