@@ -12,7 +12,7 @@ use App\Http\Controllers\Arses\ProductCategoryController;
 use App\Http\Controllers\Arses\ProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('blog-posts')->group(function (){
+Route::prefix('blog')->group(function (){
     Route::get('/', [ BlogPostController::class, 'index' ])->name('blog-posts.index');
     Route::get('/{slug}', [ BlogPostController::class, 'show' ])->name('blog-posts.show');
 });
