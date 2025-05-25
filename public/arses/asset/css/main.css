@@ -524,6 +524,7 @@ body {
     gap: 35px 60px;
     flex-wrap: wrap;
     z-index: 2;
+    min-height: 635px;
 }
 .catgorySec .catSecList .catgryCard {
     width: 300px;
@@ -1955,7 +1956,7 @@ body {
 }
 .chkoutSec .chkoutRow .leftBox {
     width: 100%;
-    min-height: 177px;
+    min-height: 407px;
     border-top: 1px solid #b3b3b3;
     border-right: 1px solid #b3b3b3;
     border-bottom: 6px solid #b3b3b3;
@@ -2372,6 +2373,9 @@ footer .footerLeft .copyright a:hover {
     }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+    .catgorySec .catSecList {
+        min-height: 575px;
+    }
     .catgorySec .catSecList .catgryCard {
         width: 270px;
         height: 270px;
@@ -2503,6 +2507,9 @@ footer .footerLeft .copyright a:hover {
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+    .catgorySec .catSecList {
+        min-height: 456px;
+    }
     .catgorySec .catSecList {
         gap: 32px 30px;
     }
@@ -2692,6 +2699,9 @@ footer .footerLeft .copyright a:hover {
     }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+    .catgorySec .catSecList {
+        min-height: 338px;
+    }
     .catgorySec .catgryCard p {
         font-size: 18px;
     }
@@ -2823,6 +2833,9 @@ footer .footerLeft .copyright a:hover {
 }
 @media (min-width: 481px) and (max-width: 575px) {
     .catgorySec .catSecList {
+        min-height: 285px;
+    }
+    .catgorySec .catSecList {
         gap: 35px;
     }
     .catgorySec .catSecList .catgryCard {
@@ -2834,6 +2847,9 @@ footer .footerLeft .copyright a:hover {
     }
 }
 @media (max-width: 480px) {
+    .catgorySec .catSecList {
+        min-height: 260px;
+    }
     .contactSec .contactMap .afterMap {
         right: 101%;
         width: 829px;
