@@ -6,7 +6,7 @@
     <div class="sideMnuBx">
         <div class="sideItmsLst">
             @foreach(CartService::getProducts() as $cart_item)
-                <a href="{{ route('product.show', $cart_item['product']->id) }}" class="sideItem transitionCls">
+                <a href="{{ route('product.show', $cart_item['product']->slug) }}" class="sideItem transitionCls">
                     <div>
                         <strong>{{ $cart_item['product']->title }}</strong>
                         <p>x{{ $cart_item['quantity'] }}</p>
