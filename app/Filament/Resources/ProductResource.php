@@ -33,6 +33,10 @@ class ProductResource extends Resource {
                                                            ->maxLength(255)
                                                            ->default(null)
                                                            ->label('عنوان') ,
+                                 // stock
+                                    Forms\Components\TextInput::make('stock')
+                                                            ->numeric()
+                                                            ->label('موجودی انبار') ,
                                  Forms\Components\TextInput::make('slug')
                                                            ->maxLength(255)
                                                            ->default(null)

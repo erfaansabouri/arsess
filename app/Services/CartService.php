@@ -137,4 +137,23 @@ class CartService {
         }
         return null;
     }
+
+    public static function getQuantityOfProduct ($product_id) {
+        $cart = session()->get('cart', []);
+        if (isset($cart[$product_id])) {
+            return $cart[$product_id]['quantity']; // Return the quantity of the specified product
+        }
+        return 0; // If the product is not in the cart, return 0
+    }
+
+    public static function checkProductQuantityWithStockOfProduct () {
+        $cart = session()->get('cart', []);
+        foreach ($cart as $item) {
+            $product = Product::find($item['product_id']);
+            if ($product && $item['quantity'] > $product->stock) {
+                return false; // If any product in the cart exceeds its stock, return false
+            }
+        }
+        return true; // All products in the cart are within their stock limits
+    }
 }

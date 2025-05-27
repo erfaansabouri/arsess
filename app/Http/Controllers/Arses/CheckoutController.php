@@ -83,6 +83,14 @@ class CheckoutController extends Controller {
                 ->with('custom_error' , $error_message)
                 ->withInput($request->all());
         }
+
+        if ( !CartService::checkProductQuantityWithStockOfProduct() ){
+            return redirect()
+                ->back()
+                ->with('custom_error' , 'موجودی برخی از محصولات به اتمام رسیده است')
+                ->withInput($request->all());
+        }
+
         $invoice = new Invoice();
         $invoice->user_id = auth()->id();
         $invoice->first_name = $request->input('first_name');
@@ -146,6 +154,15 @@ class CheckoutController extends Controller {
             $invoice->save();
             // clear cart
             CartService::clearCart();
+
+            // decrease stock
+            foreach ( $invoice->invoiceItems as $item ) {
+                $product = Product::find($item->product_id);
+                if ( $product ) {
+                    $product->stock -= $item->quantity;
+                    $product->save();
+                }
+            }
 
             return redirect()
                 ->route('my-profile.show')
