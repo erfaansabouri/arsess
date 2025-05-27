@@ -121,7 +121,7 @@
             <div class="newestSwper newestSwpr3">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        @foreach($newest_products as $npp)
+                        @foreach($newest_mavad_avalie_products as $npp)
                             <div class="swiper-slide">
                                 <a href="{{ route('product.show', ['slug' => $npp->slug]) }}" class="newestCrd position-relative transitionCls">
                                     <div class="cardImg transitionCls">

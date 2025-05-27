@@ -17,6 +17,11 @@ class HomeController extends Controller {
                                      ->get();
         $newest_products = Product::query()
                                   ->latest()
+
+                                  ->take(6)
+                                  ->get();
+        $newest_mavad_avalie_products = Product::query()
+                                  ->latest()
                                   ->whereHas('categories' , function ( $q ) {
                                       $q->where('product_categories.id' , 8);
                                   })
@@ -27,6 +32,6 @@ class HomeController extends Controller {
                                     ->latest()
                                     ->get();
 
-        return view('arses.home.index' , compact('banners' , 'categories' , 'newest_products' , 'selected_products'));
+        return view('arses.home.index' , compact('banners' , 'categories' , 'newest_products' , 'selected_products', 'newest_mavad_avalie_products'));
     }
 }
