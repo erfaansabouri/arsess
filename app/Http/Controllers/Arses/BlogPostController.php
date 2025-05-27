@@ -13,6 +13,12 @@ class BlogPostController extends Controller {
         $category_id = $request->get('category_id');
         $category_title = $request->get('category_title');
         $hashtag_title = $request->get('hashtag_title');
+        if ($category_title){
+            $category_id = BlogPostCategory::query()
+                ->where('title', $category_title)
+                ->orWhere('slug', $category_title)
+                ->first();
+        }
         $blog_posts = BlogPost::query()
                               ->latest()
                               ->when($category_id , function ( Builder $query ) {
