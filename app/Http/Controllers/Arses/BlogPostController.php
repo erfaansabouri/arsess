@@ -22,12 +22,14 @@ class BlogPostController extends Controller {
                               })
                               ->when($category_title , function ( Builder $query ) {
                                   $query->whereHas('categories' , function ( Builder $query ) {
-                                      $query->where('blog_post_categories.title' , request('category_title'));
+                                      $query->where('blog_post_categories.title' , request('category_title'))
+                                            ->orWhere('blog_post_categories.slug' , request('category_title'));
                                   });
                               })
                               ->when($hashtag_title , function ( Builder $query ) {
                                   $query->whereHas('hashtags' , function ( Builder $query ) {
-                                      $query->where('blog_post_hashtags.title' , request('hashtag_title'));
+                                      $query->where('blog_post_hashtags.title' , request('hashtag_title'))
+                                            ->orWhere('blog_post_hashtags.slug' , request('hashtag_title'));
                                   });
                               })
                               ->paginate(5);

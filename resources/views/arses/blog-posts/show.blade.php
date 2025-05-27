@@ -37,7 +37,7 @@
                                 @if(count($blog_post->categories))
                                 <div class="category">
                                     @foreach($blog_post->categories as $c)
-                                        <a href="{{ route('blog-posts.index', ['category_id' => $c->id]) }}">
+                                        <a href="{{ route('blog-posts.index', ['category_title' => $c->slug]) }}">
                                             <span>{{ $c->title }}</span>
                                         </a>
                                     @endforeach
@@ -49,7 +49,7 @@
                                 @if(count($blog_post->hashtags))
                                     <div class="category">
                                         @foreach($blog_post->hashtags as $hashtag)
-                                            <a href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->title]) }}"><span>#{{ $hashtag->title }}</span></a>
+                                            <a href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->slug]) }}"><span>#{{ $hashtag->title }}</span></a>
                                         @endforeach
                                     </div>
                                 @endif

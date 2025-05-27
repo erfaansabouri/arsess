@@ -23,7 +23,7 @@
                                 @foreach($blog_post_categories as $blog_post_category)
                                     <li>
                                         <a
-                                            href="{{ route('blog-posts.index', ['category_id' => $blog_post_category->id]) }}"
+                                            href="{{ route('blog-posts.index', ['category_title' => $blog_post_category->slug]) }}"
                                             class="tablinks  @if($category_id && $category_id == $blog_post_category->id) active @endif transitionCls position-relative"
                                             tabId="tabTwo"
                                         >
@@ -51,7 +51,7 @@
                                                 <div class="category">
                                                     <a href="#"><span>دسته بندی ها</span></a>
                                                     @foreach($blog_post->categories as $category)
-                                                        <a href="{{ route('blog-posts.index', ['category_title' => $category->title]) }}">
+                                                        <a href="{{ route('blog-posts.index', ['category_title' => $category->slug]) }}">
                                                             <p>{{ $category->title }}</p>
                                                         </a>
                                                     @endforeach
@@ -62,7 +62,7 @@
                                                 <div class="category mt-5">
                                                     <a href="#"><span>هشتگ ها</span></a>
                                                     @foreach($blog_post->hashtags as $hashtag)
-                                                        <a href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->title]) }}">
+                                                        <a href="{{ route('blog-posts.index', ['hashtag_title' => $hashtag->slug]) }}">
                                                             <p>#{{ $hashtag->title }}</p>
                                                         </a>
                                                     @endforeach
