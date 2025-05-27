@@ -19,7 +19,7 @@ class CartController extends Controller {
 
         }
 
-        return view('arses.cart.show' , compact('products'));
+        return view('arses.cart.show2' , compact('products'));
     }
 
     public function remove ( $product_id ) {
