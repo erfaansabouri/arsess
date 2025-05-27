@@ -92,7 +92,7 @@
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="#" class="tblImg d-block">
+                                                <a href="{{ route('product.show', $cart_item['product']->slug) }}" class="tblImg d-block">
                                                     <img src="{{ $cart_item['product']->getFirstMediaUrl('image') }}" alt="img"/>
                                                 </a>
                                             </td>
