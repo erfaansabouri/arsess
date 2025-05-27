@@ -54,9 +54,9 @@
                                         </button>
                                     </div>
                                 </div>
-                                <p class="text-danger mt-2" id="coupon-error-2"></p>
-                                <p class="text-success mt-2" id="coupon-success-2"></p>
                             </div>
+                            <p class="text-danger mt-2" id="coupon-error-2"></p>
+                            <p class="text-success mt-2" id="coupon-success-2"></p>
                         </div>
                         <div class="cartLeft">
                             <div class="table-responsive">
@@ -124,9 +124,9 @@
                                         </button>
                                     </div>
                                 </div>
-                                <p class="text-danger mt-2" id="coupon-error-2"></p>
-                                <p class="text-success mt-2" id="coupon-success-2"></p>
                             </div>
+                            <p class="text-danger mt-2" id="coupon-error-2"></p>
+                            <p class="text-success mt-2" id="coupon-success-2"></p>
                         </div>
                     </div>
                 </div>
