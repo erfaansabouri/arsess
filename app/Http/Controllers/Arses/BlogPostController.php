@@ -21,11 +21,6 @@ class BlogPostController extends Controller {
         }
         $blog_posts = BlogPost::query()
                               ->latest()
-                              ->when($category_id , function ( Builder $query ) {
-                                  $query->whereHas('categories' , function ( Builder $query ) {
-                                      $query->where('blog_post_categories.id' , request('category_id'));
-                                  });
-                              })
                               ->when($category_title , function ( Builder $query ) {
                                   $query->whereHas('categories' , function ( Builder $query ) {
                                       $query->where('blog_post_categories.title' , request('category_title'))
