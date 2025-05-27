@@ -24,6 +24,10 @@ class BlogPostHashtagResource extends Resource {
                                           ->label('عنوان')
                                           ->required()
                                           ->maxLength(255) ,
+                                 TextInput::make('slug')
+                                          ->label('Slug')
+                                          ->required()
+                                          ->maxLength(255) ,
                              ]);
     }
 

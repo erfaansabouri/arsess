@@ -14,58 +14,52 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class BlogPostCategoryResource extends Resource
-{
+class BlogPostCategoryResource extends Resource {
     protected static ?string $model = BlogPostCategory::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                         TextInput::make('title')
-                                  ->label('عنوان')
-                                  ->required()
-                                  ->maxLength(255) ,
-            ]);
+    public static function form ( Form $form ): Form {
+        return $form->schema([
+                                 TextInput::make('title')
+                                          ->label('عنوان')
+                                          ->required()
+                                          ->maxLength(255) ,
+                                 TextInput::make('slug')
+                                          ->label('Slug')
+                                          ->required()
+                                          ->maxLength(255) ,
+                             ]);
     }
 
-    public static function table(Table $table): Table
-    {
-        return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('title')
-                    ->label('عنوان')
-                    ->searchable()
-                    ->sortable()
-            ])
-            ->filters([
-                //
-            ])
-            ->actions([
-                Tables\Actions\EditAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
-            ]);
+    public static function table ( Table $table ): Table {
+        return $table->columns([
+                                   Tables\Columns\TextColumn::make('title')
+                                                            ->label('عنوان')
+                                                            ->searchable()
+                                                            ->sortable(),
+                               ])
+                     ->filters([//
+                               ])
+                     ->actions([
+                                   Tables\Actions\EditAction::make() ,
+                               ])
+                     ->bulkActions([
+                                       Tables\Actions\BulkActionGroup::make([
+                                                                                Tables\Actions\DeleteBulkAction::make() ,
+                                                                            ]) ,
+                                   ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
+    public static function getRelations (): array {
+        return [//
         ];
     }
 
-    public static function getPages(): array
-    {
+    public static function getPages (): array {
         return [
-            'index' => Pages\ListBlogPostCategories::route('/'),
-            'create' => Pages\CreateBlogPostCategory::route('/create'),
-            'edit' => Pages\EditBlogPostCategory::route('/{record}/edit'),
+            'index' => Pages\ListBlogPostCategories::route('/') ,
+            'create' => Pages\CreateBlogPostCategory::route('/create') ,
+            'edit' => Pages\EditBlogPostCategory::route('/{record}/edit') ,
         ];
     }
 
