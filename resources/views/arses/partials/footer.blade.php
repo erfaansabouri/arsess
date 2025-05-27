@@ -15,9 +15,10 @@
                         <a href="#" class="d-block footerLogo">
                             <img src="{{ asset('arses/asset/img/footer-logo.svg') }}" alt="logo" />
                         </a>
-                        <a href="#" class="d-block foterNamad">
+                   {{--     <a href="#" class="d-block foterNamad">
                             <img src="{{ asset('arses/asset/img/namad.jpg') }}" alt="img" />
-                        </a>
+                        </a>--}}
+                        <a class="d-block foterNamad" referrerpolicy='origin' target='_blank' href='https://trustseal.enamad.ir/?id=614896&Code=bOcg7aCwsHZqPQENmkQgJerk8HNWBJME'><img referrerpolicy='origin' src='https://trustseal.enamad.ir/logo.aspx?id=614896&Code=bOcg7aCwsHZqPQENmkQgJerk8HNWBJME' alt='' style='cursor:pointer' code='bOcg7aCwsHZqPQENmkQgJerk8HNWBJME'></a>
                         <div class="copyright">
                             تمام حقوق متعلق به <a href="{{ route('home') }}">سرای آرسس</a> است.
                         </div>
