@@ -290,7 +290,7 @@ body {
     flex-shrink: 0;
     white-space: nowrap;
 
-    width: calc(113px * 9 * 3);
+    width: calc(95px * 9 * 6);
     animation: scroll 10s linear infinite;
 }
 .topLogoSec ul li {
@@ -347,7 +347,7 @@ body {
 }
 .sideMenu .sideMnuBx {
     padding: 25px 30px 20px 0;
-    min-height: 100%;
+    min-height: calc(100% - 20px);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -1028,6 +1028,16 @@ body {
     line-height: 1.7;
     font-size: 16px;
     font-family: "Darvish_Regular";
+}
+.blogPgSec .blgPostInfo .text ul {
+    list-style: inside;
+    margin-bottom: 20px;
+}
+.blogPgSec .blgPostInfo .text li {
+    line-height: 1.7;
+    font-size: 16px;
+    font-family: "Darvish_Regular";
+    margin-bottom: 8px;
 }
 .blogPgSec .blgPostInfo .category span {
     color: #000;
@@ -2336,9 +2346,21 @@ footer .footerLeft .copyright a:hover {
         margin: 106px 0 100px 0;
     }
 }
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .topLogoSec ul {
+        width: calc(85px * 9 * 5);
+        animation: scroll 10s linear infinite;
+    }
+}
 @media (min-width: 768px) and (max-width: 1399px) {
     .headerSec.homTopSec {
         padding: 0px 0 180px 0;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .topLogoSec ul {
+        width: calc(103px * 8 * 4);
+        animation: scroll 10s linear infinite;
     }
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -2362,7 +2384,11 @@ footer .footerLeft .copyright a:hover {
         margin-top: -45px;
     }
 }
-@media (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
+    .topLogoSec ul {
+        width: calc(113px * 8 * 3);
+        animation: scroll 10s linear infinite;
+    }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
     .catgorySec .ctgryVector {
@@ -2401,6 +2427,10 @@ footer .footerLeft .copyright a:hover {
     }
 }
 @media (max-width: 991px) {
+    .productSec,
+    .searchSec {
+        padding: 40px 0 100px 0;
+    }
     .cartSec .cartRow .cartLeft {
         min-height: unset;
     }
@@ -2783,7 +2813,7 @@ footer .footerLeft .copyright a:hover {
         min-width: auto;
     }
     .srchResult {
-        gap: 35px 20px;
+        gap: 65px 20px;
     }
     .sideMenu {
         width: 280px;
