@@ -55,8 +55,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-danger mt-2" id="coupon-error-2"></p>
-                            <p class="text-success mt-2" id="coupon-success-2"></p>
+                            <p class="text-danger mt-2" id="coupon-error">a</p>
+                            <p class="text-success mt-2" id="coupon-success">b</p>
                         </div>
                         <div class="cartLeft">
                             <div class="table-responsive">
@@ -124,9 +124,12 @@
                                         </button>
                                     </div>
                                 </div>
+
                             </div>
-                            <p class="text-danger mt-2" id="coupon-error-2"></p>
-                            <p class="text-success mt-2" id="coupon-success-2"></p>
+                            <div class="text-center">
+                                <p class="text-danger mt-2" id="coupon-error-2"></p>
+                                <p class="text-success mt-2" id="coupon-success-2"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -155,19 +158,19 @@
                     },
                     success: function (response) {
                         if (response.status === 'success') {
-                            $('#coupon-success').text('کد تخفیف با موفقیت اعمال شد');
-                            $('#coupon-error').text('');
+                            $('#coupon-success-2').text('کد تخفیف با موفقیت اعمال شد');
+                            $('#coupon-error-2').text('');
                             // number format and concat toman
                             let discountAmount = new Intl.NumberFormat('fa-IR').format(response.discount);
                             let totalPrice = new Intl.NumberFormat('fa-IR').format(response.total);
                             $('#discount-amount').text(discountAmount + ' تومان');
                             $('#payment-price').text(totalPrice + ' تومان');
                         } else if (response.status === 'error') {
-                            $('#coupon-error').text('کد تخفیف نامعتبر است');
-                            $('#coupon-success').text('');
+                            $('#coupon-error-2').text('کد تخفیف نامعتبر است');
+                            $('#coupon-success-2').text('');
                         } else {
-                            $('#coupon-error').text('خطا در پردازش درخواست');
-                            $('#coupon-success').text('');
+                            $('#coupon-error-2').text('خطا در پردازش درخواست');
+                            $('#coupon-success-2').text('');
                         }
                     },
                     error: function (xhr) {
