@@ -242,7 +242,7 @@ $(document).ready(function () {
 
     /********************tabBox*********************/
     $(".tabBox").each(function () {
-        var thisTAb = $(this);
+       /* var thisTAb = $(this);
         thisTAb.find(".tablinks").click(function (e) {
             e.preventDefault();
             var thisLink = $(this);
@@ -252,7 +252,7 @@ $(document).ready(function () {
             thisTAb.find(tabId).show();
             thisLink.parent().siblings().find(".tablinks").removeClass("active");
             thisLink.addClass("active");
-        });
+        });*/
     });
 
     /********************edit-account*********************/
