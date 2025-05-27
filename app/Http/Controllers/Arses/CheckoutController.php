@@ -83,14 +83,12 @@ class CheckoutController extends Controller {
                 ->with('custom_error' , $error_message)
                 ->withInput($request->all());
         }
-
-        if ( !CartService::checkProductQuantityWithStockOfProduct() ){
+        if ( !CartService::checkProductQuantityWithStockOfProduct() ) {
             return redirect()
                 ->back()
                 ->with('custom_error' , 'موجودی برخی از محصولات به اتمام رسیده است')
                 ->withInput($request->all());
         }
-
         $invoice = new Invoice();
         $invoice->user_id = auth()->id();
         $invoice->first_name = $request->input('first_name');
@@ -118,7 +116,8 @@ class CheckoutController extends Controller {
         }
 
         return Payment::callbackUrl(route('checkout.verify'))
-                      ->purchase(( new \Shetabit\Multipay\Invoice )->amount($invoice->payment_price) , function ( $driver , $tx_id ) use ( $invoice ) {
+                      ->purchase(( new \Shetabit\Multipay\Invoice )
+                                     ->amount($invoice->payment_price) , function ( $driver , $tx_id ) use ( $invoice ) {
                           $invoice->tx_id = $tx_id;
                           $invoice->save();
                       })
@@ -155,7 +154,6 @@ class CheckoutController extends Controller {
             $invoice->save();
             // clear cart
             CartService::clearCart();
-
             // decrease stock
             foreach ( $invoice->invoiceItems as $item ) {
                 $product = Product::find($item->product_id);
