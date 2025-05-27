@@ -17,6 +17,9 @@ class HomeController extends Controller {
                                      ->get();
         $newest_products = Product::query()
                                   ->latest()
+                                  ->whereHas('categories' , function ( $q ) {
+                                      $q->where('product_categories.id' , 8);
+                                  })
                                   ->take(6)
                                   ->get();
         $selected_products = Product::query()
