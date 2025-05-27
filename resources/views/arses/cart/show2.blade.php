@@ -49,7 +49,7 @@
                                             placeholder="کد تخفیف"
                                             name="code"
                                         />
-                                        <button class="btn transitionCls">
+                                        <button id="check-coupon" class="btn transitionCls">
                                             <span class="icon-Next"></span>
                                         </button>
                                     </div>
@@ -117,7 +117,7 @@
                                             placeholder="کد تخفیف"
                                             name="code2"
                                         />
-                                        <button class="btn transitionCls">
+                                        <button id="check-coupon-2" class="btn transitionCls">
                                             <span class="icon-Next"></span>
                                         </button>
                                     </div>
