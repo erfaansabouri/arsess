@@ -127,6 +127,7 @@ class CheckoutController extends Controller {
     }
 
     public function verify ( Request $request ) {
+        dd($request->all());
         $authority = $request->input('trackId');
         $invoice = Invoice::where('tx_id' , $authority)
                           ->first();
