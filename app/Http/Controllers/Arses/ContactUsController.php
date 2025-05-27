@@ -10,6 +10,6 @@ class ContactUsController extends Controller {
         $contact_us = ContactUs::query()
                                ->firstOrFail();
 
-        return view('arses.contact-us.show' , compact('contact_us'));
+        return view('arses.contact-us.show2' , compact('contact_us'));
     }
 }

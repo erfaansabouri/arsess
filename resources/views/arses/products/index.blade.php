@@ -6,7 +6,7 @@
                 <div class="col-12">
                     <div class="saraTopLnks">
                         <div class="breadCrumb">
-                            <a href="{{ route('home') }}">سرا </a>
+                            <a href="{{ route('home') }}">سرسرای </a>
                             <span class="icon-left"></span>
                             <a href="{{ route('product.index') }}">محصولات </a>
                         </div>
