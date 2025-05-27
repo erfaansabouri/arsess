@@ -87,7 +87,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <a href="#" class="d-block">
+                                                <a href="{{ route('product.show', $cart_item['product']->slug) }}" class="d-block">
                                                     <h2>{{ $cart_item['product']->title }}</h2>
                                                 </a>
                                             </td>
