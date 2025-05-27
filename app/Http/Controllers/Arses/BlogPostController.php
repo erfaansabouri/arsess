@@ -17,7 +17,7 @@ class BlogPostController extends Controller {
             $category_id = BlogPostCategory::query()
                 ->where('title', $category_title)
                 ->orWhere('slug', $category_title)
-                ->first();
+                ->first()?->id;
         }
         $blog_posts = BlogPost::query()
                               ->latest()
