@@ -1,4 +1,10 @@
 @extends('arses.master-ii')
+@section('title', $product->meta_title ?? $product->title)
+@section('meta_description', $product->meta_description)
+@section('meta_keywords', $product->meta_keywords)
+@section('canonical_url')
+<link rel="canonical" href="{{ $product->canonical_url ?? url()->current() }}">
+@endsection
 @section('content')
 <section class="productSec">
     <div class="container">

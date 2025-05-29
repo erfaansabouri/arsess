@@ -8,6 +8,7 @@ use App\Filament\Resources\InvoiceResource\RelationManagers\InvoiceItemsRelation
 use App\Models\Invoice;
 use Filament\Forms;
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -25,14 +26,23 @@ class InvoiceResource extends Resource {
 
     public static function form ( Form $form ): Form {
         return $form->schema([
+                                 Select::make('status')
+                                       ->options([
+                                                     Invoice::STATUSES[ 'init' ] => 'اولیه' ,
+                                                     Invoice::STATUSES[ 'process' ] => 'در حال انجام' ,
+                                                     Invoice::STATUSES[ 'sent' ] => 'ارسال شده' ,
+                                                 ])
+                                       ->afterStateUpdated(function ( ?string $state , ?string $old ) {
+                                           dd($state , $old);
+                                       }) ,
+                                 Forms\Components\TextInput::make('code')
+                                                           ->label('شناسه')
+                                                           ->disabled() ,
                                  Forms\Components\TextInput::make('tx_id')
-                                                           ->label('کد تراکنش')
+                                                           ->label('شناسه درگاهی')
                                                            ->disabled() ,
                                  Forms\Components\TextInput::make('products_price')
                                                            ->label('مبلغ محصولات')
-                                                           ->disabled() ,
-                                 Forms\Components\TextInput::make('shipping_price')
-                                                           ->label('هزینه ارسال')
                                                            ->disabled() ,
                                  Forms\Components\TextInput::make('discount')
                                                            ->label('تخفیف')
@@ -73,10 +83,8 @@ class InvoiceResource extends Resource {
 
     public static function table ( Table $table ): Table {
         return $table->columns([
-                                   Tables\Columns\TextColumn::make('id')
-                                                            ->label('شناسه') ,
-                                   Tables\Columns\TextColumn::make('tx_id')
-                                                            ->label('کد تراکنش') ,
+                                   Tables\Columns\TextColumn::make('code')
+                                                            ->label('کد') ,
                                    Tables\Columns\TextColumn::make('payment_price')
                                                             ->label('مبلغ پرداختی') ,
                                    Tables\Columns\TextColumn::make('phone')
@@ -89,10 +97,13 @@ class InvoiceResource extends Resource {
                                ])
                      ->actions([
                                    Tables\Actions\ViewAction::make()
-                                                            ->url(fn ( $record ) => Pages\ViewInvoicePro::getUrl([ 'record' => $record ])),
+                                                            ->url(fn ( $record ) => Pages\ViewInvoicePro::getUrl([ 'record' => $record ])) ,
                                ])
                      ->bulkActions([])
-                     ->defaultSort('id' , 'desc');
+                     ->defaultSort('id' , 'desc')
+                     ->modifyQueryUsing(function ( Builder $query ) {
+                         $query->whereNotNull('paid_at');
+                     });
     }
 
     public static function getRelations (): array {

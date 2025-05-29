@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Rules\IranPhoneRule;
 use App\Services\CartService;
 use App\Services\Fixer;
+use App\Services\SmsService;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller {
@@ -32,9 +33,12 @@ class AuthController extends Controller {
                     ->firstOrCreate([
                                         'phone' => $phone ,
                                     ]);
-        $user->otp = 11111;
+        $user->otp = rand(10000,99999);
         $user->save();
 
+        SmsService::send($phone, 'login', [
+            'token1' => $user->otp
+        ]);
         return redirect()->route('auth.verify-code-form' , [ 'phone' => $phone ]);
     }
 

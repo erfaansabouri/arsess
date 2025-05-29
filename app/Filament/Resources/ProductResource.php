@@ -34,9 +34,9 @@ class ProductResource extends Resource {
                                                            ->default(null)
                                                            ->label('عنوان') ,
                                  // stock
-                                    Forms\Components\TextInput::make('stock')
-                                                            ->numeric()
-                                                            ->label('موجودی انبار') ,
+                                 Forms\Components\TextInput::make('stock')
+                                                           ->numeric()
+                                                           ->label('موجودی انبار') ,
                                  Forms\Components\TextInput::make('slug')
                                                            ->maxLength(255)
                                                            ->default(null)
@@ -49,8 +49,8 @@ class ProductResource extends Resource {
                                                            ->numeric()
                                                            ->label('قیمت') ,
                                  TinyEditor::make('description')
-                                                            ->columnSpanFull()
-                                                            ->label('توضیحات') ,
+                                           ->columnSpanFull()
+                                           ->label('توضیحات') ,
                                  Forms\Components\Toggle::make('is_selected')
                                                         ->required()
                                                         ->label('گنجینه') ,
@@ -62,6 +62,25 @@ class ProductResource extends Resource {
                                  Forms\Components\SpatieMediaLibraryFileUpload::make('image')
                                                                               ->collection('image')
                                                                               ->label('تصویر') ,
+                                 //meta_title
+                                 Forms\Components\TextInput::make('meta_title')
+                                                           ->maxLength(255)
+                                                           ->default(null)
+                                                           ->label('عنوان متا') ,
+                                 // meta_description
+                                 Forms\Components\Textarea::make('meta_description')
+                                                          ->columnSpanFull()
+                                                          ->label('توضیحات متا') ,
+                                 // meta_keywords
+                                 Forms\Components\TextInput::make('meta_keywords')
+                                                           ->maxLength(255)
+                                                           ->default(null)
+                                                           ->label('کلمات کلیدی متا') ,
+                                 // canonical_url
+                                 Forms\Components\TextInput::make('canonical_url')
+                                                           ->maxLength(255)
+                                                           ->default(null)
+                                                           ->label('آدرس کاننیکال') ,
                              ]);
     }
 

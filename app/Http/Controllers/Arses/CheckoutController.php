@@ -7,6 +7,7 @@ use App\Models\Coupon;
 use App\Models\Invoice;
 use App\Models\Product;
 use App\Services\CartService;
+use App\Services\SmsService;
 use Exception;
 use Illuminate\Http\Request;
 use Shetabit\Payment\Facade\Payment;
@@ -161,6 +162,10 @@ class CheckoutController extends Controller {
                     $product->save();
                 }
             }
+
+            SmsService::send($invoice->user->phone,'invoice-verified', [
+                'token1' => 'مدیریت'
+            ]);
 
             return redirect()
                 ->route('my-profile.show')

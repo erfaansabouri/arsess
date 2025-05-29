@@ -21,7 +21,7 @@
                                             @endphp
                                             <tr>
                                                 <td>
-                                                    <p class="{{ $colorClass }}">سفارش شماره {{ $invoice->tx_id }}</p>
+                                                    <p class="{{ $colorClass }}">سفارش شماره {{ $invoice->code }}</p>
                                                 </td>
                                                 <td>
                                                     <p class="{{ $colorClass }}">{{ verta($invoice->created_at)->formatJalaliDatetime() }}</p>
@@ -40,12 +40,12 @@
                                                         @endif
                                                     </p>
                                                 </td>
-                                                <td>
+                                            {{--    <td>
                                                     <button class="dwnldBtn {{ $colorClass }} btn transitionCls" disabled="">
                                                         <i>دانلود فاکتور</i>
                                                         <span class="icon-Billing-Factor"></span>
                                                     </button>
-                                                </td>
+                                                </td>--}}
                                             </tr>
                                         @endforeach
                                         </tbody>

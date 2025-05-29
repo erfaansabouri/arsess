@@ -1,4 +1,10 @@
 @extends('arses.master')
+@section('title', $blog_post->meta_title ?? $blog_post->title)
+@section('meta_description', $blog_post->meta_description)
+@section('meta_keywords', $blog_post->meta_keywords)
+@section('canonical_url')
+    <link rel="canonical" href="{{ $blog_post->canonical_url ?? url()->current() }}">
+@endsection
 @section('content')
     <section class="blogPgSec">
         <div class="container">

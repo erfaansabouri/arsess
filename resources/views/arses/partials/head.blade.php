@@ -1,7 +1,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>سرای آرسس</title>
+    <title></title>
+    <meta name="description" content="@yield('meta_description')">
+    <meta name="keywords" content="@yield('meta_keywords')">
+    @yield('canonical_url')
+    <title>سرای آرسس | @yield('title')</title>
     <link rel="stylesheet" href="{{ asset('arses/asset/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('arses/asset/css/main.css?2') }}" />
     <link rel="stylesheet" href="{{ asset('arses/asset/css/icomoon.css') }}" />
