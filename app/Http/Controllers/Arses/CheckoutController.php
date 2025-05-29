@@ -163,8 +163,8 @@ class CheckoutController extends Controller {
                 }
             }
 
-            SmsService::send($invoice->user->phone,'invoice-verified', [
-                'token1' => 'مدیریت'
+            SmsService::send($invoice->user->phone,'334439', [
+                'مدیریت'
             ]);
 
             return redirect()

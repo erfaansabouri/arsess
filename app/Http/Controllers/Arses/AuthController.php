@@ -36,8 +36,8 @@ class AuthController extends Controller {
         $user->otp = rand(10000,99999);
         $user->save();
 
-        SmsService::send($phone, 'login', [
-            'token1' => $user->otp
+        SmsService::send($phone, '334437', [
+            $user->otp
         ]);
         return redirect()->route('auth.verify-code-form' , [ 'phone' => $phone ]);
     }

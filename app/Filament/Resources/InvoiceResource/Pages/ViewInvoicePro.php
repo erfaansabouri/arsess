@@ -30,8 +30,14 @@ class ViewInvoicePro extends ViewRecord {
                                                                                  ->hidden(fn ( Invoice $record ): bool => $record->status != Invoice::STATUSES[ 'init' ])
                                                                                  ->action(function () {
                                                                                      $this->record->update([ 'status' => Invoice::STATUSES[ 'process' ] ]);
-                                                                                     SmsService::send($this->record->user->phone,'process-invoice', [
-                                                                                         'token1' => $this->record->code,
+                                                                                     SmsService::send($this->record->user->phone,'334440', [
+                                                                                         $this->record->code,
+                                                                                     ]);
+                                                                                     SmsService::send($this->record->user->phone,'334441', [
+                                                                                         $this->record->code,
+                                                                                         $this->record->payment_price,
+                                                                                         $this->record->aghlam_for_sms,
+
                                                                                      ]);
                                                                                  }) ,
                                                                            Action::make('star')
@@ -41,7 +47,7 @@ class ViewInvoicePro extends ViewRecord {
                                                                                  ->hidden(fn ( Invoice $record ): bool => $record->status != Invoice::STATUSES[ 'process' ])
                                                                                  ->action(function () {
                                                                                      $this->record->update([ 'status' => Invoice::STATUSES[ 'sent' ] ]);
-                                                                                     SmsService::send($this->record->user->phone,'process-sent', [
+                                                                                     SmsService::send($this->record->user->phone,'334443', [
                                                                                          'token1' => $this->record->code,
                                                                                      ]);
                                                                                  }) ,

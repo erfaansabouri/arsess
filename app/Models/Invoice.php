@@ -42,4 +42,13 @@ class Invoice extends Model {
     public function getIsPaidAttribute (): bool {
         return $this->paid_at !== null;
     }
+
+    public function getAghlamForSmsAttribute () {
+        $text = '';
+        foreach ($this->invoiceItems as $invoiceItem){
+            $text .= $invoiceItem->product->title . " " . $invoiceItem->quantity;
+            $text .= "\n";
+        }
+        return $text;
+    }
 }
