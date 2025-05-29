@@ -1593,7 +1593,8 @@ body {
     font-size: 20px;
     font-family: "Darvish_Bold";
 }
-.prdctIntro .introBox .introTxt {
+.prdctIntro .introBox .introTxt,
+.prdctIntro .introBox p {
     color: #000;
     text-align: right;
     font-size: 16px;
@@ -1621,6 +1622,18 @@ body {
     margin-bottom: 12px;
     line-height: 1.7;
 }
+.prdctIntro .introBox img {
+    width: 303px;
+    height: 303px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    background: #fff;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 2/1;
+}
 .prdctIntro .introBox .introImg {
     width: 303px;
     height: 303px;
@@ -1637,6 +1650,7 @@ body {
     object-position: center;
     aspect-ratio: 2/1;
 }
+
 .prdctIntro .introBox .rightImg {
     margin: 45px 0 45px auto;
 }
