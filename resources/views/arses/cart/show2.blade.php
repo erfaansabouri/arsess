@@ -23,7 +23,7 @@
                                         <span>ارسال</span>
                                         <p>پس کرایه</p>
                                     </li>
-                                    <li>
+                                    <li id="discount-li" @if(CartService::getDiscountAmount() == 0) style="display: none"  @endif>
                                         <span>تخفیف</span>
                                         <p id="discount-amount">{{ number_format(CartService::getDiscountAmount()) }} تومان</p>
                                     </li>
@@ -158,6 +158,7 @@
                     },
                     success: function (response) {
                         if (response.status === 'success') {
+                            $('#discount-li').show();
                             $('#coupon-success-2').text('کد تخفیف با موفقیت اعمال شد');
                             $('#coupon-error-2').text('');
                             // number format and concat toman
@@ -191,6 +192,7 @@
                     },
                     success: function (response) {
                         if (response.status === 'success') {
+                            $('#discount-li').show();
                             $('#coupon-success-2').text('کد تخفیف با موفقیت اعمال شد');
                             $('#coupon-error-2').text('');
                             // number format and concat toman
