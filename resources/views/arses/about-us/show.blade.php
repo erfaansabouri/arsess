@@ -3,7 +3,7 @@
 @section('meta_description', 'فروشگاه ملزومات آشپزی خاص و حرفه‌ای')
 @section('meta_keywords', 'فروشگاه ملزومات آشپزی خاص و حرفه‌ای')
 @section('canonical_url')
-    <link rel="canonical" url()->current() }}">
+    <link rel="canonical" href="{{ url()->current() }}">
 @endsection
 @section('content')
     <section class="aboutSec">
