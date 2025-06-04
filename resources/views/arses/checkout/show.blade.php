@@ -145,7 +145,7 @@
                                         <strong>ارسال</strong>
                                         <strong>پس کرایه</strong>
                                     </li>
-                                    <li>
+                                    <li id="discount-li" @if(CartService::getDiscountAmount() == 0) style="display: none"  @endif>
                                         <strong>تخفیف</strong>
                                         <strong id="discount-amount">{{ number_format(CartService::getDiscountAmount()) }} تومان</strong>
                                     </li>
@@ -210,6 +210,7 @@
                     },
                     success: function (response) {
                         if (response.status === 'success') {
+                            $('#discount-li').show();
                             $('#coupon-success').text('کد تخفیف با موفقیت اعمال شد');
                             $('#coupon-error').text('');
                             // number format and concat toman
