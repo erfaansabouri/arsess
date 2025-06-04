@@ -84,9 +84,23 @@ class InvoiceResource extends Resource {
     public static function table ( Table $table ): Table {
         return $table->columns([
                                    Tables\Columns\TextColumn::make('code')
-                                                            ->label('کد') ,
+                                                            ->label('کد')
+                                                            ->numeric() ,
+                                   Tables\Columns\TextColumn::make('first_name')
+                                                            ->label('نام') ,
+                                   Tables\Columns\TextColumn::make('last_name')
+                                                            ->label('نام خانوادگی') ,
+                                   Tables\Columns\TextColumn::make('status')
+                                                            ->label('وضعیت')
+                                                            ->formatStateUsing(fn ( string $state ): string => match ( $state ) {
+                                                                Invoice::STATUSES[ 'init' ] => 'اولیه' ,
+                                                                Invoice::STATUSES[ 'process' ] => 'در حال انجام' ,
+                                                                Invoice::STATUSES[ 'sent' ] => 'ارسال شده' ,
+                                                                default => $state ,
+                                                            }) ,
                                    Tables\Columns\TextColumn::make('payment_price')
-                                                            ->label('مبلغ پرداختی') ,
+                                                            ->label('مبلغ پرداختی')
+                                                            ->numeric() ,
                                    Tables\Columns\TextColumn::make('phone')
                                                             ->label('شماره تماس') ,
                                    IconColumn::make('is_paid')
