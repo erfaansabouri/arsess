@@ -28,6 +28,25 @@ class BlogPostCategoryResource extends Resource {
                                           ->label('Slug')
                                           ->required()
                                           ->maxLength(255) ,
+                                 //meta_title
+                                 Forms\Components\TextInput::make('meta_title')
+                                                           ->maxLength(255)
+                                                           ->default(null)
+                                                           ->label('عنوان متا') ,
+                                 // meta_description
+                                 Forms\Components\Textarea::make('meta_description')
+                                                          ->columnSpanFull()
+                                                          ->label('توضیحات متا') ,
+                                 // meta_keywords
+                                 Forms\Components\TextInput::make('meta_keywords')
+                                                           ->maxLength(255)
+                                                           ->default(null)
+                                                           ->label('کلمات کلیدی متا') ,
+                                 // canonical_url
+                                 Forms\Components\TextInput::make('canonical_url')
+                                                           ->maxLength(255)
+                                                           ->default(null)
+                                                           ->label('آدرس کاننیکال') ,
                              ]);
     }
 

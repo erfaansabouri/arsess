@@ -1,9 +1,9 @@
 @extends('arses.master')
-@section('title', @$category_model_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
-@section('meta_description', @$category_model_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
-@section('meta_keywords', @$category_model_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
+@section('title', @$blog_post_category_selected->meta_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
+@section('meta_description', $blog_post_category_selected->meta_description ?? 'نامه‌سرای ملزومات آشپزی خاص')
+@section('meta_keywords', $blog_post_category_selected->meta_keywords ?? 'نامه‌سرای ملزومات آشپزی خاص')
 @section('canonical_url')
-    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="canonical" href="{{$blog_post_category_selected->canonical_url ?? url()->current() }}">
 @endsection
 @section('content')
     <section class="blogSec">
