@@ -39,7 +39,7 @@ class BlogPostController extends Controller {
                                                 ->take(4)
                                                 ->get();
 
-        return view('arses.blog-posts.index' , compact('blog_posts' , 'blog_post_categories' , 'category_id'));
+        return view('arses.blog-posts.index' , compact('blog_posts' , 'blog_post_categories' , 'category_id' , 'category_title'));
     }
 
     public function show ( $slug ) {

@@ -1,4 +1,10 @@
 @extends('arses.master-ii')
+@section('title', $category->meta_title ?? $category->title )
+@section('meta_description', $category->meta_description ?? $category->title)
+@section('meta_keywords', $category->meta_keywords ?? $category->title)
+@section('canonical_url')
+    <link rel="canonical" href="{{ $category->canonical_url ?? url()->current() }}">
+@endsection
 @section('content')
 <section class="searchSec">
     <div class="container">

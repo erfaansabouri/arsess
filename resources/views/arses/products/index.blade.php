@@ -1,4 +1,10 @@
 @extends('arses.master-ii')
+@section('title', 'محصولات سرای آرسس' )
+@section('meta_description', 'محصولات سرای آرسس')
+@section('meta_keywords', 'محصولات سرای آرسس')
+@section('canonical_url')
+    <link rel="canonical" href="{{ url()->current() }}">
+@endsection
 @section('content')
     <section class="searchSec">
         <div class="container">
