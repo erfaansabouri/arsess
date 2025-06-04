@@ -12,12 +12,19 @@ class BlogPostController extends Controller {
     public function index ( Request $request ) {
         $category_id = $request->get('category_id');
         $category_title = $request->get('category_title');
+        $category_model_title = '';
         $hashtag_title = $request->get('hashtag_title');
         if ($category_title){
             $category_id = BlogPostCategory::query()
                 ->where('title', $category_title)
                 ->orWhere('slug', $category_title)
                 ->first()?->id;
+
+            $category_model_title = BlogPostCategory::query()
+                                                    ->where('title', $category_title)
+                                                    ->orWhere('slug', $category_title)
+                                                    ->first()?->title;
+
         }
         $blog_posts = BlogPost::query()
                               ->latest()
@@ -39,7 +46,7 @@ class BlogPostController extends Controller {
                                                 ->take(4)
                                                 ->get();
 
-        return view('arses.blog-posts.index' , compact('blog_posts' , 'blog_post_categories' , 'category_id' , 'category_title'));
+        return view('arses.blog-posts.index' , compact('blog_posts' , 'blog_post_categories' , 'category_id' , 'category_title', 'category_model_title'));
     }
 
     public function show ( $slug ) {

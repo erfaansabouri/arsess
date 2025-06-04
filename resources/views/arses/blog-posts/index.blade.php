@@ -1,7 +1,7 @@
 @extends('arses.master')
-@section('title', @$category_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
-@section('meta_description', @$category_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
-@section('meta_keywords', @$category_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
+@section('title', @$category_model_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
+@section('meta_description', @$category_model_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
+@section('meta_keywords', @$category_model_title ?? 'نامه‌سرای ملزومات آشپزی خاص')
 @section('canonical_url')
     <link rel="canonical" href="{{ url()->current() }}">
 @endsection
