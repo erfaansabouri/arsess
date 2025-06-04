@@ -100,10 +100,7 @@ class InvoiceResource extends Resource {
                                                             ->url(fn ( $record ) => Pages\ViewInvoicePro::getUrl([ 'record' => $record ])) ,
                                ])
                      ->bulkActions([])
-                     ->defaultSort('id' , 'desc')
-                     ->modifyQueryUsing(function ( Builder $query ) {
-                         $query->whereNotNull('paid_at');
-                     });
+                     ->defaultSort('id' , 'desc');
     }
 
     public static function getRelations (): array {
