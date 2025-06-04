@@ -174,8 +174,7 @@
 
                                 <div class="text">
                                     اطلاعات شخصی شما جهت استفاده در فرایند سفارش استفاده
-                                    می‌شود. و برای موارد دیگر صفحه
-                                    <a href="#">قوانین استفاده </a> را بخوانید
+                                    می‌شود.
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="payCheck">
