@@ -58,7 +58,11 @@
                             </div>
                         @endif
                         <div class="price">{{ number_format($product->price) }} تومان</div>
-                        <a href="{{ route('cart.add', $product->id) }}" class=""><button class="btn transitionCls">افزودن به سبد خرید</button></a>
+                        @if($product->stock > 0)
+                            <a href="{{ route('cart.add', $product->id) }}" class=""><button class="btn transitionCls">افزودن به سبد خرید</button></a>
+                        @else
+                            <div class="noExistntBtn">ناموجود</div>
+                        @endif
                     </div>
                 </div>
                 <div class="prdctIntro">

@@ -8,6 +8,7 @@ $(document).ready(function () {
             if (!$headerMnu.is(ev.target) && $headerMnu.has(ev.target).length === 0) {
                 $(".subBox").removeClass("opened").slideUp(300);
                 // $(".afterBox").slideUp(500);
+                $(".menuLink").removeClass("opened");
                 $(".menuVector").fadeOut(500);
 
                 $(".openSub").parent().removeClass("open");
@@ -30,10 +31,12 @@ $(document).ready(function () {
     if ($(".menuLink").length) {
         $(".menuLink").click(function () {
             if ($(".subBox").hasClass("opened")) {
+                $(".menuLink").removeClass("opened");
                 $(".subBox").removeClass("opened").slideUp(300);
                 $(".menuVector").fadeOut(300);
             } else {
                 $(".subBox").addClass("opened").slideDown(300);
+                $(".menuLink").addClass("opened");
                 $(".menuVector").fadeIn(300);
             }
         });
