@@ -6,7 +6,7 @@
     @yield('canonical_url')
     <title>سرای آرسس | @yield('title')</title>
     <link rel="stylesheet" href="{{ asset('arses/asset/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('arses/asset/css/main.css?2') }}" />
+    <link rel="stylesheet" href="{{ asset('arses/asset/css/main.css?3') }}" />
     <link rel="stylesheet" href="{{ asset('arses/asset/css/icomoon.css') }}" />
     <link rel="stylesheet" href="{{ asset('arses/asset/css/swiper-bundle.min.css') }}" />
 
