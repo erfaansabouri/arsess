@@ -106,6 +106,15 @@ class CheckoutController extends Controller {
         $invoice->coupon_code = CartService::getCouponCode();
         $invoice->payment_price = CartService::getPaymentPrice();
         $invoice->save();
+        #
+        $user = $invoice->user;
+        $user->first_name = $request->input('first_name');
+        $user->last_name = $request->input('last_name');
+        $user->address = $request->input('address');
+        $user->postal_code = $request->input('postal_code');
+        $user->national_code = $request->input('national_code');
+        $user->save();
+        #
         $products = CartService::getProducts();
         foreach ( $products as $product ) {
             $invoice->invoiceItems()
