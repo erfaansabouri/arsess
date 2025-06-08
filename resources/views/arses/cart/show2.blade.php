@@ -55,8 +55,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-danger mt-2" id="coupon-error">a</p>
-                            <p class="text-success mt-2" id="coupon-success">b</p>
                         </div>
                         <div class="cartLeft">
                             <div class="table-responsive">
@@ -126,10 +124,6 @@
                                 </div>
 
                             </div>
-                            <div class="text-center">
-                                <p class="text-danger mt-2" id="coupon-error-2"></p>
-                                <p class="text-success mt-2" id="coupon-success-2"></p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,6 +132,13 @@
     </section>
 @endsection
 @push('upper-content')
+    <div style="display: none" id="code-fail" class="notif notifBox errorNotif">
+        <p>کد تخفیف نا معتبر است</p>
+    </div>
+    <div style="display: none" id="code-success" class="notif notifBox successNotif">
+        <img src="{{ asset('arses/asset/img/white-tick.svg') }}" alt="icon" />
+        <p>تخفیف با موفقیت اعمال شد</p>
+    </div>
     @include('arses.partials.top-moving-logo')
 @endpush
 
@@ -159,19 +160,16 @@
                     success: function (response) {
                         if (response.status === 'success') {
                             $('#discount-li').show();
-                            $('#coupon-success-2').text('کد تخفیف با موفقیت اعمال شد');
-                            $('#coupon-error-2').text('');
+                            $('#code-success').show()
                             // number format and concat toman
                             let discountAmount = new Intl.NumberFormat('fa-IR').format(response.discount);
                             let totalPrice = new Intl.NumberFormat('fa-IR').format(response.total);
                             $('#discount-amount').text(discountAmount + ' تومان');
                             $('#payment-price').text(totalPrice + ' تومان');
                         } else if (response.status === 'error') {
-                            $('#coupon-error-2').text('کد تخفیف نامعتبر است');
-                            $('#coupon-success-2').text('');
+                            $('#code-fail').show();
                         } else {
-                            $('#coupon-error-2').text('خطا در پردازش درخواست');
-                            $('#coupon-success-2').text('');
+                            $('#code-fail').show();
                         }
                     },
                     error: function (xhr) {
@@ -193,19 +191,16 @@
                     success: function (response) {
                         if (response.status === 'success') {
                             $('#discount-li').show();
-                            $('#coupon-success-2').text('کد تخفیف با موفقیت اعمال شد');
-                            $('#coupon-error-2').text('');
+                            $('#code-success').show()
                             // number format and concat toman
                             let discountAmount = new Intl.NumberFormat('fa-IR').format(response.discount);
                             let totalPrice = new Intl.NumberFormat('fa-IR').format(response.total);
                             $('#discount-amount').text(discountAmount + ' تومان');
                             $('#payment-price').text(totalPrice + ' تومان');
                         } else if (response.status === 'error') {
-                            $('#coupon-error-2').text('کد تخفیف نامعتبر است');
-                            $('#coupon-success-2').text('');
+                            $('#code-fail').show();
                         } else {
-                            $('#coupon-error-2').text('خطا در پردازش درخواست');
-                            $('#coupon-success-2').text('');
+                            $('#code-fail').show();
                         }
                     },
                     error: function (xhr) {
