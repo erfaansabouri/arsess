@@ -40,6 +40,8 @@ class BlogPostResource extends Resource {
                                                              ->label('تصویر')
                                                              ->required()
                                                              ->rules([ 'image' ]) ,
+                                 Forms\Components\TextInput::make('summary')
+                                                           ->label('خلاصه') ,
                                  TinyEditor::make('body')
                                                             ->label('متن')
                                                             ->required()
