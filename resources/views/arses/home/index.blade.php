@@ -1,4 +1,7 @@
 @extends('arses.master-ii')
+@section('title', \App\Models\HomeSeoAttribute::query()->first()->title)
+@section('meta_description', \App\Models\HomeSeoAttribute::query()->first()->meta_description)
+@section('meta_keywords', \App\Models\HomeSeoAttribute::query()->first()->keywords)
 @section('content')
     <section class="homTopSec headerSec">
         <img src="{{ asset('arses/asset/img/home-header.png') }}" class="homeHdrImg" alt="img" />
