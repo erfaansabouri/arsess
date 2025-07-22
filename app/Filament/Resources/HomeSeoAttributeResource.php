@@ -36,7 +36,7 @@ class HomeSeoAttributeResource extends Resource
                                                                                          ->translateLabel()
                                                                                          ->label('توضیحات متا')
                                                                                          ->placeholder('توضیحات متا را وارد کنید'),
-                                                               Forms\Components\TextInput::make('meta_keywords')
+                                                               Forms\Components\TextInput::make('keywords')
                                                                                          ->required()
                                                                                          ->translateLabel()
                                                                                          ->label('کلمات کلیدی')
@@ -62,7 +62,7 @@ class HomeSeoAttributeResource extends Resource
                                                    ->translateLabel()
                                                    ->label('توضیحات متا')
                                                    ->limit(50),
-                          Tables\Columns\TextColumn::make('meta_keywords')
+                          Tables\Columns\TextColumn::make('keywords')
                                                    ->translateLabel()
                                                    ->label('کلمات کلیدی')
                                                    ->limit(50),
