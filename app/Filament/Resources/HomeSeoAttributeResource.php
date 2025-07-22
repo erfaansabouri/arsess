@@ -41,6 +41,11 @@ class HomeSeoAttributeResource extends Resource
                                                                                          ->translateLabel()
                                                                                          ->label('کلمات کلیدی')
                                                                                          ->placeholder('کلمات کلیدی سئو را وارد کنید'),
+                                                               SpatieMediaLibraryFileUpload::make('image')
+                                                                                           ->collection('image')
+                                                                                           ->label('تصویر')
+                                                                                           ->required()
+                                                                                           ->rules([ 'image' ]) ,
                                                            ]),
                      ]);
     }
@@ -61,11 +66,7 @@ class HomeSeoAttributeResource extends Resource
                                                    ->translateLabel()
                                                    ->label('کلمات کلیدی')
                                                    ->limit(50),
-                          SpatieMediaLibraryFileUpload::make('image')
-                                                      ->collection('image')
-                                                      ->label('تصویر')
-                                                      ->required()
-                                                      ->rules([ 'image' ]) ,
+
                       ])
             ->filters([
                           //
