@@ -33,12 +33,6 @@ class ViewInvoicePro extends ViewRecord {
                                                                                      SmsService::send($this->record->user->phone,'334440', [
                                                                                          $this->record->code,
                                                                                      ]);
-                                                                                     SmsService::send($this->record->user->phone,'334441', [
-                                                                                         $this->record->code,
-                                                                                         $this->record->payment_price,
-                                                                                         $this->record->aghlam_for_sms,
-
-                                                                                     ]);
                                                                                  }) ,
                                                                            Action::make('star')
                                                                                  ->label('تغییر وضعیت به ارسال شده')

@@ -176,6 +176,15 @@ class CheckoutController extends Controller {
                 'مدیریت'
             ]);
 
+            /* todo */
+            SmsService::send(1,'334441', [
+                $this->record->code,
+                $this->record->payment_price,
+                $this->record->aghlam_for_sms,
+            ]);
+
+            //  سفارشی جدیدی توسط {0} به مبلغ {1} با اقلام {2} در سرای آرسس با موفقیت تایید و پردازش شد.
+
             return redirect()
                 ->route('my-profile.show')
                 ->with('custom_success' , 'پرداخت با موفقیت انجام شد');
