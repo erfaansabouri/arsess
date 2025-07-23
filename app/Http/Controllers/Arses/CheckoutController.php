@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Arses;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use App\Models\Coupon;
 use App\Models\Invoice;
 use App\Models\Product;
@@ -176,12 +177,13 @@ class CheckoutController extends Controller {
                 'مدیریت'
             ]);
 
-            /* todo */
-            SmsService::send(1,'334441', [
-                $this->record->code,
-                $this->record->payment_price,
-                $this->record->aghlam_for_sms,
-            ]);
+            foreach (Admin::query()->whereNotNull('phone')->get() as $admin){
+                SmsService::send($admin->phone,'334441', [
+                    $invoice->user->phone,
+                    $invoice->payment_price,
+                    $invoice->aghlam_for_sms,
+                ]);
+            }
 
             //  سفارشی جدیدی توسط {0} به مبلغ {1} با اقلام {2} در سرای آرسس با موفقیت تایید و پردازش شد.
 
