@@ -3,6 +3,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="@yield('meta_description')">
     <meta name="keywords" content="@yield('meta_keywords')">
+    <meta property="og:image" content="{{ \App\Models\HomeSeoAttribute::first()->getFirstMediaUrl('image') }}" />
+    <meta property="og:image:width" content="720" />
+    <meta property="og:image:height" content="596" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
     @yield('canonical_url')
     <title>سرای آرسس | @yield('title')</title>
     <link rel="stylesheet" href="{{ asset('arses/asset/css/bootstrap.min.css') }}" />
